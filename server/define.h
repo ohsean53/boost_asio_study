@@ -9,8 +9,8 @@ const int MAX_MESSAGE_LEN = 129; // ? why?
 
 struct PACKET_HEADER
 {
-  short nID;
-  short nSize;
+  short id;
+  short size;
 };
 
 
@@ -33,48 +33,48 @@ struct PKT_REQ_IN : public PACKET_HEADER
 {
   void Init()
   {
-    nID = REQ_IN;
-    nSize = sizeof(PKT_REQ_IN);
-    memset(szName, 0, MAX_NAME_LEN);
+    id = REQ_IN;
+    size = sizeof(PKT_REQ_IN);
+    memset(name, 0, MAX_NAME_LEN);
   }
 
-  char szName[MAX_NAME_LEN];
+  char name[MAX_NAME_LEN];
 };
 
 struct PKT_RES_IN : public PACKET_HEADER
 {
   void Init()
   {
-    nID = RES_IN;
-    nSize = sizeof(PKT_RES_IN);
-    bIsSuccess = false;
+    id = RES_IN;
+    size = sizeof(PKT_RES_IN);
+    is_success = false;
   }
 
-  bool bIsSuccess;
+  bool is_success;
 };
 
 struct PKT_REQ_CHAT : public PACKET_HEADER
 {
   void Init()
   {
-    nID = REQ_CHAT;
-    nSize = sizeof(PKT_REQ_CHAT);
-    memset(szMessage, 0, MAX_MESSAGE_LEN);
+    id = REQ_CHAT;
+    size = sizeof(PKT_REQ_CHAT);
+    memset(message, 0, MAX_MESSAGE_LEN);
   }
 
-  char szMessage[MAX_MESSAGE_LEN];
+  char message[MAX_MESSAGE_LEN];
 };
 
 struct PKT_NOTICE_CHAT : public PACKET_HEADER
 {
   void Init()
   {
-    nID = NOTICE_CHAT;
-    nSize = sizeof(PKT_NOTICE_CHAT);
-    memset(szName, 0, MAX_NAME_LEN);
-    memset(szMessage, 0, MAX_MESSAGE_LEN);
+    id = NOTICE_CHAT;
+    size = sizeof(PKT_NOTICE_CHAT);
+    memset(name, 0, MAX_NAME_LEN);
+    memset(message, 0, MAX_MESSAGE_LEN);
   }
 
-  char szName[MAX_NAME_LEN];
-  char szMessage[MAX_MESSAGE_LEN];
+  char name[MAX_NAME_LEN];
+  char message[MAX_MESSAGE_LEN];
 };

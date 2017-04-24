@@ -72,22 +72,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(BOOST_HOME);$(IncludePath)</IncludePath>
-    <LibraryPath>$(BOOST_LIBS)$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(BOOST_HOME);$(IncludePath)</IncludePath>
-    <LibraryPath>$(BOOST_LIBS)$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(BOOST_HOME);$(IncludePath)</IncludePath>
-    <LibraryPath>$(BOOST_LIBS)$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(BOOST_HOME);$(IncludePath)</IncludePath>
-    <LibraryPath>$(BOOST_LIBS)$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -153,10 +153,13 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\server\define.h" />
+    <ClInclude Include="chat_client.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="chat_client.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

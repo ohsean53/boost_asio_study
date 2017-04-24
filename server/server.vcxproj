@@ -72,22 +72,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(BOOST_HOME);$(IncludePath)</IncludePath>
-    <LibraryPath>$(BOOST_LIBS)$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(BOOST_HOME);$(IncludePath)</IncludePath>
-    <LibraryPath>$(BOOST_LIBS)$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(BOOST_HOME);$(IncludePath)</IncludePath>
-    <LibraryPath>$(BOOST_LIBS)$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(BOOST_HOME);$(IncludePath)</IncludePath>
-    <LibraryPath>$(BOOST_LIBS)$(Platform)\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

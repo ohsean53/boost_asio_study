@@ -18,13 +18,14 @@ public:
 
   int GetSessionID() { return session_id_; }
 
-  boost::asio::ip::tcp::socket& getSocket() { return socket_; }
+  boost::asio::ip::tcp::socket& GetSocket() { return socket_; }
 
   void Init();
   void PostReceive();
   void PostSend(const bool immediately, const int size, char* data);
 
   void SetName(const char* name) {}
+  const char* GetName() { return name_.c_str(); }
 
 private:
 

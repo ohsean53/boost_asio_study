@@ -1,19 +1,19 @@
 #include "stdafx.h"
-#include "ChatServer.h"
+#include "chat_server.h"
 
 const int MAX_SESSION_COUNT = 100;
 
 int main()
 {
-	boost::asio::io_service ios;
+  boost::asio::io_service io_service;
 
-	ChatServer server(ios);
-	server.Init(MAX_SESSION_COUNT);
-	server.start();
+  ChatServer server(io_service);
+  server.Init(MAX_SESSION_COUNT);
+  server.Start();
 
-	ios.run();
+  io_service.run();
 
-	std::cout << "匙飘况农 立加 辆丰" << std::endl;
+  std::cout << "network connect close" << std::endl;
 
-	return 0;
+  return 0;
 }
