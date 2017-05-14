@@ -1,0 +1,1 @@
+F:\src\protoc-3.2.0-win32\bin\protoc --cpp_out=. *.proto

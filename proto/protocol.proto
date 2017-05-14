@@ -1,0 +1,122 @@
+syntax = "proto3";
+package gs_protocol;
+
+enum Type {
+	Undefined = 0;
+	Login = 1;
+	Create = 2;
+	Join = 3;
+	DefinedAction1 = 4;
+	Quit = 5;
+	RoomList = 6;
+
+	NotifyJoin = 100;
+	NotifyAction1 = 101;
+	NotifyQuit = 102;
+
+	Error = 1000;
+}
+
+enum ErrorType {
+	Unknown = 0;
+}
+
+message Message {
+	Type type = 1;
+	oneof payload {
+		// request
+		ReqLogin req_login = 2;
+		ReqCreate req_create = 3;
+		ReqJoin req_join = 4;
+		ReqAction1 req_action1 = 5;
+		ReqQuit req_quit = 6;
+		ReqRoomList req_room_list = 7;
+
+		// response
+		ResLogin res_login = 8;
+		ResCreate res_create = 9;
+		ResJoin res_join = 10;
+		ResAction1 res_action1 = 11;
+		ResQuit res_quit = 12;
+		ResRoomList res_room_list = 13;
+
+		// notify
+		NotifyJoinMsg notify_join = 14;
+		NotifyAction1Msg notify_action1 = 15;
+		NotifyQuitMsg notify_quit = 16;
+
+		// error
+		ErrorMsg error = 1000;
+	}
+}
+
+
+// request payload
+message ReqLogin {
+	int64 userID = 1;
+}
+message ReqCreate {
+	int64 userID = 1;
+}
+message ReqJoin {
+	int64 userID = 1;
+	int64 roomID = 2;
+}
+message ReqAction1 {
+	int64 userID = 1;
+}
+message ReqQuit {
+	int64 userID = 1;
+}
+message ReqRoomList {
+	int64 userID = 1;
+}
+
+
+// response payload
+message ResLogin {
+	int64 userID = 1;
+	int32 result = 2;
+}
+message ResCreate {
+	int64 userID = 1;
+	int64 roomID = 2;
+}
+message ResJoin {
+	int64 userID = 1;
+	int64 roomID = 2;
+	int64 members = 3;
+}
+message ResAction1 {
+	int64 userID = 1;
+	int32 result = 2;
+}
+message ResQuit {
+	int64 userID = 1;
+	int32 isSuccess = 2;
+}
+message ResRoomList {
+	int64 userID = 1;
+	int64 roomIDs = 2;
+}
+
+
+// notify message type (for client)
+message NotifyJoinMsg {
+	int64 userID = 1;
+	int64 roomID = 2;
+}
+message NotifyAction1Msg {
+	int64 userID = 1;
+}
+message NotifyQuitMsg {
+	int64 userID = 1;
+	int64 roomID = 2;
+}
+
+
+// error message
+message ErrorMsg {
+	int32 errCode = 1; // pre-defined error code
+	string errMessage = 2; // custom error message
+}
