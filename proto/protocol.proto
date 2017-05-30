@@ -1,49 +1,28 @@
 syntax = "proto3";
 package gs_protocol;
 
-enum Type {
-	Undefined = 0;
-	Login = 1;
-	Create = 2;
-	Join = 3;
-	DefinedAction1 = 4;
-	Quit = 5;
-	RoomList = 6;
-
-	NotifyJoin = 100;
-	NotifyAction1 = 101;
-	NotifyQuit = 102;
-
-	Error = 1000;
-}
-
-enum ErrorType {
-	Unknown = 0;
-}
-
 message Message {
-	Type type = 1;
 	oneof payload {
 		// request
-		ReqLogin req_login = 2;
-		ReqCreate req_create = 3;
-		ReqJoin req_join = 4;
-		ReqAction1 req_action1 = 5;
-		ReqQuit req_quit = 6;
-		ReqRoomList req_room_list = 7;
+		ReqLogin req_login = 1;
+		ReqCreate req_create = 2;
+		ReqJoin req_join = 3;
+		ReqAction1 req_action1 = 4;
+		ReqQuit req_quit = 5;
+		ReqRoomList req_room_list = 6;
 
 		// response
-		ResLogin res_login = 8;
-		ResCreate res_create = 9;
-		ResJoin res_join = 10;
-		ResAction1 res_action1 = 11;
-		ResQuit res_quit = 12;
-		ResRoomList res_room_list = 13;
+		ResLogin res_login = 7;
+		ResCreate res_create = 8;
+		ResJoin res_join = 9;
+		ResAction1 res_action1 = 10;
+		ResQuit res_quit = 11;
+		ResRoomList res_room_list = 12;
 
 		// notify
-		NotifyJoinMsg notify_join = 14;
-		NotifyAction1Msg notify_action1 = 15;
-		NotifyQuitMsg notify_quit = 16;
+		NotifyJoinMsg notify_join = 13;
+		NotifyAction1Msg notify_action1 = 14;
+		NotifyQuitMsg notify_quit = 15;
 
 		// error
 		ErrorMsg error = 1000;
@@ -85,7 +64,7 @@ message ResCreate {
 message ResJoin {
 	int64 userID = 1;
 	int64 roomID = 2;
-	int64 members = 3;
+	repeated int64 members = 3;
 }
 message ResAction1 {
 	int64 userID = 1;
@@ -97,7 +76,7 @@ message ResQuit {
 }
 message ResRoomList {
 	int64 userID = 1;
-	int64 roomIDs = 2;
+	repeated int64 roomIDs = 2;
 }
 
 

@@ -17,25 +17,25 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 
-namespace protocol {
+namespace gs_protocol {
 class MessageDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<Message> {
   public:
-  const ::protocol::ReqLogin* req_login_;
-  const ::protocol::ReqCreate* req_create_;
-  const ::protocol::ReqJoin* req_join_;
-  const ::protocol::ReqAction1* req_action1_;
-  const ::protocol::ReqQuit* req_quit_;
-  const ::protocol::ReqRoomList* req_room_list_;
-  const ::protocol::ResLogin* res_login_;
-  const ::protocol::ResCreate* res_create_;
-  const ::protocol::ResJoin* res_join_;
-  const ::protocol::ResAction1* res_action1_;
-  const ::protocol::ResQuit* res_quit_;
-  const ::protocol::ResRoomList* res_room_list_;
-  const ::protocol::NotifyJoinMsg* notify_join_;
-  const ::protocol::NotifyAction1Msg* notify_action1_;
-  const ::protocol::NotifyQuitMsg* notify_quit_;
-  const ::protocol::ErrorMsg* error_;
+  const ::gs_protocol::ReqLogin* req_login_;
+  const ::gs_protocol::ReqCreate* req_create_;
+  const ::gs_protocol::ReqJoin* req_join_;
+  const ::gs_protocol::ReqAction1* req_action1_;
+  const ::gs_protocol::ReqQuit* req_quit_;
+  const ::gs_protocol::ReqRoomList* req_room_list_;
+  const ::gs_protocol::ResLogin* res_login_;
+  const ::gs_protocol::ResCreate* res_create_;
+  const ::gs_protocol::ResJoin* res_join_;
+  const ::gs_protocol::ResAction1* res_action1_;
+  const ::gs_protocol::ResQuit* res_quit_;
+  const ::gs_protocol::ResRoomList* res_room_list_;
+  const ::gs_protocol::NotifyJoinMsg* notify_join_;
+  const ::gs_protocol::NotifyAction1Msg* notify_action1_;
+  const ::gs_protocol::NotifyQuitMsg* notify_quit_;
+  const ::gs_protocol::ErrorMsg* error_;
 } _Message_default_instance_;
 class ReqLoginDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<ReqLogin> {
 } _ReqLogin_default_instance_;
@@ -76,7 +76,6 @@ namespace protobuf_protocol_2eproto {
 namespace {
 
 ::google::protobuf::Metadata file_level_metadata[17];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
 
 }  // namespace
 
@@ -85,7 +84,6 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Message, _internal_metadata_),
   ~0u,  // no _extensions_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Message, _oneof_case_[0]),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Message, type_),
   PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Message_default_instance_), req_login_),
   PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Message_default_instance_), req_create_),
   PROTO2_GENERATED_DEFAULT_ONEOF_FIELD_OFFSET((&_Message_default_instance_), req_join_),
@@ -198,22 +196,22 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 0, -1, sizeof(Message)},
-  { 22, -1, sizeof(ReqLogin)},
-  { 27, -1, sizeof(ReqCreate)},
-  { 32, -1, sizeof(ReqJoin)},
-  { 38, -1, sizeof(ReqAction1)},
-  { 43, -1, sizeof(ReqQuit)},
-  { 48, -1, sizeof(ReqRoomList)},
-  { 53, -1, sizeof(ResLogin)},
-  { 59, -1, sizeof(ResCreate)},
-  { 65, -1, sizeof(ResJoin)},
-  { 72, -1, sizeof(ResAction1)},
-  { 78, -1, sizeof(ResQuit)},
-  { 84, -1, sizeof(ResRoomList)},
-  { 90, -1, sizeof(NotifyJoinMsg)},
-  { 96, -1, sizeof(NotifyAction1Msg)},
-  { 101, -1, sizeof(NotifyQuitMsg)},
-  { 107, -1, sizeof(ErrorMsg)},
+  { 21, -1, sizeof(ReqLogin)},
+  { 26, -1, sizeof(ReqCreate)},
+  { 31, -1, sizeof(ReqJoin)},
+  { 37, -1, sizeof(ReqAction1)},
+  { 42, -1, sizeof(ReqQuit)},
+  { 47, -1, sizeof(ReqRoomList)},
+  { 52, -1, sizeof(ResLogin)},
+  { 58, -1, sizeof(ResCreate)},
+  { 64, -1, sizeof(ResJoin)},
+  { 71, -1, sizeof(ResAction1)},
+  { 77, -1, sizeof(ResQuit)},
+  { 83, -1, sizeof(ResRoomList)},
+  { 89, -1, sizeof(NotifyJoinMsg)},
+  { 95, -1, sizeof(NotifyAction1Msg)},
+  { 100, -1, sizeof(NotifyQuitMsg)},
+  { 106, -1, sizeof(ErrorMsg)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -243,7 +241,7 @@ void protobuf_AssignDescriptors() {
   ::google::protobuf::MessageFactory* factory = NULL;
   AssignDescriptors(
       "protocol.proto", schemas, file_default_instances, TableStruct::offsets, factory,
-      file_level_metadata, file_level_enum_descriptors, NULL);
+      file_level_metadata, NULL, NULL);
 }
 
 void protobuf_AssignDescriptorsOnce() {
@@ -317,38 +315,38 @@ void TableStruct::InitDefaultsImpl() {
   _NotifyAction1Msg_default_instance_.DefaultConstruct();
   _NotifyQuitMsg_default_instance_.DefaultConstruct();
   _ErrorMsg_default_instance_.DefaultConstruct();
-  _Message_default_instance_.req_login_ = const_cast< ::protocol::ReqLogin*>(
-      ::protocol::ReqLogin::internal_default_instance());
-  _Message_default_instance_.req_create_ = const_cast< ::protocol::ReqCreate*>(
-      ::protocol::ReqCreate::internal_default_instance());
-  _Message_default_instance_.req_join_ = const_cast< ::protocol::ReqJoin*>(
-      ::protocol::ReqJoin::internal_default_instance());
-  _Message_default_instance_.req_action1_ = const_cast< ::protocol::ReqAction1*>(
-      ::protocol::ReqAction1::internal_default_instance());
-  _Message_default_instance_.req_quit_ = const_cast< ::protocol::ReqQuit*>(
-      ::protocol::ReqQuit::internal_default_instance());
-  _Message_default_instance_.req_room_list_ = const_cast< ::protocol::ReqRoomList*>(
-      ::protocol::ReqRoomList::internal_default_instance());
-  _Message_default_instance_.res_login_ = const_cast< ::protocol::ResLogin*>(
-      ::protocol::ResLogin::internal_default_instance());
-  _Message_default_instance_.res_create_ = const_cast< ::protocol::ResCreate*>(
-      ::protocol::ResCreate::internal_default_instance());
-  _Message_default_instance_.res_join_ = const_cast< ::protocol::ResJoin*>(
-      ::protocol::ResJoin::internal_default_instance());
-  _Message_default_instance_.res_action1_ = const_cast< ::protocol::ResAction1*>(
-      ::protocol::ResAction1::internal_default_instance());
-  _Message_default_instance_.res_quit_ = const_cast< ::protocol::ResQuit*>(
-      ::protocol::ResQuit::internal_default_instance());
-  _Message_default_instance_.res_room_list_ = const_cast< ::protocol::ResRoomList*>(
-      ::protocol::ResRoomList::internal_default_instance());
-  _Message_default_instance_.notify_join_ = const_cast< ::protocol::NotifyJoinMsg*>(
-      ::protocol::NotifyJoinMsg::internal_default_instance());
-  _Message_default_instance_.notify_action1_ = const_cast< ::protocol::NotifyAction1Msg*>(
-      ::protocol::NotifyAction1Msg::internal_default_instance());
-  _Message_default_instance_.notify_quit_ = const_cast< ::protocol::NotifyQuitMsg*>(
-      ::protocol::NotifyQuitMsg::internal_default_instance());
-  _Message_default_instance_.error_ = const_cast< ::protocol::ErrorMsg*>(
-      ::protocol::ErrorMsg::internal_default_instance());
+  _Message_default_instance_.req_login_ = const_cast< ::gs_protocol::ReqLogin*>(
+      ::gs_protocol::ReqLogin::internal_default_instance());
+  _Message_default_instance_.req_create_ = const_cast< ::gs_protocol::ReqCreate*>(
+      ::gs_protocol::ReqCreate::internal_default_instance());
+  _Message_default_instance_.req_join_ = const_cast< ::gs_protocol::ReqJoin*>(
+      ::gs_protocol::ReqJoin::internal_default_instance());
+  _Message_default_instance_.req_action1_ = const_cast< ::gs_protocol::ReqAction1*>(
+      ::gs_protocol::ReqAction1::internal_default_instance());
+  _Message_default_instance_.req_quit_ = const_cast< ::gs_protocol::ReqQuit*>(
+      ::gs_protocol::ReqQuit::internal_default_instance());
+  _Message_default_instance_.req_room_list_ = const_cast< ::gs_protocol::ReqRoomList*>(
+      ::gs_protocol::ReqRoomList::internal_default_instance());
+  _Message_default_instance_.res_login_ = const_cast< ::gs_protocol::ResLogin*>(
+      ::gs_protocol::ResLogin::internal_default_instance());
+  _Message_default_instance_.res_create_ = const_cast< ::gs_protocol::ResCreate*>(
+      ::gs_protocol::ResCreate::internal_default_instance());
+  _Message_default_instance_.res_join_ = const_cast< ::gs_protocol::ResJoin*>(
+      ::gs_protocol::ResJoin::internal_default_instance());
+  _Message_default_instance_.res_action1_ = const_cast< ::gs_protocol::ResAction1*>(
+      ::gs_protocol::ResAction1::internal_default_instance());
+  _Message_default_instance_.res_quit_ = const_cast< ::gs_protocol::ResQuit*>(
+      ::gs_protocol::ResQuit::internal_default_instance());
+  _Message_default_instance_.res_room_list_ = const_cast< ::gs_protocol::ResRoomList*>(
+      ::gs_protocol::ResRoomList::internal_default_instance());
+  _Message_default_instance_.notify_join_ = const_cast< ::gs_protocol::NotifyJoinMsg*>(
+      ::gs_protocol::NotifyJoinMsg::internal_default_instance());
+  _Message_default_instance_.notify_action1_ = const_cast< ::gs_protocol::NotifyAction1Msg*>(
+      ::gs_protocol::NotifyAction1Msg::internal_default_instance());
+  _Message_default_instance_.notify_quit_ = const_cast< ::gs_protocol::NotifyQuitMsg*>(
+      ::gs_protocol::NotifyQuitMsg::internal_default_instance());
+  _Message_default_instance_.error_ = const_cast< ::gs_protocol::ErrorMsg*>(
+      ::gs_protocol::ErrorMsg::internal_default_instance());
 }
 
 void InitDefaults() {
@@ -358,50 +356,46 @@ void InitDefaults() {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
-      "\n\016protocol.proto\022\010protocol\"\354\005\n\007Message\022\034"
-      "\n\004type\030\001 \001(\0162\016.protocol.Type\022\'\n\treq_logi"
-      "n\030\002 \001(\0132\022.protocol.ReqLoginH\000\022)\n\nreq_cre"
-      "ate\030\003 \001(\0132\023.protocol.ReqCreateH\000\022%\n\010req_"
-      "join\030\004 \001(\0132\021.protocol.ReqJoinH\000\022+\n\013req_a"
-      "ction1\030\005 \001(\0132\024.protocol.ReqAction1H\000\022%\n\010"
-      "req_quit\030\006 \001(\0132\021.protocol.ReqQuitH\000\022.\n\rr"
-      "eq_room_list\030\007 \001(\0132\025.protocol.ReqRoomLis"
-      "tH\000\022\'\n\tres_login\030\010 \001(\0132\022.protocol.ResLog"
-      "inH\000\022)\n\nres_create\030\t \001(\0132\023.protocol.ResC"
-      "reateH\000\022%\n\010res_join\030\n \001(\0132\021.protocol.Res"
-      "JoinH\000\022+\n\013res_action1\030\013 \001(\0132\024.protocol.R"
-      "esAction1H\000\022%\n\010res_quit\030\014 \001(\0132\021.protocol"
-      ".ResQuitH\000\022.\n\rres_room_list\030\r \001(\0132\025.prot"
-      "ocol.ResRoomListH\000\022.\n\013notify_join\030\016 \001(\0132"
-      "\027.protocol.NotifyJoinMsgH\000\0224\n\016notify_act"
-      "ion1\030\017 \001(\0132\032.protocol.NotifyAction1MsgH\000"
-      "\022.\n\013notify_quit\030\020 \001(\0132\027.protocol.NotifyQ"
-      "uitMsgH\000\022$\n\005error\030\350\007 \001(\0132\022.protocol.Erro"
-      "rMsgH\000B\t\n\007payload\"\032\n\010ReqLogin\022\016\n\006userID\030"
-      "\001 \001(\003\"\033\n\tReqCreate\022\016\n\006userID\030\001 \001(\003\")\n\007Re"
-      "qJoin\022\016\n\006userID\030\001 \001(\003\022\016\n\006roomID\030\002 \001(\003\"\034\n"
-      "\nReqAction1\022\016\n\006userID\030\001 \001(\003\"\031\n\007ReqQuit\022\016"
-      "\n\006userID\030\001 \001(\003\"\035\n\013ReqRoomList\022\016\n\006userID\030"
-      "\001 \001(\003\"*\n\010ResLogin\022\016\n\006userID\030\001 \001(\003\022\016\n\006res"
-      "ult\030\002 \001(\005\"+\n\tResCreate\022\016\n\006userID\030\001 \001(\003\022\016"
-      "\n\006roomID\030\002 \001(\003\":\n\007ResJoin\022\016\n\006userID\030\001 \001("
-      "\003\022\016\n\006roomID\030\002 \001(\003\022\017\n\007members\030\003 \001(\003\",\n\nRe"
-      "sAction1\022\016\n\006userID\030\001 \001(\003\022\016\n\006result\030\002 \001(\005"
-      "\",\n\007ResQuit\022\016\n\006userID\030\001 \001(\003\022\021\n\tisSuccess"
-      "\030\002 \001(\005\".\n\013ResRoomList\022\016\n\006userID\030\001 \001(\003\022\017\n"
-      "\007roomIDs\030\002 \001(\003\"/\n\rNotifyJoinMsg\022\016\n\006userI"
-      "D\030\001 \001(\003\022\016\n\006roomID\030\002 \001(\003\"\"\n\020NotifyAction1"
-      "Msg\022\016\n\006userID\030\001 \001(\003\"/\n\rNotifyQuitMsg\022\016\n\006"
-      "userID\030\001 \001(\003\022\016\n\006roomID\030\002 \001(\003\"/\n\010ErrorMsg"
-      "\022\017\n\007errCode\030\001 \001(\005\022\022\n\nerrMessage\030\002 \001(\t*\241\001"
-      "\n\004Type\022\r\n\tUndefined\020\000\022\t\n\005Login\020\001\022\n\n\006Crea"
-      "te\020\002\022\010\n\004Join\020\003\022\022\n\016DefinedAction1\020\004\022\010\n\004Qu"
-      "it\020\005\022\014\n\010RoomList\020\006\022\016\n\nNotifyJoin\020d\022\021\n\rNo"
-      "tifyAction1\020e\022\016\n\nNotifyQuit\020f\022\n\n\005Error\020\350"
-      "\007*\030\n\tErrorType\022\013\n\007Unknown\020\000b\006proto3"
+      "\n\016protocol.proto\022\013gs_protocol\"\376\005\n\007Messag"
+      "e\022*\n\treq_login\030\001 \001(\0132\025.gs_protocol.ReqLo"
+      "ginH\000\022,\n\nreq_create\030\002 \001(\0132\026.gs_protocol."
+      "ReqCreateH\000\022(\n\010req_join\030\003 \001(\0132\024.gs_proto"
+      "col.ReqJoinH\000\022.\n\013req_action1\030\004 \001(\0132\027.gs_"
+      "protocol.ReqAction1H\000\022(\n\010req_quit\030\005 \001(\0132"
+      "\024.gs_protocol.ReqQuitH\000\0221\n\rreq_room_list"
+      "\030\006 \001(\0132\030.gs_protocol.ReqRoomListH\000\022*\n\tre"
+      "s_login\030\007 \001(\0132\025.gs_protocol.ResLoginH\000\022,"
+      "\n\nres_create\030\010 \001(\0132\026.gs_protocol.ResCrea"
+      "teH\000\022(\n\010res_join\030\t \001(\0132\024.gs_protocol.Res"
+      "JoinH\000\022.\n\013res_action1\030\n \001(\0132\027.gs_protoco"
+      "l.ResAction1H\000\022(\n\010res_quit\030\013 \001(\0132\024.gs_pr"
+      "otocol.ResQuitH\000\0221\n\rres_room_list\030\014 \001(\0132"
+      "\030.gs_protocol.ResRoomListH\000\0221\n\013notify_jo"
+      "in\030\r \001(\0132\032.gs_protocol.NotifyJoinMsgH\000\0227"
+      "\n\016notify_action1\030\016 \001(\0132\035.gs_protocol.Not"
+      "ifyAction1MsgH\000\0221\n\013notify_quit\030\017 \001(\0132\032.g"
+      "s_protocol.NotifyQuitMsgH\000\022\'\n\005error\030\350\007 \001"
+      "(\0132\025.gs_protocol.ErrorMsgH\000B\t\n\007payload\"\032"
+      "\n\010ReqLogin\022\016\n\006userID\030\001 \001(\003\"\033\n\tReqCreate\022"
+      "\016\n\006userID\030\001 \001(\003\")\n\007ReqJoin\022\016\n\006userID\030\001 \001"
+      "(\003\022\016\n\006roomID\030\002 \001(\003\"\034\n\nReqAction1\022\016\n\006user"
+      "ID\030\001 \001(\003\"\031\n\007ReqQuit\022\016\n\006userID\030\001 \001(\003\"\035\n\013R"
+      "eqRoomList\022\016\n\006userID\030\001 \001(\003\"*\n\010ResLogin\022\016"
+      "\n\006userID\030\001 \001(\003\022\016\n\006result\030\002 \001(\005\"+\n\tResCre"
+      "ate\022\016\n\006userID\030\001 \001(\003\022\016\n\006roomID\030\002 \001(\003\":\n\007R"
+      "esJoin\022\016\n\006userID\030\001 \001(\003\022\016\n\006roomID\030\002 \001(\003\022\017"
+      "\n\007members\030\003 \003(\003\",\n\nResAction1\022\016\n\006userID\030"
+      "\001 \001(\003\022\016\n\006result\030\002 \001(\005\",\n\007ResQuit\022\016\n\006user"
+      "ID\030\001 \001(\003\022\021\n\tisSuccess\030\002 \001(\005\".\n\013ResRoomLi"
+      "st\022\016\n\006userID\030\001 \001(\003\022\017\n\007roomIDs\030\002 \003(\003\"/\n\rN"
+      "otifyJoinMsg\022\016\n\006userID\030\001 \001(\003\022\016\n\006roomID\030\002"
+      " \001(\003\"\"\n\020NotifyAction1Msg\022\016\n\006userID\030\001 \001(\003"
+      "\"/\n\rNotifyQuitMsg\022\016\n\006userID\030\001 \001(\003\022\016\n\006roo"
+      "mID\030\002 \001(\003\"/\n\010ErrorMsg\022\017\n\007errCode\030\001 \001(\005\022\022"
+      "\n\nerrMessage\030\002 \001(\tb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1635);
+      descriptor, 1466);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "protocol.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -420,47 +414,10 @@ struct StaticDescriptorInitializer {
 
 }  // namespace protobuf_protocol_2eproto
 
-const ::google::protobuf::EnumDescriptor* Type_descriptor() {
-  protobuf_protocol_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_protocol_2eproto::file_level_enum_descriptors[0];
-}
-bool Type_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-    case 100:
-    case 101:
-    case 102:
-    case 1000:
-      return true;
-    default:
-      return false;
-  }
-}
-
-const ::google::protobuf::EnumDescriptor* ErrorType_descriptor() {
-  protobuf_protocol_2eproto::protobuf_AssignDescriptorsOnce();
-  return protobuf_protocol_2eproto::file_level_enum_descriptors[1];
-}
-bool ErrorType_IsValid(int value) {
-  switch (value) {
-    case 0:
-      return true;
-    default:
-      return false;
-  }
-}
-
 
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Message::kTypeFieldNumber;
 const int Message::kReqLoginFieldNumber;
 const int Message::kReqCreateFieldNumber;
 const int Message::kReqJoinFieldNumber;
@@ -485,95 +442,93 @@ Message::Message()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.Message)
+  // @@protoc_insertion_point(constructor:gs_protocol.Message)
 }
 Message::Message(const Message& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  type_ = from.type_;
   clear_has_payload();
   switch (from.payload_case()) {
     case kReqLogin: {
-      mutable_req_login()->::protocol::ReqLogin::MergeFrom(from.req_login());
+      mutable_req_login()->::gs_protocol::ReqLogin::MergeFrom(from.req_login());
       break;
     }
     case kReqCreate: {
-      mutable_req_create()->::protocol::ReqCreate::MergeFrom(from.req_create());
+      mutable_req_create()->::gs_protocol::ReqCreate::MergeFrom(from.req_create());
       break;
     }
     case kReqJoin: {
-      mutable_req_join()->::protocol::ReqJoin::MergeFrom(from.req_join());
+      mutable_req_join()->::gs_protocol::ReqJoin::MergeFrom(from.req_join());
       break;
     }
     case kReqAction1: {
-      mutable_req_action1()->::protocol::ReqAction1::MergeFrom(from.req_action1());
+      mutable_req_action1()->::gs_protocol::ReqAction1::MergeFrom(from.req_action1());
       break;
     }
     case kReqQuit: {
-      mutable_req_quit()->::protocol::ReqQuit::MergeFrom(from.req_quit());
+      mutable_req_quit()->::gs_protocol::ReqQuit::MergeFrom(from.req_quit());
       break;
     }
     case kReqRoomList: {
-      mutable_req_room_list()->::protocol::ReqRoomList::MergeFrom(from.req_room_list());
+      mutable_req_room_list()->::gs_protocol::ReqRoomList::MergeFrom(from.req_room_list());
       break;
     }
     case kResLogin: {
-      mutable_res_login()->::protocol::ResLogin::MergeFrom(from.res_login());
+      mutable_res_login()->::gs_protocol::ResLogin::MergeFrom(from.res_login());
       break;
     }
     case kResCreate: {
-      mutable_res_create()->::protocol::ResCreate::MergeFrom(from.res_create());
+      mutable_res_create()->::gs_protocol::ResCreate::MergeFrom(from.res_create());
       break;
     }
     case kResJoin: {
-      mutable_res_join()->::protocol::ResJoin::MergeFrom(from.res_join());
+      mutable_res_join()->::gs_protocol::ResJoin::MergeFrom(from.res_join());
       break;
     }
     case kResAction1: {
-      mutable_res_action1()->::protocol::ResAction1::MergeFrom(from.res_action1());
+      mutable_res_action1()->::gs_protocol::ResAction1::MergeFrom(from.res_action1());
       break;
     }
     case kResQuit: {
-      mutable_res_quit()->::protocol::ResQuit::MergeFrom(from.res_quit());
+      mutable_res_quit()->::gs_protocol::ResQuit::MergeFrom(from.res_quit());
       break;
     }
     case kResRoomList: {
-      mutable_res_room_list()->::protocol::ResRoomList::MergeFrom(from.res_room_list());
+      mutable_res_room_list()->::gs_protocol::ResRoomList::MergeFrom(from.res_room_list());
       break;
     }
     case kNotifyJoin: {
-      mutable_notify_join()->::protocol::NotifyJoinMsg::MergeFrom(from.notify_join());
+      mutable_notify_join()->::gs_protocol::NotifyJoinMsg::MergeFrom(from.notify_join());
       break;
     }
     case kNotifyAction1: {
-      mutable_notify_action1()->::protocol::NotifyAction1Msg::MergeFrom(from.notify_action1());
+      mutable_notify_action1()->::gs_protocol::NotifyAction1Msg::MergeFrom(from.notify_action1());
       break;
     }
     case kNotifyQuit: {
-      mutable_notify_quit()->::protocol::NotifyQuitMsg::MergeFrom(from.notify_quit());
+      mutable_notify_quit()->::gs_protocol::NotifyQuitMsg::MergeFrom(from.notify_quit());
       break;
     }
     case kError: {
-      mutable_error()->::protocol::ErrorMsg::MergeFrom(from.error());
+      mutable_error()->::gs_protocol::ErrorMsg::MergeFrom(from.error());
       break;
     }
     case PAYLOAD_NOT_SET: {
       break;
     }
   }
-  // @@protoc_insertion_point(copy_constructor:protocol.Message)
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.Message)
 }
 
 void Message::SharedCtor() {
-  type_ = 0;
   clear_has_payload();
   _cached_size_ = 0;
 }
 
 Message::~Message() {
-  // @@protoc_insertion_point(destructor:protocol.Message)
+  // @@protoc_insertion_point(destructor:gs_protocol.Message)
   SharedDtor();
 }
 
@@ -607,7 +562,7 @@ Message* Message::New(::google::protobuf::Arena* arena) const {
 }
 
 void Message::clear_payload() {
-// @@protoc_insertion_point(one_of_clear_start:protocol.Message)
+// @@protoc_insertion_point(one_of_clear_start:gs_protocol.Message)
   switch (payload_case()) {
     case kReqLogin: {
       delete payload_.req_login_;
@@ -682,8 +637,7 @@ void Message::clear_payload() {
 
 
 void Message::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.Message)
-  type_ = 0;
+// @@protoc_insertion_point(message_clear_start:gs_protocol.Message)
   clear_payload();
 }
 
@@ -691,29 +645,15 @@ bool Message::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.Message)
+  // @@protoc_insertion_point(parse_start:gs_protocol.Message)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .protocol.Type type = 1;
+      // .gs_protocol.ReqLogin req_login = 1;
       case 1: {
-        if (tag == 8u) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_type(static_cast< ::protocol::Type >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .protocol.ReqLogin req_login = 2;
-      case 2: {
-        if (tag == 18u) {
+        if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_req_login()));
         } else {
@@ -722,9 +662,9 @@ bool Message::MergePartialFromCodedStream(
         break;
       }
 
-      // .protocol.ReqCreate req_create = 3;
-      case 3: {
-        if (tag == 26u) {
+      // .gs_protocol.ReqCreate req_create = 2;
+      case 2: {
+        if (tag == 18u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_req_create()));
         } else {
@@ -733,9 +673,9 @@ bool Message::MergePartialFromCodedStream(
         break;
       }
 
-      // .protocol.ReqJoin req_join = 4;
-      case 4: {
-        if (tag == 34u) {
+      // .gs_protocol.ReqJoin req_join = 3;
+      case 3: {
+        if (tag == 26u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_req_join()));
         } else {
@@ -744,9 +684,9 @@ bool Message::MergePartialFromCodedStream(
         break;
       }
 
-      // .protocol.ReqAction1 req_action1 = 5;
-      case 5: {
-        if (tag == 42u) {
+      // .gs_protocol.ReqAction1 req_action1 = 4;
+      case 4: {
+        if (tag == 34u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_req_action1()));
         } else {
@@ -755,9 +695,9 @@ bool Message::MergePartialFromCodedStream(
         break;
       }
 
-      // .protocol.ReqQuit req_quit = 6;
-      case 6: {
-        if (tag == 50u) {
+      // .gs_protocol.ReqQuit req_quit = 5;
+      case 5: {
+        if (tag == 42u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_req_quit()));
         } else {
@@ -766,9 +706,9 @@ bool Message::MergePartialFromCodedStream(
         break;
       }
 
-      // .protocol.ReqRoomList req_room_list = 7;
-      case 7: {
-        if (tag == 58u) {
+      // .gs_protocol.ReqRoomList req_room_list = 6;
+      case 6: {
+        if (tag == 50u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_req_room_list()));
         } else {
@@ -777,9 +717,9 @@ bool Message::MergePartialFromCodedStream(
         break;
       }
 
-      // .protocol.ResLogin res_login = 8;
-      case 8: {
-        if (tag == 66u) {
+      // .gs_protocol.ResLogin res_login = 7;
+      case 7: {
+        if (tag == 58u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_res_login()));
         } else {
@@ -788,9 +728,9 @@ bool Message::MergePartialFromCodedStream(
         break;
       }
 
-      // .protocol.ResCreate res_create = 9;
-      case 9: {
-        if (tag == 74u) {
+      // .gs_protocol.ResCreate res_create = 8;
+      case 8: {
+        if (tag == 66u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_res_create()));
         } else {
@@ -799,9 +739,9 @@ bool Message::MergePartialFromCodedStream(
         break;
       }
 
-      // .protocol.ResJoin res_join = 10;
-      case 10: {
-        if (tag == 82u) {
+      // .gs_protocol.ResJoin res_join = 9;
+      case 9: {
+        if (tag == 74u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_res_join()));
         } else {
@@ -810,9 +750,9 @@ bool Message::MergePartialFromCodedStream(
         break;
       }
 
-      // .protocol.ResAction1 res_action1 = 11;
-      case 11: {
-        if (tag == 90u) {
+      // .gs_protocol.ResAction1 res_action1 = 10;
+      case 10: {
+        if (tag == 82u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_res_action1()));
         } else {
@@ -821,9 +761,9 @@ bool Message::MergePartialFromCodedStream(
         break;
       }
 
-      // .protocol.ResQuit res_quit = 12;
-      case 12: {
-        if (tag == 98u) {
+      // .gs_protocol.ResQuit res_quit = 11;
+      case 11: {
+        if (tag == 90u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_res_quit()));
         } else {
@@ -832,9 +772,9 @@ bool Message::MergePartialFromCodedStream(
         break;
       }
 
-      // .protocol.ResRoomList res_room_list = 13;
-      case 13: {
-        if (tag == 106u) {
+      // .gs_protocol.ResRoomList res_room_list = 12;
+      case 12: {
+        if (tag == 98u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_res_room_list()));
         } else {
@@ -843,9 +783,9 @@ bool Message::MergePartialFromCodedStream(
         break;
       }
 
-      // .protocol.NotifyJoinMsg notify_join = 14;
-      case 14: {
-        if (tag == 114u) {
+      // .gs_protocol.NotifyJoinMsg notify_join = 13;
+      case 13: {
+        if (tag == 106u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_notify_join()));
         } else {
@@ -854,9 +794,9 @@ bool Message::MergePartialFromCodedStream(
         break;
       }
 
-      // .protocol.NotifyAction1Msg notify_action1 = 15;
-      case 15: {
-        if (tag == 122u) {
+      // .gs_protocol.NotifyAction1Msg notify_action1 = 14;
+      case 14: {
+        if (tag == 114u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_notify_action1()));
         } else {
@@ -865,9 +805,9 @@ bool Message::MergePartialFromCodedStream(
         break;
       }
 
-      // .protocol.NotifyQuitMsg notify_quit = 16;
-      case 16: {
-        if (tag == 130u) {
+      // .gs_protocol.NotifyQuitMsg notify_quit = 15;
+      case 15: {
+        if (tag == 122u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_notify_quit()));
         } else {
@@ -876,7 +816,7 @@ bool Message::MergePartialFromCodedStream(
         break;
       }
 
-      // .protocol.ErrorMsg error = 1000;
+      // .gs_protocol.ErrorMsg error = 1000;
       case 1000: {
         if (tag == 8002u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -900,365 +840,347 @@ bool Message::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.Message)
+  // @@protoc_insertion_point(parse_success:gs_protocol.Message)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.Message)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.Message)
   return false;
 #undef DO_
 }
 
 void Message::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.Message)
-  // .protocol.Type type = 1;
-  if (this->type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      1, this->type(), output);
-  }
-
-  // .protocol.ReqLogin req_login = 2;
+  // @@protoc_insertion_point(serialize_start:gs_protocol.Message)
+  // .gs_protocol.ReqLogin req_login = 1;
   if (has_req_login()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *payload_.req_login_, output);
+      1, *payload_.req_login_, output);
   }
 
-  // .protocol.ReqCreate req_create = 3;
+  // .gs_protocol.ReqCreate req_create = 2;
   if (has_req_create()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, *payload_.req_create_, output);
+      2, *payload_.req_create_, output);
   }
 
-  // .protocol.ReqJoin req_join = 4;
+  // .gs_protocol.ReqJoin req_join = 3;
   if (has_req_join()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, *payload_.req_join_, output);
+      3, *payload_.req_join_, output);
   }
 
-  // .protocol.ReqAction1 req_action1 = 5;
+  // .gs_protocol.ReqAction1 req_action1 = 4;
   if (has_req_action1()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, *payload_.req_action1_, output);
+      4, *payload_.req_action1_, output);
   }
 
-  // .protocol.ReqQuit req_quit = 6;
+  // .gs_protocol.ReqQuit req_quit = 5;
   if (has_req_quit()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, *payload_.req_quit_, output);
+      5, *payload_.req_quit_, output);
   }
 
-  // .protocol.ReqRoomList req_room_list = 7;
+  // .gs_protocol.ReqRoomList req_room_list = 6;
   if (has_req_room_list()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, *payload_.req_room_list_, output);
+      6, *payload_.req_room_list_, output);
   }
 
-  // .protocol.ResLogin res_login = 8;
+  // .gs_protocol.ResLogin res_login = 7;
   if (has_res_login()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      8, *payload_.res_login_, output);
+      7, *payload_.res_login_, output);
   }
 
-  // .protocol.ResCreate res_create = 9;
+  // .gs_protocol.ResCreate res_create = 8;
   if (has_res_create()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      9, *payload_.res_create_, output);
+      8, *payload_.res_create_, output);
   }
 
-  // .protocol.ResJoin res_join = 10;
+  // .gs_protocol.ResJoin res_join = 9;
   if (has_res_join()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      10, *payload_.res_join_, output);
+      9, *payload_.res_join_, output);
   }
 
-  // .protocol.ResAction1 res_action1 = 11;
+  // .gs_protocol.ResAction1 res_action1 = 10;
   if (has_res_action1()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      11, *payload_.res_action1_, output);
+      10, *payload_.res_action1_, output);
   }
 
-  // .protocol.ResQuit res_quit = 12;
+  // .gs_protocol.ResQuit res_quit = 11;
   if (has_res_quit()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      12, *payload_.res_quit_, output);
+      11, *payload_.res_quit_, output);
   }
 
-  // .protocol.ResRoomList res_room_list = 13;
+  // .gs_protocol.ResRoomList res_room_list = 12;
   if (has_res_room_list()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      13, *payload_.res_room_list_, output);
+      12, *payload_.res_room_list_, output);
   }
 
-  // .protocol.NotifyJoinMsg notify_join = 14;
+  // .gs_protocol.NotifyJoinMsg notify_join = 13;
   if (has_notify_join()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      14, *payload_.notify_join_, output);
+      13, *payload_.notify_join_, output);
   }
 
-  // .protocol.NotifyAction1Msg notify_action1 = 15;
+  // .gs_protocol.NotifyAction1Msg notify_action1 = 14;
   if (has_notify_action1()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      15, *payload_.notify_action1_, output);
+      14, *payload_.notify_action1_, output);
   }
 
-  // .protocol.NotifyQuitMsg notify_quit = 16;
+  // .gs_protocol.NotifyQuitMsg notify_quit = 15;
   if (has_notify_quit()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      16, *payload_.notify_quit_, output);
+      15, *payload_.notify_quit_, output);
   }
 
-  // .protocol.ErrorMsg error = 1000;
+  // .gs_protocol.ErrorMsg error = 1000;
   if (has_error()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1000, *payload_.error_, output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.Message)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.Message)
 }
 
 ::google::protobuf::uint8* Message::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.Message)
-  // .protocol.Type type = 1;
-  if (this->type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      1, this->type(), target);
-  }
-
-  // .protocol.ReqLogin req_login = 2;
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.Message)
+  // .gs_protocol.ReqLogin req_login = 1;
   if (has_req_login()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        2, *payload_.req_login_, false, target);
+        1, *payload_.req_login_, false, target);
   }
 
-  // .protocol.ReqCreate req_create = 3;
+  // .gs_protocol.ReqCreate req_create = 2;
   if (has_req_create()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        3, *payload_.req_create_, false, target);
+        2, *payload_.req_create_, false, target);
   }
 
-  // .protocol.ReqJoin req_join = 4;
+  // .gs_protocol.ReqJoin req_join = 3;
   if (has_req_join()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        4, *payload_.req_join_, false, target);
+        3, *payload_.req_join_, false, target);
   }
 
-  // .protocol.ReqAction1 req_action1 = 5;
+  // .gs_protocol.ReqAction1 req_action1 = 4;
   if (has_req_action1()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        5, *payload_.req_action1_, false, target);
+        4, *payload_.req_action1_, false, target);
   }
 
-  // .protocol.ReqQuit req_quit = 6;
+  // .gs_protocol.ReqQuit req_quit = 5;
   if (has_req_quit()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        6, *payload_.req_quit_, false, target);
+        5, *payload_.req_quit_, false, target);
   }
 
-  // .protocol.ReqRoomList req_room_list = 7;
+  // .gs_protocol.ReqRoomList req_room_list = 6;
   if (has_req_room_list()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        7, *payload_.req_room_list_, false, target);
+        6, *payload_.req_room_list_, false, target);
   }
 
-  // .protocol.ResLogin res_login = 8;
+  // .gs_protocol.ResLogin res_login = 7;
   if (has_res_login()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        8, *payload_.res_login_, false, target);
+        7, *payload_.res_login_, false, target);
   }
 
-  // .protocol.ResCreate res_create = 9;
+  // .gs_protocol.ResCreate res_create = 8;
   if (has_res_create()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        9, *payload_.res_create_, false, target);
+        8, *payload_.res_create_, false, target);
   }
 
-  // .protocol.ResJoin res_join = 10;
+  // .gs_protocol.ResJoin res_join = 9;
   if (has_res_join()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        10, *payload_.res_join_, false, target);
+        9, *payload_.res_join_, false, target);
   }
 
-  // .protocol.ResAction1 res_action1 = 11;
+  // .gs_protocol.ResAction1 res_action1 = 10;
   if (has_res_action1()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        11, *payload_.res_action1_, false, target);
+        10, *payload_.res_action1_, false, target);
   }
 
-  // .protocol.ResQuit res_quit = 12;
+  // .gs_protocol.ResQuit res_quit = 11;
   if (has_res_quit()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        12, *payload_.res_quit_, false, target);
+        11, *payload_.res_quit_, false, target);
   }
 
-  // .protocol.ResRoomList res_room_list = 13;
+  // .gs_protocol.ResRoomList res_room_list = 12;
   if (has_res_room_list()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        13, *payload_.res_room_list_, false, target);
+        12, *payload_.res_room_list_, false, target);
   }
 
-  // .protocol.NotifyJoinMsg notify_join = 14;
+  // .gs_protocol.NotifyJoinMsg notify_join = 13;
   if (has_notify_join()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        14, *payload_.notify_join_, false, target);
+        13, *payload_.notify_join_, false, target);
   }
 
-  // .protocol.NotifyAction1Msg notify_action1 = 15;
+  // .gs_protocol.NotifyAction1Msg notify_action1 = 14;
   if (has_notify_action1()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        15, *payload_.notify_action1_, false, target);
+        14, *payload_.notify_action1_, false, target);
   }
 
-  // .protocol.NotifyQuitMsg notify_quit = 16;
+  // .gs_protocol.NotifyQuitMsg notify_quit = 15;
   if (has_notify_quit()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        16, *payload_.notify_quit_, false, target);
+        15, *payload_.notify_quit_, false, target);
   }
 
-  // .protocol.ErrorMsg error = 1000;
+  // .gs_protocol.ErrorMsg error = 1000;
   if (has_error()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
         1000, *payload_.error_, false, target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.Message)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.Message)
   return target;
 }
 
 size_t Message::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.Message)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.Message)
   size_t total_size = 0;
 
-  // .protocol.Type type = 1;
-  if (this->type() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->type());
-  }
-
   switch (payload_case()) {
-    // .protocol.ReqLogin req_login = 2;
+    // .gs_protocol.ReqLogin req_login = 1;
     case kReqLogin: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *payload_.req_login_);
       break;
     }
-    // .protocol.ReqCreate req_create = 3;
+    // .gs_protocol.ReqCreate req_create = 2;
     case kReqCreate: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *payload_.req_create_);
       break;
     }
-    // .protocol.ReqJoin req_join = 4;
+    // .gs_protocol.ReqJoin req_join = 3;
     case kReqJoin: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *payload_.req_join_);
       break;
     }
-    // .protocol.ReqAction1 req_action1 = 5;
+    // .gs_protocol.ReqAction1 req_action1 = 4;
     case kReqAction1: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *payload_.req_action1_);
       break;
     }
-    // .protocol.ReqQuit req_quit = 6;
+    // .gs_protocol.ReqQuit req_quit = 5;
     case kReqQuit: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *payload_.req_quit_);
       break;
     }
-    // .protocol.ReqRoomList req_room_list = 7;
+    // .gs_protocol.ReqRoomList req_room_list = 6;
     case kReqRoomList: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *payload_.req_room_list_);
       break;
     }
-    // .protocol.ResLogin res_login = 8;
+    // .gs_protocol.ResLogin res_login = 7;
     case kResLogin: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *payload_.res_login_);
       break;
     }
-    // .protocol.ResCreate res_create = 9;
+    // .gs_protocol.ResCreate res_create = 8;
     case kResCreate: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *payload_.res_create_);
       break;
     }
-    // .protocol.ResJoin res_join = 10;
+    // .gs_protocol.ResJoin res_join = 9;
     case kResJoin: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *payload_.res_join_);
       break;
     }
-    // .protocol.ResAction1 res_action1 = 11;
+    // .gs_protocol.ResAction1 res_action1 = 10;
     case kResAction1: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *payload_.res_action1_);
       break;
     }
-    // .protocol.ResQuit res_quit = 12;
+    // .gs_protocol.ResQuit res_quit = 11;
     case kResQuit: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *payload_.res_quit_);
       break;
     }
-    // .protocol.ResRoomList res_room_list = 13;
+    // .gs_protocol.ResRoomList res_room_list = 12;
     case kResRoomList: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *payload_.res_room_list_);
       break;
     }
-    // .protocol.NotifyJoinMsg notify_join = 14;
+    // .gs_protocol.NotifyJoinMsg notify_join = 13;
     case kNotifyJoin: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *payload_.notify_join_);
       break;
     }
-    // .protocol.NotifyAction1Msg notify_action1 = 15;
+    // .gs_protocol.NotifyAction1Msg notify_action1 = 14;
     case kNotifyAction1: {
       total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *payload_.notify_action1_);
       break;
     }
-    // .protocol.NotifyQuitMsg notify_quit = 16;
+    // .gs_protocol.NotifyQuitMsg notify_quit = 15;
     case kNotifyQuit: {
-      total_size += 2 +
+      total_size += 1 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
           *payload_.notify_quit_);
       break;
     }
-    // .protocol.ErrorMsg error = 1000;
+    // .gs_protocol.ErrorMsg error = 1000;
     case kError: {
       total_size += 2 +
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
@@ -1277,90 +1199,87 @@ size_t Message::ByteSizeLong() const {
 }
 
 void Message::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.Message)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.Message)
   GOOGLE_DCHECK_NE(&from, this);
   const Message* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const Message>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.Message)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.Message)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.Message)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.Message)
     MergeFrom(*source);
   }
 }
 
 void Message::MergeFrom(const Message& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.Message)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.Message)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.type() != 0) {
-    set_type(from.type());
-  }
   switch (from.payload_case()) {
     case kReqLogin: {
-      mutable_req_login()->::protocol::ReqLogin::MergeFrom(from.req_login());
+      mutable_req_login()->::gs_protocol::ReqLogin::MergeFrom(from.req_login());
       break;
     }
     case kReqCreate: {
-      mutable_req_create()->::protocol::ReqCreate::MergeFrom(from.req_create());
+      mutable_req_create()->::gs_protocol::ReqCreate::MergeFrom(from.req_create());
       break;
     }
     case kReqJoin: {
-      mutable_req_join()->::protocol::ReqJoin::MergeFrom(from.req_join());
+      mutable_req_join()->::gs_protocol::ReqJoin::MergeFrom(from.req_join());
       break;
     }
     case kReqAction1: {
-      mutable_req_action1()->::protocol::ReqAction1::MergeFrom(from.req_action1());
+      mutable_req_action1()->::gs_protocol::ReqAction1::MergeFrom(from.req_action1());
       break;
     }
     case kReqQuit: {
-      mutable_req_quit()->::protocol::ReqQuit::MergeFrom(from.req_quit());
+      mutable_req_quit()->::gs_protocol::ReqQuit::MergeFrom(from.req_quit());
       break;
     }
     case kReqRoomList: {
-      mutable_req_room_list()->::protocol::ReqRoomList::MergeFrom(from.req_room_list());
+      mutable_req_room_list()->::gs_protocol::ReqRoomList::MergeFrom(from.req_room_list());
       break;
     }
     case kResLogin: {
-      mutable_res_login()->::protocol::ResLogin::MergeFrom(from.res_login());
+      mutable_res_login()->::gs_protocol::ResLogin::MergeFrom(from.res_login());
       break;
     }
     case kResCreate: {
-      mutable_res_create()->::protocol::ResCreate::MergeFrom(from.res_create());
+      mutable_res_create()->::gs_protocol::ResCreate::MergeFrom(from.res_create());
       break;
     }
     case kResJoin: {
-      mutable_res_join()->::protocol::ResJoin::MergeFrom(from.res_join());
+      mutable_res_join()->::gs_protocol::ResJoin::MergeFrom(from.res_join());
       break;
     }
     case kResAction1: {
-      mutable_res_action1()->::protocol::ResAction1::MergeFrom(from.res_action1());
+      mutable_res_action1()->::gs_protocol::ResAction1::MergeFrom(from.res_action1());
       break;
     }
     case kResQuit: {
-      mutable_res_quit()->::protocol::ResQuit::MergeFrom(from.res_quit());
+      mutable_res_quit()->::gs_protocol::ResQuit::MergeFrom(from.res_quit());
       break;
     }
     case kResRoomList: {
-      mutable_res_room_list()->::protocol::ResRoomList::MergeFrom(from.res_room_list());
+      mutable_res_room_list()->::gs_protocol::ResRoomList::MergeFrom(from.res_room_list());
       break;
     }
     case kNotifyJoin: {
-      mutable_notify_join()->::protocol::NotifyJoinMsg::MergeFrom(from.notify_join());
+      mutable_notify_join()->::gs_protocol::NotifyJoinMsg::MergeFrom(from.notify_join());
       break;
     }
     case kNotifyAction1: {
-      mutable_notify_action1()->::protocol::NotifyAction1Msg::MergeFrom(from.notify_action1());
+      mutable_notify_action1()->::gs_protocol::NotifyAction1Msg::MergeFrom(from.notify_action1());
       break;
     }
     case kNotifyQuit: {
-      mutable_notify_quit()->::protocol::NotifyQuitMsg::MergeFrom(from.notify_quit());
+      mutable_notify_quit()->::gs_protocol::NotifyQuitMsg::MergeFrom(from.notify_quit());
       break;
     }
     case kError: {
-      mutable_error()->::protocol::ErrorMsg::MergeFrom(from.error());
+      mutable_error()->::gs_protocol::ErrorMsg::MergeFrom(from.error());
       break;
     }
     case PAYLOAD_NOT_SET: {
@@ -1370,14 +1289,14 @@ void Message::MergeFrom(const Message& from) {
 }
 
 void Message::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.Message)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.Message)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void Message::CopyFrom(const Message& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.Message)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.Message)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1392,7 +1311,6 @@ void Message::Swap(Message* other) {
   InternalSwap(other);
 }
 void Message::InternalSwap(Message* other) {
-  std::swap(type_, other->type_);
   std::swap(payload_, other->payload_);
   std::swap(_oneof_case_[0], other->_oneof_case_[0]);
   std::swap(_cached_size_, other->_cached_size_);
@@ -1406,21 +1324,7 @@ void Message::InternalSwap(Message* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // Message
 
-// .protocol.Type type = 1;
-void Message::clear_type() {
-  type_ = 0;
-}
-::protocol::Type Message::type() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.type)
-  return static_cast< ::protocol::Type >(type_);
-}
-void Message::set_type(::protocol::Type value) {
-  
-  type_ = value;
-  // @@protoc_insertion_point(field_set:protocol.Message.type)
-}
-
-// .protocol.ReqLogin req_login = 2;
+// .gs_protocol.ReqLogin req_login = 1;
 bool Message::has_req_login() const {
   return payload_case() == kReqLogin;
 }
@@ -1433,42 +1337,42 @@ void Message::clear_req_login() {
     clear_has_payload();
   }
 }
- const ::protocol::ReqLogin& Message::req_login() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.req_login)
+ const ::gs_protocol::ReqLogin& Message::req_login() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.req_login)
   return has_req_login()
       ? *payload_.req_login_
-      : ::protocol::ReqLogin::default_instance();
+      : ::gs_protocol::ReqLogin::default_instance();
 }
-::protocol::ReqLogin* Message::mutable_req_login() {
+::gs_protocol::ReqLogin* Message::mutable_req_login() {
   if (!has_req_login()) {
     clear_payload();
     set_has_req_login();
-    payload_.req_login_ = new ::protocol::ReqLogin;
+    payload_.req_login_ = new ::gs_protocol::ReqLogin;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.req_login)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.req_login)
   return payload_.req_login_;
 }
-::protocol::ReqLogin* Message::release_req_login() {
-  // @@protoc_insertion_point(field_release:protocol.Message.req_login)
+::gs_protocol::ReqLogin* Message::release_req_login() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.req_login)
   if (has_req_login()) {
     clear_has_payload();
-    ::protocol::ReqLogin* temp = payload_.req_login_;
+    ::gs_protocol::ReqLogin* temp = payload_.req_login_;
     payload_.req_login_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_req_login(::protocol::ReqLogin* req_login) {
+void Message::set_allocated_req_login(::gs_protocol::ReqLogin* req_login) {
   clear_payload();
   if (req_login) {
     set_has_req_login();
     payload_.req_login_ = req_login;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.req_login)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.req_login)
 }
 
-// .protocol.ReqCreate req_create = 3;
+// .gs_protocol.ReqCreate req_create = 2;
 bool Message::has_req_create() const {
   return payload_case() == kReqCreate;
 }
@@ -1481,42 +1385,42 @@ void Message::clear_req_create() {
     clear_has_payload();
   }
 }
- const ::protocol::ReqCreate& Message::req_create() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.req_create)
+ const ::gs_protocol::ReqCreate& Message::req_create() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.req_create)
   return has_req_create()
       ? *payload_.req_create_
-      : ::protocol::ReqCreate::default_instance();
+      : ::gs_protocol::ReqCreate::default_instance();
 }
-::protocol::ReqCreate* Message::mutable_req_create() {
+::gs_protocol::ReqCreate* Message::mutable_req_create() {
   if (!has_req_create()) {
     clear_payload();
     set_has_req_create();
-    payload_.req_create_ = new ::protocol::ReqCreate;
+    payload_.req_create_ = new ::gs_protocol::ReqCreate;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.req_create)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.req_create)
   return payload_.req_create_;
 }
-::protocol::ReqCreate* Message::release_req_create() {
-  // @@protoc_insertion_point(field_release:protocol.Message.req_create)
+::gs_protocol::ReqCreate* Message::release_req_create() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.req_create)
   if (has_req_create()) {
     clear_has_payload();
-    ::protocol::ReqCreate* temp = payload_.req_create_;
+    ::gs_protocol::ReqCreate* temp = payload_.req_create_;
     payload_.req_create_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_req_create(::protocol::ReqCreate* req_create) {
+void Message::set_allocated_req_create(::gs_protocol::ReqCreate* req_create) {
   clear_payload();
   if (req_create) {
     set_has_req_create();
     payload_.req_create_ = req_create;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.req_create)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.req_create)
 }
 
-// .protocol.ReqJoin req_join = 4;
+// .gs_protocol.ReqJoin req_join = 3;
 bool Message::has_req_join() const {
   return payload_case() == kReqJoin;
 }
@@ -1529,42 +1433,42 @@ void Message::clear_req_join() {
     clear_has_payload();
   }
 }
- const ::protocol::ReqJoin& Message::req_join() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.req_join)
+ const ::gs_protocol::ReqJoin& Message::req_join() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.req_join)
   return has_req_join()
       ? *payload_.req_join_
-      : ::protocol::ReqJoin::default_instance();
+      : ::gs_protocol::ReqJoin::default_instance();
 }
-::protocol::ReqJoin* Message::mutable_req_join() {
+::gs_protocol::ReqJoin* Message::mutable_req_join() {
   if (!has_req_join()) {
     clear_payload();
     set_has_req_join();
-    payload_.req_join_ = new ::protocol::ReqJoin;
+    payload_.req_join_ = new ::gs_protocol::ReqJoin;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.req_join)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.req_join)
   return payload_.req_join_;
 }
-::protocol::ReqJoin* Message::release_req_join() {
-  // @@protoc_insertion_point(field_release:protocol.Message.req_join)
+::gs_protocol::ReqJoin* Message::release_req_join() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.req_join)
   if (has_req_join()) {
     clear_has_payload();
-    ::protocol::ReqJoin* temp = payload_.req_join_;
+    ::gs_protocol::ReqJoin* temp = payload_.req_join_;
     payload_.req_join_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_req_join(::protocol::ReqJoin* req_join) {
+void Message::set_allocated_req_join(::gs_protocol::ReqJoin* req_join) {
   clear_payload();
   if (req_join) {
     set_has_req_join();
     payload_.req_join_ = req_join;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.req_join)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.req_join)
 }
 
-// .protocol.ReqAction1 req_action1 = 5;
+// .gs_protocol.ReqAction1 req_action1 = 4;
 bool Message::has_req_action1() const {
   return payload_case() == kReqAction1;
 }
@@ -1577,42 +1481,42 @@ void Message::clear_req_action1() {
     clear_has_payload();
   }
 }
- const ::protocol::ReqAction1& Message::req_action1() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.req_action1)
+ const ::gs_protocol::ReqAction1& Message::req_action1() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.req_action1)
   return has_req_action1()
       ? *payload_.req_action1_
-      : ::protocol::ReqAction1::default_instance();
+      : ::gs_protocol::ReqAction1::default_instance();
 }
-::protocol::ReqAction1* Message::mutable_req_action1() {
+::gs_protocol::ReqAction1* Message::mutable_req_action1() {
   if (!has_req_action1()) {
     clear_payload();
     set_has_req_action1();
-    payload_.req_action1_ = new ::protocol::ReqAction1;
+    payload_.req_action1_ = new ::gs_protocol::ReqAction1;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.req_action1)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.req_action1)
   return payload_.req_action1_;
 }
-::protocol::ReqAction1* Message::release_req_action1() {
-  // @@protoc_insertion_point(field_release:protocol.Message.req_action1)
+::gs_protocol::ReqAction1* Message::release_req_action1() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.req_action1)
   if (has_req_action1()) {
     clear_has_payload();
-    ::protocol::ReqAction1* temp = payload_.req_action1_;
+    ::gs_protocol::ReqAction1* temp = payload_.req_action1_;
     payload_.req_action1_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_req_action1(::protocol::ReqAction1* req_action1) {
+void Message::set_allocated_req_action1(::gs_protocol::ReqAction1* req_action1) {
   clear_payload();
   if (req_action1) {
     set_has_req_action1();
     payload_.req_action1_ = req_action1;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.req_action1)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.req_action1)
 }
 
-// .protocol.ReqQuit req_quit = 6;
+// .gs_protocol.ReqQuit req_quit = 5;
 bool Message::has_req_quit() const {
   return payload_case() == kReqQuit;
 }
@@ -1625,42 +1529,42 @@ void Message::clear_req_quit() {
     clear_has_payload();
   }
 }
- const ::protocol::ReqQuit& Message::req_quit() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.req_quit)
+ const ::gs_protocol::ReqQuit& Message::req_quit() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.req_quit)
   return has_req_quit()
       ? *payload_.req_quit_
-      : ::protocol::ReqQuit::default_instance();
+      : ::gs_protocol::ReqQuit::default_instance();
 }
-::protocol::ReqQuit* Message::mutable_req_quit() {
+::gs_protocol::ReqQuit* Message::mutable_req_quit() {
   if (!has_req_quit()) {
     clear_payload();
     set_has_req_quit();
-    payload_.req_quit_ = new ::protocol::ReqQuit;
+    payload_.req_quit_ = new ::gs_protocol::ReqQuit;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.req_quit)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.req_quit)
   return payload_.req_quit_;
 }
-::protocol::ReqQuit* Message::release_req_quit() {
-  // @@protoc_insertion_point(field_release:protocol.Message.req_quit)
+::gs_protocol::ReqQuit* Message::release_req_quit() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.req_quit)
   if (has_req_quit()) {
     clear_has_payload();
-    ::protocol::ReqQuit* temp = payload_.req_quit_;
+    ::gs_protocol::ReqQuit* temp = payload_.req_quit_;
     payload_.req_quit_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_req_quit(::protocol::ReqQuit* req_quit) {
+void Message::set_allocated_req_quit(::gs_protocol::ReqQuit* req_quit) {
   clear_payload();
   if (req_quit) {
     set_has_req_quit();
     payload_.req_quit_ = req_quit;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.req_quit)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.req_quit)
 }
 
-// .protocol.ReqRoomList req_room_list = 7;
+// .gs_protocol.ReqRoomList req_room_list = 6;
 bool Message::has_req_room_list() const {
   return payload_case() == kReqRoomList;
 }
@@ -1673,42 +1577,42 @@ void Message::clear_req_room_list() {
     clear_has_payload();
   }
 }
- const ::protocol::ReqRoomList& Message::req_room_list() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.req_room_list)
+ const ::gs_protocol::ReqRoomList& Message::req_room_list() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.req_room_list)
   return has_req_room_list()
       ? *payload_.req_room_list_
-      : ::protocol::ReqRoomList::default_instance();
+      : ::gs_protocol::ReqRoomList::default_instance();
 }
-::protocol::ReqRoomList* Message::mutable_req_room_list() {
+::gs_protocol::ReqRoomList* Message::mutable_req_room_list() {
   if (!has_req_room_list()) {
     clear_payload();
     set_has_req_room_list();
-    payload_.req_room_list_ = new ::protocol::ReqRoomList;
+    payload_.req_room_list_ = new ::gs_protocol::ReqRoomList;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.req_room_list)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.req_room_list)
   return payload_.req_room_list_;
 }
-::protocol::ReqRoomList* Message::release_req_room_list() {
-  // @@protoc_insertion_point(field_release:protocol.Message.req_room_list)
+::gs_protocol::ReqRoomList* Message::release_req_room_list() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.req_room_list)
   if (has_req_room_list()) {
     clear_has_payload();
-    ::protocol::ReqRoomList* temp = payload_.req_room_list_;
+    ::gs_protocol::ReqRoomList* temp = payload_.req_room_list_;
     payload_.req_room_list_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_req_room_list(::protocol::ReqRoomList* req_room_list) {
+void Message::set_allocated_req_room_list(::gs_protocol::ReqRoomList* req_room_list) {
   clear_payload();
   if (req_room_list) {
     set_has_req_room_list();
     payload_.req_room_list_ = req_room_list;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.req_room_list)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.req_room_list)
 }
 
-// .protocol.ResLogin res_login = 8;
+// .gs_protocol.ResLogin res_login = 7;
 bool Message::has_res_login() const {
   return payload_case() == kResLogin;
 }
@@ -1721,42 +1625,42 @@ void Message::clear_res_login() {
     clear_has_payload();
   }
 }
- const ::protocol::ResLogin& Message::res_login() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.res_login)
+ const ::gs_protocol::ResLogin& Message::res_login() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.res_login)
   return has_res_login()
       ? *payload_.res_login_
-      : ::protocol::ResLogin::default_instance();
+      : ::gs_protocol::ResLogin::default_instance();
 }
-::protocol::ResLogin* Message::mutable_res_login() {
+::gs_protocol::ResLogin* Message::mutable_res_login() {
   if (!has_res_login()) {
     clear_payload();
     set_has_res_login();
-    payload_.res_login_ = new ::protocol::ResLogin;
+    payload_.res_login_ = new ::gs_protocol::ResLogin;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.res_login)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.res_login)
   return payload_.res_login_;
 }
-::protocol::ResLogin* Message::release_res_login() {
-  // @@protoc_insertion_point(field_release:protocol.Message.res_login)
+::gs_protocol::ResLogin* Message::release_res_login() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.res_login)
   if (has_res_login()) {
     clear_has_payload();
-    ::protocol::ResLogin* temp = payload_.res_login_;
+    ::gs_protocol::ResLogin* temp = payload_.res_login_;
     payload_.res_login_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_res_login(::protocol::ResLogin* res_login) {
+void Message::set_allocated_res_login(::gs_protocol::ResLogin* res_login) {
   clear_payload();
   if (res_login) {
     set_has_res_login();
     payload_.res_login_ = res_login;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.res_login)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.res_login)
 }
 
-// .protocol.ResCreate res_create = 9;
+// .gs_protocol.ResCreate res_create = 8;
 bool Message::has_res_create() const {
   return payload_case() == kResCreate;
 }
@@ -1769,42 +1673,42 @@ void Message::clear_res_create() {
     clear_has_payload();
   }
 }
- const ::protocol::ResCreate& Message::res_create() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.res_create)
+ const ::gs_protocol::ResCreate& Message::res_create() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.res_create)
   return has_res_create()
       ? *payload_.res_create_
-      : ::protocol::ResCreate::default_instance();
+      : ::gs_protocol::ResCreate::default_instance();
 }
-::protocol::ResCreate* Message::mutable_res_create() {
+::gs_protocol::ResCreate* Message::mutable_res_create() {
   if (!has_res_create()) {
     clear_payload();
     set_has_res_create();
-    payload_.res_create_ = new ::protocol::ResCreate;
+    payload_.res_create_ = new ::gs_protocol::ResCreate;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.res_create)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.res_create)
   return payload_.res_create_;
 }
-::protocol::ResCreate* Message::release_res_create() {
-  // @@protoc_insertion_point(field_release:protocol.Message.res_create)
+::gs_protocol::ResCreate* Message::release_res_create() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.res_create)
   if (has_res_create()) {
     clear_has_payload();
-    ::protocol::ResCreate* temp = payload_.res_create_;
+    ::gs_protocol::ResCreate* temp = payload_.res_create_;
     payload_.res_create_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_res_create(::protocol::ResCreate* res_create) {
+void Message::set_allocated_res_create(::gs_protocol::ResCreate* res_create) {
   clear_payload();
   if (res_create) {
     set_has_res_create();
     payload_.res_create_ = res_create;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.res_create)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.res_create)
 }
 
-// .protocol.ResJoin res_join = 10;
+// .gs_protocol.ResJoin res_join = 9;
 bool Message::has_res_join() const {
   return payload_case() == kResJoin;
 }
@@ -1817,42 +1721,42 @@ void Message::clear_res_join() {
     clear_has_payload();
   }
 }
- const ::protocol::ResJoin& Message::res_join() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.res_join)
+ const ::gs_protocol::ResJoin& Message::res_join() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.res_join)
   return has_res_join()
       ? *payload_.res_join_
-      : ::protocol::ResJoin::default_instance();
+      : ::gs_protocol::ResJoin::default_instance();
 }
-::protocol::ResJoin* Message::mutable_res_join() {
+::gs_protocol::ResJoin* Message::mutable_res_join() {
   if (!has_res_join()) {
     clear_payload();
     set_has_res_join();
-    payload_.res_join_ = new ::protocol::ResJoin;
+    payload_.res_join_ = new ::gs_protocol::ResJoin;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.res_join)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.res_join)
   return payload_.res_join_;
 }
-::protocol::ResJoin* Message::release_res_join() {
-  // @@protoc_insertion_point(field_release:protocol.Message.res_join)
+::gs_protocol::ResJoin* Message::release_res_join() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.res_join)
   if (has_res_join()) {
     clear_has_payload();
-    ::protocol::ResJoin* temp = payload_.res_join_;
+    ::gs_protocol::ResJoin* temp = payload_.res_join_;
     payload_.res_join_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_res_join(::protocol::ResJoin* res_join) {
+void Message::set_allocated_res_join(::gs_protocol::ResJoin* res_join) {
   clear_payload();
   if (res_join) {
     set_has_res_join();
     payload_.res_join_ = res_join;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.res_join)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.res_join)
 }
 
-// .protocol.ResAction1 res_action1 = 11;
+// .gs_protocol.ResAction1 res_action1 = 10;
 bool Message::has_res_action1() const {
   return payload_case() == kResAction1;
 }
@@ -1865,42 +1769,42 @@ void Message::clear_res_action1() {
     clear_has_payload();
   }
 }
- const ::protocol::ResAction1& Message::res_action1() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.res_action1)
+ const ::gs_protocol::ResAction1& Message::res_action1() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.res_action1)
   return has_res_action1()
       ? *payload_.res_action1_
-      : ::protocol::ResAction1::default_instance();
+      : ::gs_protocol::ResAction1::default_instance();
 }
-::protocol::ResAction1* Message::mutable_res_action1() {
+::gs_protocol::ResAction1* Message::mutable_res_action1() {
   if (!has_res_action1()) {
     clear_payload();
     set_has_res_action1();
-    payload_.res_action1_ = new ::protocol::ResAction1;
+    payload_.res_action1_ = new ::gs_protocol::ResAction1;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.res_action1)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.res_action1)
   return payload_.res_action1_;
 }
-::protocol::ResAction1* Message::release_res_action1() {
-  // @@protoc_insertion_point(field_release:protocol.Message.res_action1)
+::gs_protocol::ResAction1* Message::release_res_action1() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.res_action1)
   if (has_res_action1()) {
     clear_has_payload();
-    ::protocol::ResAction1* temp = payload_.res_action1_;
+    ::gs_protocol::ResAction1* temp = payload_.res_action1_;
     payload_.res_action1_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_res_action1(::protocol::ResAction1* res_action1) {
+void Message::set_allocated_res_action1(::gs_protocol::ResAction1* res_action1) {
   clear_payload();
   if (res_action1) {
     set_has_res_action1();
     payload_.res_action1_ = res_action1;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.res_action1)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.res_action1)
 }
 
-// .protocol.ResQuit res_quit = 12;
+// .gs_protocol.ResQuit res_quit = 11;
 bool Message::has_res_quit() const {
   return payload_case() == kResQuit;
 }
@@ -1913,42 +1817,42 @@ void Message::clear_res_quit() {
     clear_has_payload();
   }
 }
- const ::protocol::ResQuit& Message::res_quit() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.res_quit)
+ const ::gs_protocol::ResQuit& Message::res_quit() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.res_quit)
   return has_res_quit()
       ? *payload_.res_quit_
-      : ::protocol::ResQuit::default_instance();
+      : ::gs_protocol::ResQuit::default_instance();
 }
-::protocol::ResQuit* Message::mutable_res_quit() {
+::gs_protocol::ResQuit* Message::mutable_res_quit() {
   if (!has_res_quit()) {
     clear_payload();
     set_has_res_quit();
-    payload_.res_quit_ = new ::protocol::ResQuit;
+    payload_.res_quit_ = new ::gs_protocol::ResQuit;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.res_quit)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.res_quit)
   return payload_.res_quit_;
 }
-::protocol::ResQuit* Message::release_res_quit() {
-  // @@protoc_insertion_point(field_release:protocol.Message.res_quit)
+::gs_protocol::ResQuit* Message::release_res_quit() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.res_quit)
   if (has_res_quit()) {
     clear_has_payload();
-    ::protocol::ResQuit* temp = payload_.res_quit_;
+    ::gs_protocol::ResQuit* temp = payload_.res_quit_;
     payload_.res_quit_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_res_quit(::protocol::ResQuit* res_quit) {
+void Message::set_allocated_res_quit(::gs_protocol::ResQuit* res_quit) {
   clear_payload();
   if (res_quit) {
     set_has_res_quit();
     payload_.res_quit_ = res_quit;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.res_quit)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.res_quit)
 }
 
-// .protocol.ResRoomList res_room_list = 13;
+// .gs_protocol.ResRoomList res_room_list = 12;
 bool Message::has_res_room_list() const {
   return payload_case() == kResRoomList;
 }
@@ -1961,42 +1865,42 @@ void Message::clear_res_room_list() {
     clear_has_payload();
   }
 }
- const ::protocol::ResRoomList& Message::res_room_list() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.res_room_list)
+ const ::gs_protocol::ResRoomList& Message::res_room_list() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.res_room_list)
   return has_res_room_list()
       ? *payload_.res_room_list_
-      : ::protocol::ResRoomList::default_instance();
+      : ::gs_protocol::ResRoomList::default_instance();
 }
-::protocol::ResRoomList* Message::mutable_res_room_list() {
+::gs_protocol::ResRoomList* Message::mutable_res_room_list() {
   if (!has_res_room_list()) {
     clear_payload();
     set_has_res_room_list();
-    payload_.res_room_list_ = new ::protocol::ResRoomList;
+    payload_.res_room_list_ = new ::gs_protocol::ResRoomList;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.res_room_list)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.res_room_list)
   return payload_.res_room_list_;
 }
-::protocol::ResRoomList* Message::release_res_room_list() {
-  // @@protoc_insertion_point(field_release:protocol.Message.res_room_list)
+::gs_protocol::ResRoomList* Message::release_res_room_list() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.res_room_list)
   if (has_res_room_list()) {
     clear_has_payload();
-    ::protocol::ResRoomList* temp = payload_.res_room_list_;
+    ::gs_protocol::ResRoomList* temp = payload_.res_room_list_;
     payload_.res_room_list_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_res_room_list(::protocol::ResRoomList* res_room_list) {
+void Message::set_allocated_res_room_list(::gs_protocol::ResRoomList* res_room_list) {
   clear_payload();
   if (res_room_list) {
     set_has_res_room_list();
     payload_.res_room_list_ = res_room_list;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.res_room_list)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.res_room_list)
 }
 
-// .protocol.NotifyJoinMsg notify_join = 14;
+// .gs_protocol.NotifyJoinMsg notify_join = 13;
 bool Message::has_notify_join() const {
   return payload_case() == kNotifyJoin;
 }
@@ -2009,42 +1913,42 @@ void Message::clear_notify_join() {
     clear_has_payload();
   }
 }
- const ::protocol::NotifyJoinMsg& Message::notify_join() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.notify_join)
+ const ::gs_protocol::NotifyJoinMsg& Message::notify_join() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.notify_join)
   return has_notify_join()
       ? *payload_.notify_join_
-      : ::protocol::NotifyJoinMsg::default_instance();
+      : ::gs_protocol::NotifyJoinMsg::default_instance();
 }
-::protocol::NotifyJoinMsg* Message::mutable_notify_join() {
+::gs_protocol::NotifyJoinMsg* Message::mutable_notify_join() {
   if (!has_notify_join()) {
     clear_payload();
     set_has_notify_join();
-    payload_.notify_join_ = new ::protocol::NotifyJoinMsg;
+    payload_.notify_join_ = new ::gs_protocol::NotifyJoinMsg;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.notify_join)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.notify_join)
   return payload_.notify_join_;
 }
-::protocol::NotifyJoinMsg* Message::release_notify_join() {
-  // @@protoc_insertion_point(field_release:protocol.Message.notify_join)
+::gs_protocol::NotifyJoinMsg* Message::release_notify_join() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.notify_join)
   if (has_notify_join()) {
     clear_has_payload();
-    ::protocol::NotifyJoinMsg* temp = payload_.notify_join_;
+    ::gs_protocol::NotifyJoinMsg* temp = payload_.notify_join_;
     payload_.notify_join_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_notify_join(::protocol::NotifyJoinMsg* notify_join) {
+void Message::set_allocated_notify_join(::gs_protocol::NotifyJoinMsg* notify_join) {
   clear_payload();
   if (notify_join) {
     set_has_notify_join();
     payload_.notify_join_ = notify_join;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.notify_join)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.notify_join)
 }
 
-// .protocol.NotifyAction1Msg notify_action1 = 15;
+// .gs_protocol.NotifyAction1Msg notify_action1 = 14;
 bool Message::has_notify_action1() const {
   return payload_case() == kNotifyAction1;
 }
@@ -2057,42 +1961,42 @@ void Message::clear_notify_action1() {
     clear_has_payload();
   }
 }
- const ::protocol::NotifyAction1Msg& Message::notify_action1() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.notify_action1)
+ const ::gs_protocol::NotifyAction1Msg& Message::notify_action1() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.notify_action1)
   return has_notify_action1()
       ? *payload_.notify_action1_
-      : ::protocol::NotifyAction1Msg::default_instance();
+      : ::gs_protocol::NotifyAction1Msg::default_instance();
 }
-::protocol::NotifyAction1Msg* Message::mutable_notify_action1() {
+::gs_protocol::NotifyAction1Msg* Message::mutable_notify_action1() {
   if (!has_notify_action1()) {
     clear_payload();
     set_has_notify_action1();
-    payload_.notify_action1_ = new ::protocol::NotifyAction1Msg;
+    payload_.notify_action1_ = new ::gs_protocol::NotifyAction1Msg;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.notify_action1)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.notify_action1)
   return payload_.notify_action1_;
 }
-::protocol::NotifyAction1Msg* Message::release_notify_action1() {
-  // @@protoc_insertion_point(field_release:protocol.Message.notify_action1)
+::gs_protocol::NotifyAction1Msg* Message::release_notify_action1() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.notify_action1)
   if (has_notify_action1()) {
     clear_has_payload();
-    ::protocol::NotifyAction1Msg* temp = payload_.notify_action1_;
+    ::gs_protocol::NotifyAction1Msg* temp = payload_.notify_action1_;
     payload_.notify_action1_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_notify_action1(::protocol::NotifyAction1Msg* notify_action1) {
+void Message::set_allocated_notify_action1(::gs_protocol::NotifyAction1Msg* notify_action1) {
   clear_payload();
   if (notify_action1) {
     set_has_notify_action1();
     payload_.notify_action1_ = notify_action1;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.notify_action1)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.notify_action1)
 }
 
-// .protocol.NotifyQuitMsg notify_quit = 16;
+// .gs_protocol.NotifyQuitMsg notify_quit = 15;
 bool Message::has_notify_quit() const {
   return payload_case() == kNotifyQuit;
 }
@@ -2105,42 +2009,42 @@ void Message::clear_notify_quit() {
     clear_has_payload();
   }
 }
- const ::protocol::NotifyQuitMsg& Message::notify_quit() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.notify_quit)
+ const ::gs_protocol::NotifyQuitMsg& Message::notify_quit() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.notify_quit)
   return has_notify_quit()
       ? *payload_.notify_quit_
-      : ::protocol::NotifyQuitMsg::default_instance();
+      : ::gs_protocol::NotifyQuitMsg::default_instance();
 }
-::protocol::NotifyQuitMsg* Message::mutable_notify_quit() {
+::gs_protocol::NotifyQuitMsg* Message::mutable_notify_quit() {
   if (!has_notify_quit()) {
     clear_payload();
     set_has_notify_quit();
-    payload_.notify_quit_ = new ::protocol::NotifyQuitMsg;
+    payload_.notify_quit_ = new ::gs_protocol::NotifyQuitMsg;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.notify_quit)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.notify_quit)
   return payload_.notify_quit_;
 }
-::protocol::NotifyQuitMsg* Message::release_notify_quit() {
-  // @@protoc_insertion_point(field_release:protocol.Message.notify_quit)
+::gs_protocol::NotifyQuitMsg* Message::release_notify_quit() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.notify_quit)
   if (has_notify_quit()) {
     clear_has_payload();
-    ::protocol::NotifyQuitMsg* temp = payload_.notify_quit_;
+    ::gs_protocol::NotifyQuitMsg* temp = payload_.notify_quit_;
     payload_.notify_quit_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_notify_quit(::protocol::NotifyQuitMsg* notify_quit) {
+void Message::set_allocated_notify_quit(::gs_protocol::NotifyQuitMsg* notify_quit) {
   clear_payload();
   if (notify_quit) {
     set_has_notify_quit();
     payload_.notify_quit_ = notify_quit;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.notify_quit)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.notify_quit)
 }
 
-// .protocol.ErrorMsg error = 1000;
+// .gs_protocol.ErrorMsg error = 1000;
 bool Message::has_error() const {
   return payload_case() == kError;
 }
@@ -2153,39 +2057,39 @@ void Message::clear_error() {
     clear_has_payload();
   }
 }
- const ::protocol::ErrorMsg& Message::error() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.error)
+ const ::gs_protocol::ErrorMsg& Message::error() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.error)
   return has_error()
       ? *payload_.error_
-      : ::protocol::ErrorMsg::default_instance();
+      : ::gs_protocol::ErrorMsg::default_instance();
 }
-::protocol::ErrorMsg* Message::mutable_error() {
+::gs_protocol::ErrorMsg* Message::mutable_error() {
   if (!has_error()) {
     clear_payload();
     set_has_error();
-    payload_.error_ = new ::protocol::ErrorMsg;
+    payload_.error_ = new ::gs_protocol::ErrorMsg;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.error)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.error)
   return payload_.error_;
 }
-::protocol::ErrorMsg* Message::release_error() {
-  // @@protoc_insertion_point(field_release:protocol.Message.error)
+::gs_protocol::ErrorMsg* Message::release_error() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.error)
   if (has_error()) {
     clear_has_payload();
-    ::protocol::ErrorMsg* temp = payload_.error_;
+    ::gs_protocol::ErrorMsg* temp = payload_.error_;
     payload_.error_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-void Message::set_allocated_error(::protocol::ErrorMsg* error) {
+void Message::set_allocated_error(::gs_protocol::ErrorMsg* error) {
   clear_payload();
   if (error) {
     set_has_error();
     payload_.error_ = error;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.error)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.error)
 }
 
 bool Message::has_payload() const {
@@ -2211,7 +2115,7 @@ ReqLogin::ReqLogin()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.ReqLogin)
+  // @@protoc_insertion_point(constructor:gs_protocol.ReqLogin)
 }
 ReqLogin::ReqLogin(const ReqLogin& from)
   : ::google::protobuf::Message(),
@@ -2219,7 +2123,7 @@ ReqLogin::ReqLogin(const ReqLogin& from)
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   userid_ = from.userid_;
-  // @@protoc_insertion_point(copy_constructor:protocol.ReqLogin)
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.ReqLogin)
 }
 
 void ReqLogin::SharedCtor() {
@@ -2228,7 +2132,7 @@ void ReqLogin::SharedCtor() {
 }
 
 ReqLogin::~ReqLogin() {
-  // @@protoc_insertion_point(destructor:protocol.ReqLogin)
+  // @@protoc_insertion_point(destructor:gs_protocol.ReqLogin)
   SharedDtor();
 }
 
@@ -2259,7 +2163,7 @@ ReqLogin* ReqLogin::New(::google::protobuf::Arena* arena) const {
 }
 
 void ReqLogin::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.ReqLogin)
+// @@protoc_insertion_point(message_clear_start:gs_protocol.ReqLogin)
   userid_ = GOOGLE_LONGLONG(0);
 }
 
@@ -2267,7 +2171,7 @@ bool ReqLogin::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.ReqLogin)
+  // @@protoc_insertion_point(parse_start:gs_protocol.ReqLogin)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -2299,40 +2203,40 @@ bool ReqLogin::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.ReqLogin)
+  // @@protoc_insertion_point(parse_success:gs_protocol.ReqLogin)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.ReqLogin)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.ReqLogin)
   return false;
 #undef DO_
 }
 
 void ReqLogin::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.ReqLogin)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.ReqLogin)
   // int64 userID = 1;
   if (this->userid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->userid(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.ReqLogin)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.ReqLogin)
 }
 
 ::google::protobuf::uint8* ReqLogin::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.ReqLogin)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.ReqLogin)
   // int64 userID = 1;
   if (this->userid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->userid(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.ReqLogin)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.ReqLogin)
   return target;
 }
 
 size_t ReqLogin::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.ReqLogin)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.ReqLogin)
   size_t total_size = 0;
 
   // int64 userID = 1;
@@ -2350,22 +2254,22 @@ size_t ReqLogin::ByteSizeLong() const {
 }
 
 void ReqLogin::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.ReqLogin)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.ReqLogin)
   GOOGLE_DCHECK_NE(&from, this);
   const ReqLogin* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const ReqLogin>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.ReqLogin)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.ReqLogin)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.ReqLogin)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.ReqLogin)
     MergeFrom(*source);
   }
 }
 
 void ReqLogin::MergeFrom(const ReqLogin& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.ReqLogin)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.ReqLogin)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.userid() != 0) {
@@ -2374,14 +2278,14 @@ void ReqLogin::MergeFrom(const ReqLogin& from) {
 }
 
 void ReqLogin::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.ReqLogin)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.ReqLogin)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ReqLogin::CopyFrom(const ReqLogin& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.ReqLogin)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.ReqLogin)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2413,13 +2317,13 @@ void ReqLogin::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 ReqLogin::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ReqLogin.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ReqLogin.userID)
   return userid_;
 }
 void ReqLogin::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ReqLogin.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ReqLogin.userID)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -2436,7 +2340,7 @@ ReqCreate::ReqCreate()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.ReqCreate)
+  // @@protoc_insertion_point(constructor:gs_protocol.ReqCreate)
 }
 ReqCreate::ReqCreate(const ReqCreate& from)
   : ::google::protobuf::Message(),
@@ -2444,7 +2348,7 @@ ReqCreate::ReqCreate(const ReqCreate& from)
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   userid_ = from.userid_;
-  // @@protoc_insertion_point(copy_constructor:protocol.ReqCreate)
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.ReqCreate)
 }
 
 void ReqCreate::SharedCtor() {
@@ -2453,7 +2357,7 @@ void ReqCreate::SharedCtor() {
 }
 
 ReqCreate::~ReqCreate() {
-  // @@protoc_insertion_point(destructor:protocol.ReqCreate)
+  // @@protoc_insertion_point(destructor:gs_protocol.ReqCreate)
   SharedDtor();
 }
 
@@ -2484,7 +2388,7 @@ ReqCreate* ReqCreate::New(::google::protobuf::Arena* arena) const {
 }
 
 void ReqCreate::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.ReqCreate)
+// @@protoc_insertion_point(message_clear_start:gs_protocol.ReqCreate)
   userid_ = GOOGLE_LONGLONG(0);
 }
 
@@ -2492,7 +2396,7 @@ bool ReqCreate::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.ReqCreate)
+  // @@protoc_insertion_point(parse_start:gs_protocol.ReqCreate)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -2524,40 +2428,40 @@ bool ReqCreate::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.ReqCreate)
+  // @@protoc_insertion_point(parse_success:gs_protocol.ReqCreate)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.ReqCreate)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.ReqCreate)
   return false;
 #undef DO_
 }
 
 void ReqCreate::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.ReqCreate)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.ReqCreate)
   // int64 userID = 1;
   if (this->userid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->userid(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.ReqCreate)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.ReqCreate)
 }
 
 ::google::protobuf::uint8* ReqCreate::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.ReqCreate)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.ReqCreate)
   // int64 userID = 1;
   if (this->userid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->userid(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.ReqCreate)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.ReqCreate)
   return target;
 }
 
 size_t ReqCreate::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.ReqCreate)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.ReqCreate)
   size_t total_size = 0;
 
   // int64 userID = 1;
@@ -2575,22 +2479,22 @@ size_t ReqCreate::ByteSizeLong() const {
 }
 
 void ReqCreate::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.ReqCreate)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.ReqCreate)
   GOOGLE_DCHECK_NE(&from, this);
   const ReqCreate* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const ReqCreate>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.ReqCreate)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.ReqCreate)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.ReqCreate)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.ReqCreate)
     MergeFrom(*source);
   }
 }
 
 void ReqCreate::MergeFrom(const ReqCreate& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.ReqCreate)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.ReqCreate)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.userid() != 0) {
@@ -2599,14 +2503,14 @@ void ReqCreate::MergeFrom(const ReqCreate& from) {
 }
 
 void ReqCreate::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.ReqCreate)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.ReqCreate)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ReqCreate::CopyFrom(const ReqCreate& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.ReqCreate)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.ReqCreate)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2638,13 +2542,13 @@ void ReqCreate::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 ReqCreate::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ReqCreate.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ReqCreate.userID)
   return userid_;
 }
 void ReqCreate::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ReqCreate.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ReqCreate.userID)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -2662,7 +2566,7 @@ ReqJoin::ReqJoin()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.ReqJoin)
+  // @@protoc_insertion_point(constructor:gs_protocol.ReqJoin)
 }
 ReqJoin::ReqJoin(const ReqJoin& from)
   : ::google::protobuf::Message(),
@@ -2672,7 +2576,7 @@ ReqJoin::ReqJoin(const ReqJoin& from)
   ::memcpy(&userid_, &from.userid_,
     reinterpret_cast<char*>(&roomid_) -
     reinterpret_cast<char*>(&userid_) + sizeof(roomid_));
-  // @@protoc_insertion_point(copy_constructor:protocol.ReqJoin)
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.ReqJoin)
 }
 
 void ReqJoin::SharedCtor() {
@@ -2682,7 +2586,7 @@ void ReqJoin::SharedCtor() {
 }
 
 ReqJoin::~ReqJoin() {
-  // @@protoc_insertion_point(destructor:protocol.ReqJoin)
+  // @@protoc_insertion_point(destructor:gs_protocol.ReqJoin)
   SharedDtor();
 }
 
@@ -2713,7 +2617,7 @@ ReqJoin* ReqJoin::New(::google::protobuf::Arena* arena) const {
 }
 
 void ReqJoin::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.ReqJoin)
+// @@protoc_insertion_point(message_clear_start:gs_protocol.ReqJoin)
   ::memset(&userid_, 0, reinterpret_cast<char*>(&roomid_) -
     reinterpret_cast<char*>(&userid_) + sizeof(roomid_));
 }
@@ -2722,7 +2626,7 @@ bool ReqJoin::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.ReqJoin)
+  // @@protoc_insertion_point(parse_start:gs_protocol.ReqJoin)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -2767,17 +2671,17 @@ bool ReqJoin::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.ReqJoin)
+  // @@protoc_insertion_point(parse_success:gs_protocol.ReqJoin)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.ReqJoin)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.ReqJoin)
   return false;
 #undef DO_
 }
 
 void ReqJoin::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.ReqJoin)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.ReqJoin)
   // int64 userID = 1;
   if (this->userid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->userid(), output);
@@ -2788,13 +2692,13 @@ void ReqJoin::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->roomid(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.ReqJoin)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.ReqJoin)
 }
 
 ::google::protobuf::uint8* ReqJoin::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.ReqJoin)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.ReqJoin)
   // int64 userID = 1;
   if (this->userid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->userid(), target);
@@ -2805,12 +2709,12 @@ void ReqJoin::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->roomid(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.ReqJoin)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.ReqJoin)
   return target;
 }
 
 size_t ReqJoin::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.ReqJoin)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.ReqJoin)
   size_t total_size = 0;
 
   // int64 userID = 1;
@@ -2835,22 +2739,22 @@ size_t ReqJoin::ByteSizeLong() const {
 }
 
 void ReqJoin::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.ReqJoin)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.ReqJoin)
   GOOGLE_DCHECK_NE(&from, this);
   const ReqJoin* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const ReqJoin>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.ReqJoin)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.ReqJoin)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.ReqJoin)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.ReqJoin)
     MergeFrom(*source);
   }
 }
 
 void ReqJoin::MergeFrom(const ReqJoin& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.ReqJoin)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.ReqJoin)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.userid() != 0) {
@@ -2862,14 +2766,14 @@ void ReqJoin::MergeFrom(const ReqJoin& from) {
 }
 
 void ReqJoin::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.ReqJoin)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.ReqJoin)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ReqJoin::CopyFrom(const ReqJoin& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.ReqJoin)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.ReqJoin)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2902,13 +2806,13 @@ void ReqJoin::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 ReqJoin::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ReqJoin.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ReqJoin.userID)
   return userid_;
 }
 void ReqJoin::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ReqJoin.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ReqJoin.userID)
 }
 
 // int64 roomID = 2;
@@ -2916,13 +2820,13 @@ void ReqJoin::clear_roomid() {
   roomid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 ReqJoin::roomid() const {
-  // @@protoc_insertion_point(field_get:protocol.ReqJoin.roomID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ReqJoin.roomID)
   return roomid_;
 }
 void ReqJoin::set_roomid(::google::protobuf::int64 value) {
   
   roomid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ReqJoin.roomID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ReqJoin.roomID)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -2939,7 +2843,7 @@ ReqAction1::ReqAction1()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.ReqAction1)
+  // @@protoc_insertion_point(constructor:gs_protocol.ReqAction1)
 }
 ReqAction1::ReqAction1(const ReqAction1& from)
   : ::google::protobuf::Message(),
@@ -2947,7 +2851,7 @@ ReqAction1::ReqAction1(const ReqAction1& from)
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   userid_ = from.userid_;
-  // @@protoc_insertion_point(copy_constructor:protocol.ReqAction1)
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.ReqAction1)
 }
 
 void ReqAction1::SharedCtor() {
@@ -2956,7 +2860,7 @@ void ReqAction1::SharedCtor() {
 }
 
 ReqAction1::~ReqAction1() {
-  // @@protoc_insertion_point(destructor:protocol.ReqAction1)
+  // @@protoc_insertion_point(destructor:gs_protocol.ReqAction1)
   SharedDtor();
 }
 
@@ -2987,7 +2891,7 @@ ReqAction1* ReqAction1::New(::google::protobuf::Arena* arena) const {
 }
 
 void ReqAction1::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.ReqAction1)
+// @@protoc_insertion_point(message_clear_start:gs_protocol.ReqAction1)
   userid_ = GOOGLE_LONGLONG(0);
 }
 
@@ -2995,7 +2899,7 @@ bool ReqAction1::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.ReqAction1)
+  // @@protoc_insertion_point(parse_start:gs_protocol.ReqAction1)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -3027,40 +2931,40 @@ bool ReqAction1::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.ReqAction1)
+  // @@protoc_insertion_point(parse_success:gs_protocol.ReqAction1)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.ReqAction1)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.ReqAction1)
   return false;
 #undef DO_
 }
 
 void ReqAction1::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.ReqAction1)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.ReqAction1)
   // int64 userID = 1;
   if (this->userid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->userid(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.ReqAction1)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.ReqAction1)
 }
 
 ::google::protobuf::uint8* ReqAction1::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.ReqAction1)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.ReqAction1)
   // int64 userID = 1;
   if (this->userid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->userid(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.ReqAction1)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.ReqAction1)
   return target;
 }
 
 size_t ReqAction1::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.ReqAction1)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.ReqAction1)
   size_t total_size = 0;
 
   // int64 userID = 1;
@@ -3078,22 +2982,22 @@ size_t ReqAction1::ByteSizeLong() const {
 }
 
 void ReqAction1::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.ReqAction1)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.ReqAction1)
   GOOGLE_DCHECK_NE(&from, this);
   const ReqAction1* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const ReqAction1>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.ReqAction1)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.ReqAction1)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.ReqAction1)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.ReqAction1)
     MergeFrom(*source);
   }
 }
 
 void ReqAction1::MergeFrom(const ReqAction1& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.ReqAction1)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.ReqAction1)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.userid() != 0) {
@@ -3102,14 +3006,14 @@ void ReqAction1::MergeFrom(const ReqAction1& from) {
 }
 
 void ReqAction1::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.ReqAction1)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.ReqAction1)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ReqAction1::CopyFrom(const ReqAction1& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.ReqAction1)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.ReqAction1)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3141,13 +3045,13 @@ void ReqAction1::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 ReqAction1::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ReqAction1.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ReqAction1.userID)
   return userid_;
 }
 void ReqAction1::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ReqAction1.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ReqAction1.userID)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3164,7 +3068,7 @@ ReqQuit::ReqQuit()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.ReqQuit)
+  // @@protoc_insertion_point(constructor:gs_protocol.ReqQuit)
 }
 ReqQuit::ReqQuit(const ReqQuit& from)
   : ::google::protobuf::Message(),
@@ -3172,7 +3076,7 @@ ReqQuit::ReqQuit(const ReqQuit& from)
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   userid_ = from.userid_;
-  // @@protoc_insertion_point(copy_constructor:protocol.ReqQuit)
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.ReqQuit)
 }
 
 void ReqQuit::SharedCtor() {
@@ -3181,7 +3085,7 @@ void ReqQuit::SharedCtor() {
 }
 
 ReqQuit::~ReqQuit() {
-  // @@protoc_insertion_point(destructor:protocol.ReqQuit)
+  // @@protoc_insertion_point(destructor:gs_protocol.ReqQuit)
   SharedDtor();
 }
 
@@ -3212,7 +3116,7 @@ ReqQuit* ReqQuit::New(::google::protobuf::Arena* arena) const {
 }
 
 void ReqQuit::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.ReqQuit)
+// @@protoc_insertion_point(message_clear_start:gs_protocol.ReqQuit)
   userid_ = GOOGLE_LONGLONG(0);
 }
 
@@ -3220,7 +3124,7 @@ bool ReqQuit::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.ReqQuit)
+  // @@protoc_insertion_point(parse_start:gs_protocol.ReqQuit)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -3252,40 +3156,40 @@ bool ReqQuit::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.ReqQuit)
+  // @@protoc_insertion_point(parse_success:gs_protocol.ReqQuit)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.ReqQuit)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.ReqQuit)
   return false;
 #undef DO_
 }
 
 void ReqQuit::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.ReqQuit)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.ReqQuit)
   // int64 userID = 1;
   if (this->userid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->userid(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.ReqQuit)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.ReqQuit)
 }
 
 ::google::protobuf::uint8* ReqQuit::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.ReqQuit)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.ReqQuit)
   // int64 userID = 1;
   if (this->userid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->userid(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.ReqQuit)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.ReqQuit)
   return target;
 }
 
 size_t ReqQuit::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.ReqQuit)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.ReqQuit)
   size_t total_size = 0;
 
   // int64 userID = 1;
@@ -3303,22 +3207,22 @@ size_t ReqQuit::ByteSizeLong() const {
 }
 
 void ReqQuit::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.ReqQuit)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.ReqQuit)
   GOOGLE_DCHECK_NE(&from, this);
   const ReqQuit* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const ReqQuit>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.ReqQuit)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.ReqQuit)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.ReqQuit)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.ReqQuit)
     MergeFrom(*source);
   }
 }
 
 void ReqQuit::MergeFrom(const ReqQuit& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.ReqQuit)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.ReqQuit)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.userid() != 0) {
@@ -3327,14 +3231,14 @@ void ReqQuit::MergeFrom(const ReqQuit& from) {
 }
 
 void ReqQuit::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.ReqQuit)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.ReqQuit)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ReqQuit::CopyFrom(const ReqQuit& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.ReqQuit)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.ReqQuit)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3366,13 +3270,13 @@ void ReqQuit::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 ReqQuit::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ReqQuit.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ReqQuit.userID)
   return userid_;
 }
 void ReqQuit::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ReqQuit.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ReqQuit.userID)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3389,7 +3293,7 @@ ReqRoomList::ReqRoomList()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.ReqRoomList)
+  // @@protoc_insertion_point(constructor:gs_protocol.ReqRoomList)
 }
 ReqRoomList::ReqRoomList(const ReqRoomList& from)
   : ::google::protobuf::Message(),
@@ -3397,7 +3301,7 @@ ReqRoomList::ReqRoomList(const ReqRoomList& from)
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   userid_ = from.userid_;
-  // @@protoc_insertion_point(copy_constructor:protocol.ReqRoomList)
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.ReqRoomList)
 }
 
 void ReqRoomList::SharedCtor() {
@@ -3406,7 +3310,7 @@ void ReqRoomList::SharedCtor() {
 }
 
 ReqRoomList::~ReqRoomList() {
-  // @@protoc_insertion_point(destructor:protocol.ReqRoomList)
+  // @@protoc_insertion_point(destructor:gs_protocol.ReqRoomList)
   SharedDtor();
 }
 
@@ -3437,7 +3341,7 @@ ReqRoomList* ReqRoomList::New(::google::protobuf::Arena* arena) const {
 }
 
 void ReqRoomList::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.ReqRoomList)
+// @@protoc_insertion_point(message_clear_start:gs_protocol.ReqRoomList)
   userid_ = GOOGLE_LONGLONG(0);
 }
 
@@ -3445,7 +3349,7 @@ bool ReqRoomList::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.ReqRoomList)
+  // @@protoc_insertion_point(parse_start:gs_protocol.ReqRoomList)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -3477,40 +3381,40 @@ bool ReqRoomList::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.ReqRoomList)
+  // @@protoc_insertion_point(parse_success:gs_protocol.ReqRoomList)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.ReqRoomList)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.ReqRoomList)
   return false;
 #undef DO_
 }
 
 void ReqRoomList::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.ReqRoomList)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.ReqRoomList)
   // int64 userID = 1;
   if (this->userid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->userid(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.ReqRoomList)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.ReqRoomList)
 }
 
 ::google::protobuf::uint8* ReqRoomList::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.ReqRoomList)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.ReqRoomList)
   // int64 userID = 1;
   if (this->userid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->userid(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.ReqRoomList)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.ReqRoomList)
   return target;
 }
 
 size_t ReqRoomList::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.ReqRoomList)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.ReqRoomList)
   size_t total_size = 0;
 
   // int64 userID = 1;
@@ -3528,22 +3432,22 @@ size_t ReqRoomList::ByteSizeLong() const {
 }
 
 void ReqRoomList::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.ReqRoomList)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.ReqRoomList)
   GOOGLE_DCHECK_NE(&from, this);
   const ReqRoomList* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const ReqRoomList>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.ReqRoomList)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.ReqRoomList)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.ReqRoomList)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.ReqRoomList)
     MergeFrom(*source);
   }
 }
 
 void ReqRoomList::MergeFrom(const ReqRoomList& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.ReqRoomList)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.ReqRoomList)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.userid() != 0) {
@@ -3552,14 +3456,14 @@ void ReqRoomList::MergeFrom(const ReqRoomList& from) {
 }
 
 void ReqRoomList::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.ReqRoomList)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.ReqRoomList)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ReqRoomList::CopyFrom(const ReqRoomList& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.ReqRoomList)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.ReqRoomList)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3591,13 +3495,13 @@ void ReqRoomList::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 ReqRoomList::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ReqRoomList.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ReqRoomList.userID)
   return userid_;
 }
 void ReqRoomList::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ReqRoomList.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ReqRoomList.userID)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3615,7 +3519,7 @@ ResLogin::ResLogin()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.ResLogin)
+  // @@protoc_insertion_point(constructor:gs_protocol.ResLogin)
 }
 ResLogin::ResLogin(const ResLogin& from)
   : ::google::protobuf::Message(),
@@ -3625,7 +3529,7 @@ ResLogin::ResLogin(const ResLogin& from)
   ::memcpy(&userid_, &from.userid_,
     reinterpret_cast<char*>(&result_) -
     reinterpret_cast<char*>(&userid_) + sizeof(result_));
-  // @@protoc_insertion_point(copy_constructor:protocol.ResLogin)
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.ResLogin)
 }
 
 void ResLogin::SharedCtor() {
@@ -3635,7 +3539,7 @@ void ResLogin::SharedCtor() {
 }
 
 ResLogin::~ResLogin() {
-  // @@protoc_insertion_point(destructor:protocol.ResLogin)
+  // @@protoc_insertion_point(destructor:gs_protocol.ResLogin)
   SharedDtor();
 }
 
@@ -3666,7 +3570,7 @@ ResLogin* ResLogin::New(::google::protobuf::Arena* arena) const {
 }
 
 void ResLogin::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.ResLogin)
+// @@protoc_insertion_point(message_clear_start:gs_protocol.ResLogin)
   ::memset(&userid_, 0, reinterpret_cast<char*>(&result_) -
     reinterpret_cast<char*>(&userid_) + sizeof(result_));
 }
@@ -3675,7 +3579,7 @@ bool ResLogin::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.ResLogin)
+  // @@protoc_insertion_point(parse_start:gs_protocol.ResLogin)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -3720,17 +3624,17 @@ bool ResLogin::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.ResLogin)
+  // @@protoc_insertion_point(parse_success:gs_protocol.ResLogin)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.ResLogin)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.ResLogin)
   return false;
 #undef DO_
 }
 
 void ResLogin::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.ResLogin)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.ResLogin)
   // int64 userID = 1;
   if (this->userid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->userid(), output);
@@ -3741,13 +3645,13 @@ void ResLogin::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->result(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.ResLogin)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.ResLogin)
 }
 
 ::google::protobuf::uint8* ResLogin::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.ResLogin)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.ResLogin)
   // int64 userID = 1;
   if (this->userid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->userid(), target);
@@ -3758,12 +3662,12 @@ void ResLogin::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->result(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.ResLogin)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.ResLogin)
   return target;
 }
 
 size_t ResLogin::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.ResLogin)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.ResLogin)
   size_t total_size = 0;
 
   // int64 userID = 1;
@@ -3788,22 +3692,22 @@ size_t ResLogin::ByteSizeLong() const {
 }
 
 void ResLogin::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.ResLogin)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.ResLogin)
   GOOGLE_DCHECK_NE(&from, this);
   const ResLogin* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const ResLogin>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.ResLogin)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.ResLogin)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.ResLogin)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.ResLogin)
     MergeFrom(*source);
   }
 }
 
 void ResLogin::MergeFrom(const ResLogin& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.ResLogin)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.ResLogin)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.userid() != 0) {
@@ -3815,14 +3719,14 @@ void ResLogin::MergeFrom(const ResLogin& from) {
 }
 
 void ResLogin::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.ResLogin)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.ResLogin)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ResLogin::CopyFrom(const ResLogin& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.ResLogin)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.ResLogin)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3855,13 +3759,13 @@ void ResLogin::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 ResLogin::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResLogin.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResLogin.userID)
   return userid_;
 }
 void ResLogin::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResLogin.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResLogin.userID)
 }
 
 // int32 result = 2;
@@ -3869,13 +3773,13 @@ void ResLogin::clear_result() {
   result_ = 0;
 }
 ::google::protobuf::int32 ResLogin::result() const {
-  // @@protoc_insertion_point(field_get:protocol.ResLogin.result)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResLogin.result)
   return result_;
 }
 void ResLogin::set_result(::google::protobuf::int32 value) {
   
   result_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResLogin.result)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResLogin.result)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3893,7 +3797,7 @@ ResCreate::ResCreate()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.ResCreate)
+  // @@protoc_insertion_point(constructor:gs_protocol.ResCreate)
 }
 ResCreate::ResCreate(const ResCreate& from)
   : ::google::protobuf::Message(),
@@ -3903,7 +3807,7 @@ ResCreate::ResCreate(const ResCreate& from)
   ::memcpy(&userid_, &from.userid_,
     reinterpret_cast<char*>(&roomid_) -
     reinterpret_cast<char*>(&userid_) + sizeof(roomid_));
-  // @@protoc_insertion_point(copy_constructor:protocol.ResCreate)
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.ResCreate)
 }
 
 void ResCreate::SharedCtor() {
@@ -3913,7 +3817,7 @@ void ResCreate::SharedCtor() {
 }
 
 ResCreate::~ResCreate() {
-  // @@protoc_insertion_point(destructor:protocol.ResCreate)
+  // @@protoc_insertion_point(destructor:gs_protocol.ResCreate)
   SharedDtor();
 }
 
@@ -3944,7 +3848,7 @@ ResCreate* ResCreate::New(::google::protobuf::Arena* arena) const {
 }
 
 void ResCreate::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.ResCreate)
+// @@protoc_insertion_point(message_clear_start:gs_protocol.ResCreate)
   ::memset(&userid_, 0, reinterpret_cast<char*>(&roomid_) -
     reinterpret_cast<char*>(&userid_) + sizeof(roomid_));
 }
@@ -3953,7 +3857,7 @@ bool ResCreate::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.ResCreate)
+  // @@protoc_insertion_point(parse_start:gs_protocol.ResCreate)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -3998,17 +3902,17 @@ bool ResCreate::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.ResCreate)
+  // @@protoc_insertion_point(parse_success:gs_protocol.ResCreate)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.ResCreate)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.ResCreate)
   return false;
 #undef DO_
 }
 
 void ResCreate::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.ResCreate)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.ResCreate)
   // int64 userID = 1;
   if (this->userid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->userid(), output);
@@ -4019,13 +3923,13 @@ void ResCreate::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->roomid(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.ResCreate)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.ResCreate)
 }
 
 ::google::protobuf::uint8* ResCreate::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.ResCreate)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.ResCreate)
   // int64 userID = 1;
   if (this->userid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->userid(), target);
@@ -4036,12 +3940,12 @@ void ResCreate::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->roomid(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.ResCreate)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.ResCreate)
   return target;
 }
 
 size_t ResCreate::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.ResCreate)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.ResCreate)
   size_t total_size = 0;
 
   // int64 userID = 1;
@@ -4066,22 +3970,22 @@ size_t ResCreate::ByteSizeLong() const {
 }
 
 void ResCreate::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.ResCreate)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.ResCreate)
   GOOGLE_DCHECK_NE(&from, this);
   const ResCreate* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const ResCreate>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.ResCreate)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.ResCreate)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.ResCreate)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.ResCreate)
     MergeFrom(*source);
   }
 }
 
 void ResCreate::MergeFrom(const ResCreate& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.ResCreate)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.ResCreate)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.userid() != 0) {
@@ -4093,14 +3997,14 @@ void ResCreate::MergeFrom(const ResCreate& from) {
 }
 
 void ResCreate::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.ResCreate)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.ResCreate)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ResCreate::CopyFrom(const ResCreate& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.ResCreate)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.ResCreate)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4133,13 +4037,13 @@ void ResCreate::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 ResCreate::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResCreate.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResCreate.userID)
   return userid_;
 }
 void ResCreate::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResCreate.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResCreate.userID)
 }
 
 // int64 roomID = 2;
@@ -4147,13 +4051,13 @@ void ResCreate::clear_roomid() {
   roomid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 ResCreate::roomid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResCreate.roomID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResCreate.roomID)
   return roomid_;
 }
 void ResCreate::set_roomid(::google::protobuf::int64 value) {
   
   roomid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResCreate.roomID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResCreate.roomID)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4172,27 +4076,28 @@ ResJoin::ResJoin()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.ResJoin)
+  // @@protoc_insertion_point(constructor:gs_protocol.ResJoin)
 }
 ResJoin::ResJoin(const ResJoin& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
+      members_(from.members_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&userid_, &from.userid_,
-    reinterpret_cast<char*>(&members_) -
-    reinterpret_cast<char*>(&userid_) + sizeof(members_));
-  // @@protoc_insertion_point(copy_constructor:protocol.ResJoin)
+    reinterpret_cast<char*>(&roomid_) -
+    reinterpret_cast<char*>(&userid_) + sizeof(roomid_));
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.ResJoin)
 }
 
 void ResJoin::SharedCtor() {
-  ::memset(&userid_, 0, reinterpret_cast<char*>(&members_) -
-    reinterpret_cast<char*>(&userid_) + sizeof(members_));
+  ::memset(&userid_, 0, reinterpret_cast<char*>(&roomid_) -
+    reinterpret_cast<char*>(&userid_) + sizeof(roomid_));
   _cached_size_ = 0;
 }
 
 ResJoin::~ResJoin() {
-  // @@protoc_insertion_point(destructor:protocol.ResJoin)
+  // @@protoc_insertion_point(destructor:gs_protocol.ResJoin)
   SharedDtor();
 }
 
@@ -4223,16 +4128,17 @@ ResJoin* ResJoin::New(::google::protobuf::Arena* arena) const {
 }
 
 void ResJoin::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.ResJoin)
-  ::memset(&userid_, 0, reinterpret_cast<char*>(&members_) -
-    reinterpret_cast<char*>(&userid_) + sizeof(members_));
+// @@protoc_insertion_point(message_clear_start:gs_protocol.ResJoin)
+  members_.Clear();
+  ::memset(&userid_, 0, reinterpret_cast<char*>(&roomid_) -
+    reinterpret_cast<char*>(&userid_) + sizeof(roomid_));
 }
 
 bool ResJoin::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.ResJoin)
+  // @@protoc_insertion_point(parse_start:gs_protocol.ResJoin)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -4264,13 +4170,16 @@ bool ResJoin::MergePartialFromCodedStream(
         break;
       }
 
-      // int64 members = 3;
+      // repeated int64 members = 3;
       case 3: {
-        if (tag == 24u) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+        if (tag == 26u) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
-                 input, &members_)));
+                 input, this->mutable_members())));
+        } else if (tag == 24u) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                 1, 26u, input, this->mutable_members())));
         } else {
           goto handle_unusual;
         }
@@ -4290,17 +4199,17 @@ bool ResJoin::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.ResJoin)
+  // @@protoc_insertion_point(parse_success:gs_protocol.ResJoin)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.ResJoin)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.ResJoin)
   return false;
 #undef DO_
 }
 
 void ResJoin::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.ResJoin)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.ResJoin)
   // int64 userID = 1;
   if (this->userid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->userid(), output);
@@ -4311,18 +4220,23 @@ void ResJoin::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->roomid(), output);
   }
 
-  // int64 members = 3;
-  if (this->members() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(3, this->members(), output);
+  // repeated int64 members = 3;
+  if (this->members_size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteTag(3, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
+    output->WriteVarint32(_members_cached_byte_size_);
+  }
+  for (int i = 0; i < this->members_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt64NoTag(
+      this->members(i), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.ResJoin)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.ResJoin)
 }
 
 ::google::protobuf::uint8* ResJoin::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.ResJoin)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.ResJoin)
   // int64 userID = 1;
   if (this->userid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->userid(), target);
@@ -4333,18 +4247,42 @@ void ResJoin::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->roomid(), target);
   }
 
-  // int64 members = 3;
-  if (this->members() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(3, this->members(), target);
+  // repeated int64 members = 3;
+  if (this->members_size() > 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
+      3,
+      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
+      target);
+    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
+      _members_cached_byte_size_, target);
+  }
+  for (int i = 0; i < this->members_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteInt64NoTagToArray(this->members(i), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.ResJoin)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.ResJoin)
   return target;
 }
 
 size_t ResJoin::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.ResJoin)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.ResJoin)
   size_t total_size = 0;
+
+  // repeated int64 members = 3;
+  {
+    size_t data_size = ::google::protobuf::internal::WireFormatLite::
+      Int64Size(this->members_);
+    if (data_size > 0) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(data_size);
+    }
+    int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
+    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+    _members_cached_byte_size_ = cached_size;
+    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+    total_size += data_size;
+  }
 
   // int64 userID = 1;
   if (this->userid() != 0) {
@@ -4360,13 +4298,6 @@ size_t ResJoin::ByteSizeLong() const {
         this->roomid());
   }
 
-  // int64 members = 3;
-  if (this->members() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->members());
-  }
-
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -4375,44 +4306,42 @@ size_t ResJoin::ByteSizeLong() const {
 }
 
 void ResJoin::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.ResJoin)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.ResJoin)
   GOOGLE_DCHECK_NE(&from, this);
   const ResJoin* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const ResJoin>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.ResJoin)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.ResJoin)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.ResJoin)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.ResJoin)
     MergeFrom(*source);
   }
 }
 
 void ResJoin::MergeFrom(const ResJoin& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.ResJoin)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.ResJoin)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  members_.MergeFrom(from.members_);
   if (from.userid() != 0) {
     set_userid(from.userid());
   }
   if (from.roomid() != 0) {
     set_roomid(from.roomid());
   }
-  if (from.members() != 0) {
-    set_members(from.members());
-  }
 }
 
 void ResJoin::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.ResJoin)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.ResJoin)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ResJoin::CopyFrom(const ResJoin& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.ResJoin)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.ResJoin)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4427,9 +4356,9 @@ void ResJoin::Swap(ResJoin* other) {
   InternalSwap(other);
 }
 void ResJoin::InternalSwap(ResJoin* other) {
+  members_.UnsafeArenaSwap(&other->members_);
   std::swap(userid_, other->userid_);
   std::swap(roomid_, other->roomid_);
-  std::swap(members_, other->members_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
@@ -4446,13 +4375,13 @@ void ResJoin::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 ResJoin::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResJoin.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResJoin.userID)
   return userid_;
 }
 void ResJoin::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResJoin.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResJoin.userID)
 }
 
 // int64 roomID = 2;
@@ -4460,27 +4389,43 @@ void ResJoin::clear_roomid() {
   roomid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 ResJoin::roomid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResJoin.roomID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResJoin.roomID)
   return roomid_;
 }
 void ResJoin::set_roomid(::google::protobuf::int64 value) {
   
   roomid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResJoin.roomID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResJoin.roomID)
 }
 
-// int64 members = 3;
-void ResJoin::clear_members() {
-  members_ = GOOGLE_LONGLONG(0);
+// repeated int64 members = 3;
+int ResJoin::members_size() const {
+  return members_.size();
 }
-::google::protobuf::int64 ResJoin::members() const {
-  // @@protoc_insertion_point(field_get:protocol.ResJoin.members)
+void ResJoin::clear_members() {
+  members_.Clear();
+}
+::google::protobuf::int64 ResJoin::members(int index) const {
+  // @@protoc_insertion_point(field_get:gs_protocol.ResJoin.members)
+  return members_.Get(index);
+}
+void ResJoin::set_members(int index, ::google::protobuf::int64 value) {
+  members_.Set(index, value);
+  // @@protoc_insertion_point(field_set:gs_protocol.ResJoin.members)
+}
+void ResJoin::add_members(::google::protobuf::int64 value) {
+  members_.Add(value);
+  // @@protoc_insertion_point(field_add:gs_protocol.ResJoin.members)
+}
+const ::google::protobuf::RepeatedField< ::google::protobuf::int64 >&
+ResJoin::members() const {
+  // @@protoc_insertion_point(field_list:gs_protocol.ResJoin.members)
   return members_;
 }
-void ResJoin::set_members(::google::protobuf::int64 value) {
-  
-  members_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResJoin.members)
+::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
+ResJoin::mutable_members() {
+  // @@protoc_insertion_point(field_mutable_list:gs_protocol.ResJoin.members)
+  return &members_;
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4498,7 +4443,7 @@ ResAction1::ResAction1()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.ResAction1)
+  // @@protoc_insertion_point(constructor:gs_protocol.ResAction1)
 }
 ResAction1::ResAction1(const ResAction1& from)
   : ::google::protobuf::Message(),
@@ -4508,7 +4453,7 @@ ResAction1::ResAction1(const ResAction1& from)
   ::memcpy(&userid_, &from.userid_,
     reinterpret_cast<char*>(&result_) -
     reinterpret_cast<char*>(&userid_) + sizeof(result_));
-  // @@protoc_insertion_point(copy_constructor:protocol.ResAction1)
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.ResAction1)
 }
 
 void ResAction1::SharedCtor() {
@@ -4518,7 +4463,7 @@ void ResAction1::SharedCtor() {
 }
 
 ResAction1::~ResAction1() {
-  // @@protoc_insertion_point(destructor:protocol.ResAction1)
+  // @@protoc_insertion_point(destructor:gs_protocol.ResAction1)
   SharedDtor();
 }
 
@@ -4549,7 +4494,7 @@ ResAction1* ResAction1::New(::google::protobuf::Arena* arena) const {
 }
 
 void ResAction1::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.ResAction1)
+// @@protoc_insertion_point(message_clear_start:gs_protocol.ResAction1)
   ::memset(&userid_, 0, reinterpret_cast<char*>(&result_) -
     reinterpret_cast<char*>(&userid_) + sizeof(result_));
 }
@@ -4558,7 +4503,7 @@ bool ResAction1::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.ResAction1)
+  // @@protoc_insertion_point(parse_start:gs_protocol.ResAction1)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -4603,17 +4548,17 @@ bool ResAction1::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.ResAction1)
+  // @@protoc_insertion_point(parse_success:gs_protocol.ResAction1)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.ResAction1)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.ResAction1)
   return false;
 #undef DO_
 }
 
 void ResAction1::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.ResAction1)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.ResAction1)
   // int64 userID = 1;
   if (this->userid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->userid(), output);
@@ -4624,13 +4569,13 @@ void ResAction1::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->result(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.ResAction1)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.ResAction1)
 }
 
 ::google::protobuf::uint8* ResAction1::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.ResAction1)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.ResAction1)
   // int64 userID = 1;
   if (this->userid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->userid(), target);
@@ -4641,12 +4586,12 @@ void ResAction1::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->result(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.ResAction1)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.ResAction1)
   return target;
 }
 
 size_t ResAction1::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.ResAction1)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.ResAction1)
   size_t total_size = 0;
 
   // int64 userID = 1;
@@ -4671,22 +4616,22 @@ size_t ResAction1::ByteSizeLong() const {
 }
 
 void ResAction1::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.ResAction1)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.ResAction1)
   GOOGLE_DCHECK_NE(&from, this);
   const ResAction1* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const ResAction1>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.ResAction1)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.ResAction1)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.ResAction1)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.ResAction1)
     MergeFrom(*source);
   }
 }
 
 void ResAction1::MergeFrom(const ResAction1& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.ResAction1)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.ResAction1)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.userid() != 0) {
@@ -4698,14 +4643,14 @@ void ResAction1::MergeFrom(const ResAction1& from) {
 }
 
 void ResAction1::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.ResAction1)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.ResAction1)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ResAction1::CopyFrom(const ResAction1& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.ResAction1)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.ResAction1)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4738,13 +4683,13 @@ void ResAction1::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 ResAction1::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResAction1.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResAction1.userID)
   return userid_;
 }
 void ResAction1::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResAction1.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResAction1.userID)
 }
 
 // int32 result = 2;
@@ -4752,13 +4697,13 @@ void ResAction1::clear_result() {
   result_ = 0;
 }
 ::google::protobuf::int32 ResAction1::result() const {
-  // @@protoc_insertion_point(field_get:protocol.ResAction1.result)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResAction1.result)
   return result_;
 }
 void ResAction1::set_result(::google::protobuf::int32 value) {
   
   result_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResAction1.result)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResAction1.result)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -4776,7 +4721,7 @@ ResQuit::ResQuit()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.ResQuit)
+  // @@protoc_insertion_point(constructor:gs_protocol.ResQuit)
 }
 ResQuit::ResQuit(const ResQuit& from)
   : ::google::protobuf::Message(),
@@ -4786,7 +4731,7 @@ ResQuit::ResQuit(const ResQuit& from)
   ::memcpy(&userid_, &from.userid_,
     reinterpret_cast<char*>(&issuccess_) -
     reinterpret_cast<char*>(&userid_) + sizeof(issuccess_));
-  // @@protoc_insertion_point(copy_constructor:protocol.ResQuit)
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.ResQuit)
 }
 
 void ResQuit::SharedCtor() {
@@ -4796,7 +4741,7 @@ void ResQuit::SharedCtor() {
 }
 
 ResQuit::~ResQuit() {
-  // @@protoc_insertion_point(destructor:protocol.ResQuit)
+  // @@protoc_insertion_point(destructor:gs_protocol.ResQuit)
   SharedDtor();
 }
 
@@ -4827,7 +4772,7 @@ ResQuit* ResQuit::New(::google::protobuf::Arena* arena) const {
 }
 
 void ResQuit::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.ResQuit)
+// @@protoc_insertion_point(message_clear_start:gs_protocol.ResQuit)
   ::memset(&userid_, 0, reinterpret_cast<char*>(&issuccess_) -
     reinterpret_cast<char*>(&userid_) + sizeof(issuccess_));
 }
@@ -4836,7 +4781,7 @@ bool ResQuit::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.ResQuit)
+  // @@protoc_insertion_point(parse_start:gs_protocol.ResQuit)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -4881,17 +4826,17 @@ bool ResQuit::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.ResQuit)
+  // @@protoc_insertion_point(parse_success:gs_protocol.ResQuit)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.ResQuit)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.ResQuit)
   return false;
 #undef DO_
 }
 
 void ResQuit::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.ResQuit)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.ResQuit)
   // int64 userID = 1;
   if (this->userid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->userid(), output);
@@ -4902,13 +4847,13 @@ void ResQuit::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->issuccess(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.ResQuit)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.ResQuit)
 }
 
 ::google::protobuf::uint8* ResQuit::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.ResQuit)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.ResQuit)
   // int64 userID = 1;
   if (this->userid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->userid(), target);
@@ -4919,12 +4864,12 @@ void ResQuit::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->issuccess(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.ResQuit)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.ResQuit)
   return target;
 }
 
 size_t ResQuit::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.ResQuit)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.ResQuit)
   size_t total_size = 0;
 
   // int64 userID = 1;
@@ -4949,22 +4894,22 @@ size_t ResQuit::ByteSizeLong() const {
 }
 
 void ResQuit::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.ResQuit)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.ResQuit)
   GOOGLE_DCHECK_NE(&from, this);
   const ResQuit* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const ResQuit>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.ResQuit)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.ResQuit)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.ResQuit)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.ResQuit)
     MergeFrom(*source);
   }
 }
 
 void ResQuit::MergeFrom(const ResQuit& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.ResQuit)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.ResQuit)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.userid() != 0) {
@@ -4976,14 +4921,14 @@ void ResQuit::MergeFrom(const ResQuit& from) {
 }
 
 void ResQuit::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.ResQuit)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.ResQuit)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ResQuit::CopyFrom(const ResQuit& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.ResQuit)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.ResQuit)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5016,13 +4961,13 @@ void ResQuit::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 ResQuit::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResQuit.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResQuit.userID)
   return userid_;
 }
 void ResQuit::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResQuit.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResQuit.userID)
 }
 
 // int32 isSuccess = 2;
@@ -5030,13 +4975,13 @@ void ResQuit::clear_issuccess() {
   issuccess_ = 0;
 }
 ::google::protobuf::int32 ResQuit::issuccess() const {
-  // @@protoc_insertion_point(field_get:protocol.ResQuit.isSuccess)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResQuit.isSuccess)
   return issuccess_;
 }
 void ResQuit::set_issuccess(::google::protobuf::int32 value) {
   
   issuccess_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResQuit.isSuccess)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResQuit.isSuccess)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -5054,27 +4999,25 @@ ResRoomList::ResRoomList()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.ResRoomList)
+  // @@protoc_insertion_point(constructor:gs_protocol.ResRoomList)
 }
 ResRoomList::ResRoomList(const ResRoomList& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
+      roomids_(from.roomids_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&userid_, &from.userid_,
-    reinterpret_cast<char*>(&roomids_) -
-    reinterpret_cast<char*>(&userid_) + sizeof(roomids_));
-  // @@protoc_insertion_point(copy_constructor:protocol.ResRoomList)
+  userid_ = from.userid_;
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.ResRoomList)
 }
 
 void ResRoomList::SharedCtor() {
-  ::memset(&userid_, 0, reinterpret_cast<char*>(&roomids_) -
-    reinterpret_cast<char*>(&userid_) + sizeof(roomids_));
+  userid_ = GOOGLE_LONGLONG(0);
   _cached_size_ = 0;
 }
 
 ResRoomList::~ResRoomList() {
-  // @@protoc_insertion_point(destructor:protocol.ResRoomList)
+  // @@protoc_insertion_point(destructor:gs_protocol.ResRoomList)
   SharedDtor();
 }
 
@@ -5105,16 +5048,16 @@ ResRoomList* ResRoomList::New(::google::protobuf::Arena* arena) const {
 }
 
 void ResRoomList::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.ResRoomList)
-  ::memset(&userid_, 0, reinterpret_cast<char*>(&roomids_) -
-    reinterpret_cast<char*>(&userid_) + sizeof(roomids_));
+// @@protoc_insertion_point(message_clear_start:gs_protocol.ResRoomList)
+  roomids_.Clear();
+  userid_ = GOOGLE_LONGLONG(0);
 }
 
 bool ResRoomList::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.ResRoomList)
+  // @@protoc_insertion_point(parse_start:gs_protocol.ResRoomList)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -5133,13 +5076,16 @@ bool ResRoomList::MergePartialFromCodedStream(
         break;
       }
 
-      // int64 roomIDs = 2;
+      // repeated int64 roomIDs = 2;
       case 2: {
-        if (tag == 16u) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+        if (tag == 18u) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
-                 input, &roomids_)));
+                 input, this->mutable_roomids())));
+        } else if (tag == 16u) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                 1, 18u, input, this->mutable_roomids())));
         } else {
           goto handle_unusual;
         }
@@ -5159,64 +5105,86 @@ bool ResRoomList::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.ResRoomList)
+  // @@protoc_insertion_point(parse_success:gs_protocol.ResRoomList)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.ResRoomList)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.ResRoomList)
   return false;
 #undef DO_
 }
 
 void ResRoomList::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.ResRoomList)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.ResRoomList)
   // int64 userID = 1;
   if (this->userid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->userid(), output);
   }
 
-  // int64 roomIDs = 2;
-  if (this->roomids() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->roomids(), output);
+  // repeated int64 roomIDs = 2;
+  if (this->roomids_size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteTag(2, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
+    output->WriteVarint32(_roomids_cached_byte_size_);
+  }
+  for (int i = 0; i < this->roomids_size(); i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt64NoTag(
+      this->roomids(i), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.ResRoomList)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.ResRoomList)
 }
 
 ::google::protobuf::uint8* ResRoomList::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.ResRoomList)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.ResRoomList)
   // int64 userID = 1;
   if (this->userid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->userid(), target);
   }
 
-  // int64 roomIDs = 2;
-  if (this->roomids() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->roomids(), target);
+  // repeated int64 roomIDs = 2;
+  if (this->roomids_size() > 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
+      2,
+      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
+      target);
+    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
+      _roomids_cached_byte_size_, target);
+  }
+  for (int i = 0; i < this->roomids_size(); i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteInt64NoTagToArray(this->roomids(i), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.ResRoomList)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.ResRoomList)
   return target;
 }
 
 size_t ResRoomList::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.ResRoomList)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.ResRoomList)
   size_t total_size = 0;
+
+  // repeated int64 roomIDs = 2;
+  {
+    size_t data_size = ::google::protobuf::internal::WireFormatLite::
+      Int64Size(this->roomids_);
+    if (data_size > 0) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(data_size);
+    }
+    int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
+    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+    _roomids_cached_byte_size_ = cached_size;
+    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+    total_size += data_size;
+  }
 
   // int64 userID = 1;
   if (this->userid() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int64Size(
         this->userid());
-  }
-
-  // int64 roomIDs = 2;
-  if (this->roomids() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->roomids());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -5227,41 +5195,39 @@ size_t ResRoomList::ByteSizeLong() const {
 }
 
 void ResRoomList::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.ResRoomList)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.ResRoomList)
   GOOGLE_DCHECK_NE(&from, this);
   const ResRoomList* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const ResRoomList>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.ResRoomList)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.ResRoomList)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.ResRoomList)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.ResRoomList)
     MergeFrom(*source);
   }
 }
 
 void ResRoomList::MergeFrom(const ResRoomList& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.ResRoomList)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.ResRoomList)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  roomids_.MergeFrom(from.roomids_);
   if (from.userid() != 0) {
     set_userid(from.userid());
-  }
-  if (from.roomids() != 0) {
-    set_roomids(from.roomids());
   }
 }
 
 void ResRoomList::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.ResRoomList)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.ResRoomList)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ResRoomList::CopyFrom(const ResRoomList& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.ResRoomList)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.ResRoomList)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5276,8 +5242,8 @@ void ResRoomList::Swap(ResRoomList* other) {
   InternalSwap(other);
 }
 void ResRoomList::InternalSwap(ResRoomList* other) {
+  roomids_.UnsafeArenaSwap(&other->roomids_);
   std::swap(userid_, other->userid_);
-  std::swap(roomids_, other->roomids_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
@@ -5294,27 +5260,43 @@ void ResRoomList::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 ResRoomList::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResRoomList.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResRoomList.userID)
   return userid_;
 }
 void ResRoomList::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResRoomList.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResRoomList.userID)
 }
 
-// int64 roomIDs = 2;
-void ResRoomList::clear_roomids() {
-  roomids_ = GOOGLE_LONGLONG(0);
+// repeated int64 roomIDs = 2;
+int ResRoomList::roomids_size() const {
+  return roomids_.size();
 }
-::google::protobuf::int64 ResRoomList::roomids() const {
-  // @@protoc_insertion_point(field_get:protocol.ResRoomList.roomIDs)
+void ResRoomList::clear_roomids() {
+  roomids_.Clear();
+}
+::google::protobuf::int64 ResRoomList::roomids(int index) const {
+  // @@protoc_insertion_point(field_get:gs_protocol.ResRoomList.roomIDs)
+  return roomids_.Get(index);
+}
+void ResRoomList::set_roomids(int index, ::google::protobuf::int64 value) {
+  roomids_.Set(index, value);
+  // @@protoc_insertion_point(field_set:gs_protocol.ResRoomList.roomIDs)
+}
+void ResRoomList::add_roomids(::google::protobuf::int64 value) {
+  roomids_.Add(value);
+  // @@protoc_insertion_point(field_add:gs_protocol.ResRoomList.roomIDs)
+}
+const ::google::protobuf::RepeatedField< ::google::protobuf::int64 >&
+ResRoomList::roomids() const {
+  // @@protoc_insertion_point(field_list:gs_protocol.ResRoomList.roomIDs)
   return roomids_;
 }
-void ResRoomList::set_roomids(::google::protobuf::int64 value) {
-  
-  roomids_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResRoomList.roomIDs)
+::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
+ResRoomList::mutable_roomids() {
+  // @@protoc_insertion_point(field_mutable_list:gs_protocol.ResRoomList.roomIDs)
+  return &roomids_;
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -5332,7 +5314,7 @@ NotifyJoinMsg::NotifyJoinMsg()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.NotifyJoinMsg)
+  // @@protoc_insertion_point(constructor:gs_protocol.NotifyJoinMsg)
 }
 NotifyJoinMsg::NotifyJoinMsg(const NotifyJoinMsg& from)
   : ::google::protobuf::Message(),
@@ -5342,7 +5324,7 @@ NotifyJoinMsg::NotifyJoinMsg(const NotifyJoinMsg& from)
   ::memcpy(&userid_, &from.userid_,
     reinterpret_cast<char*>(&roomid_) -
     reinterpret_cast<char*>(&userid_) + sizeof(roomid_));
-  // @@protoc_insertion_point(copy_constructor:protocol.NotifyJoinMsg)
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.NotifyJoinMsg)
 }
 
 void NotifyJoinMsg::SharedCtor() {
@@ -5352,7 +5334,7 @@ void NotifyJoinMsg::SharedCtor() {
 }
 
 NotifyJoinMsg::~NotifyJoinMsg() {
-  // @@protoc_insertion_point(destructor:protocol.NotifyJoinMsg)
+  // @@protoc_insertion_point(destructor:gs_protocol.NotifyJoinMsg)
   SharedDtor();
 }
 
@@ -5383,7 +5365,7 @@ NotifyJoinMsg* NotifyJoinMsg::New(::google::protobuf::Arena* arena) const {
 }
 
 void NotifyJoinMsg::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.NotifyJoinMsg)
+// @@protoc_insertion_point(message_clear_start:gs_protocol.NotifyJoinMsg)
   ::memset(&userid_, 0, reinterpret_cast<char*>(&roomid_) -
     reinterpret_cast<char*>(&userid_) + sizeof(roomid_));
 }
@@ -5392,7 +5374,7 @@ bool NotifyJoinMsg::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.NotifyJoinMsg)
+  // @@protoc_insertion_point(parse_start:gs_protocol.NotifyJoinMsg)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -5437,17 +5419,17 @@ bool NotifyJoinMsg::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.NotifyJoinMsg)
+  // @@protoc_insertion_point(parse_success:gs_protocol.NotifyJoinMsg)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.NotifyJoinMsg)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.NotifyJoinMsg)
   return false;
 #undef DO_
 }
 
 void NotifyJoinMsg::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.NotifyJoinMsg)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.NotifyJoinMsg)
   // int64 userID = 1;
   if (this->userid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->userid(), output);
@@ -5458,13 +5440,13 @@ void NotifyJoinMsg::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->roomid(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.NotifyJoinMsg)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.NotifyJoinMsg)
 }
 
 ::google::protobuf::uint8* NotifyJoinMsg::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.NotifyJoinMsg)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.NotifyJoinMsg)
   // int64 userID = 1;
   if (this->userid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->userid(), target);
@@ -5475,12 +5457,12 @@ void NotifyJoinMsg::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->roomid(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.NotifyJoinMsg)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.NotifyJoinMsg)
   return target;
 }
 
 size_t NotifyJoinMsg::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.NotifyJoinMsg)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.NotifyJoinMsg)
   size_t total_size = 0;
 
   // int64 userID = 1;
@@ -5505,22 +5487,22 @@ size_t NotifyJoinMsg::ByteSizeLong() const {
 }
 
 void NotifyJoinMsg::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.NotifyJoinMsg)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.NotifyJoinMsg)
   GOOGLE_DCHECK_NE(&from, this);
   const NotifyJoinMsg* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const NotifyJoinMsg>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.NotifyJoinMsg)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.NotifyJoinMsg)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.NotifyJoinMsg)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.NotifyJoinMsg)
     MergeFrom(*source);
   }
 }
 
 void NotifyJoinMsg::MergeFrom(const NotifyJoinMsg& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.NotifyJoinMsg)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.NotifyJoinMsg)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.userid() != 0) {
@@ -5532,14 +5514,14 @@ void NotifyJoinMsg::MergeFrom(const NotifyJoinMsg& from) {
 }
 
 void NotifyJoinMsg::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.NotifyJoinMsg)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.NotifyJoinMsg)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void NotifyJoinMsg::CopyFrom(const NotifyJoinMsg& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.NotifyJoinMsg)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.NotifyJoinMsg)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5572,13 +5554,13 @@ void NotifyJoinMsg::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 NotifyJoinMsg::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.NotifyJoinMsg.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.NotifyJoinMsg.userID)
   return userid_;
 }
 void NotifyJoinMsg::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.NotifyJoinMsg.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.NotifyJoinMsg.userID)
 }
 
 // int64 roomID = 2;
@@ -5586,13 +5568,13 @@ void NotifyJoinMsg::clear_roomid() {
   roomid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 NotifyJoinMsg::roomid() const {
-  // @@protoc_insertion_point(field_get:protocol.NotifyJoinMsg.roomID)
+  // @@protoc_insertion_point(field_get:gs_protocol.NotifyJoinMsg.roomID)
   return roomid_;
 }
 void NotifyJoinMsg::set_roomid(::google::protobuf::int64 value) {
   
   roomid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.NotifyJoinMsg.roomID)
+  // @@protoc_insertion_point(field_set:gs_protocol.NotifyJoinMsg.roomID)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -5609,7 +5591,7 @@ NotifyAction1Msg::NotifyAction1Msg()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.NotifyAction1Msg)
+  // @@protoc_insertion_point(constructor:gs_protocol.NotifyAction1Msg)
 }
 NotifyAction1Msg::NotifyAction1Msg(const NotifyAction1Msg& from)
   : ::google::protobuf::Message(),
@@ -5617,7 +5599,7 @@ NotifyAction1Msg::NotifyAction1Msg(const NotifyAction1Msg& from)
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   userid_ = from.userid_;
-  // @@protoc_insertion_point(copy_constructor:protocol.NotifyAction1Msg)
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.NotifyAction1Msg)
 }
 
 void NotifyAction1Msg::SharedCtor() {
@@ -5626,7 +5608,7 @@ void NotifyAction1Msg::SharedCtor() {
 }
 
 NotifyAction1Msg::~NotifyAction1Msg() {
-  // @@protoc_insertion_point(destructor:protocol.NotifyAction1Msg)
+  // @@protoc_insertion_point(destructor:gs_protocol.NotifyAction1Msg)
   SharedDtor();
 }
 
@@ -5657,7 +5639,7 @@ NotifyAction1Msg* NotifyAction1Msg::New(::google::protobuf::Arena* arena) const 
 }
 
 void NotifyAction1Msg::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.NotifyAction1Msg)
+// @@protoc_insertion_point(message_clear_start:gs_protocol.NotifyAction1Msg)
   userid_ = GOOGLE_LONGLONG(0);
 }
 
@@ -5665,7 +5647,7 @@ bool NotifyAction1Msg::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.NotifyAction1Msg)
+  // @@protoc_insertion_point(parse_start:gs_protocol.NotifyAction1Msg)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -5697,40 +5679,40 @@ bool NotifyAction1Msg::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.NotifyAction1Msg)
+  // @@protoc_insertion_point(parse_success:gs_protocol.NotifyAction1Msg)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.NotifyAction1Msg)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.NotifyAction1Msg)
   return false;
 #undef DO_
 }
 
 void NotifyAction1Msg::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.NotifyAction1Msg)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.NotifyAction1Msg)
   // int64 userID = 1;
   if (this->userid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->userid(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.NotifyAction1Msg)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.NotifyAction1Msg)
 }
 
 ::google::protobuf::uint8* NotifyAction1Msg::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.NotifyAction1Msg)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.NotifyAction1Msg)
   // int64 userID = 1;
   if (this->userid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->userid(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.NotifyAction1Msg)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.NotifyAction1Msg)
   return target;
 }
 
 size_t NotifyAction1Msg::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.NotifyAction1Msg)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.NotifyAction1Msg)
   size_t total_size = 0;
 
   // int64 userID = 1;
@@ -5748,22 +5730,22 @@ size_t NotifyAction1Msg::ByteSizeLong() const {
 }
 
 void NotifyAction1Msg::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.NotifyAction1Msg)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.NotifyAction1Msg)
   GOOGLE_DCHECK_NE(&from, this);
   const NotifyAction1Msg* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const NotifyAction1Msg>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.NotifyAction1Msg)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.NotifyAction1Msg)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.NotifyAction1Msg)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.NotifyAction1Msg)
     MergeFrom(*source);
   }
 }
 
 void NotifyAction1Msg::MergeFrom(const NotifyAction1Msg& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.NotifyAction1Msg)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.NotifyAction1Msg)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.userid() != 0) {
@@ -5772,14 +5754,14 @@ void NotifyAction1Msg::MergeFrom(const NotifyAction1Msg& from) {
 }
 
 void NotifyAction1Msg::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.NotifyAction1Msg)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.NotifyAction1Msg)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void NotifyAction1Msg::CopyFrom(const NotifyAction1Msg& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.NotifyAction1Msg)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.NotifyAction1Msg)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5811,13 +5793,13 @@ void NotifyAction1Msg::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 NotifyAction1Msg::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.NotifyAction1Msg.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.NotifyAction1Msg.userID)
   return userid_;
 }
 void NotifyAction1Msg::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.NotifyAction1Msg.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.NotifyAction1Msg.userID)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -5835,7 +5817,7 @@ NotifyQuitMsg::NotifyQuitMsg()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.NotifyQuitMsg)
+  // @@protoc_insertion_point(constructor:gs_protocol.NotifyQuitMsg)
 }
 NotifyQuitMsg::NotifyQuitMsg(const NotifyQuitMsg& from)
   : ::google::protobuf::Message(),
@@ -5845,7 +5827,7 @@ NotifyQuitMsg::NotifyQuitMsg(const NotifyQuitMsg& from)
   ::memcpy(&userid_, &from.userid_,
     reinterpret_cast<char*>(&roomid_) -
     reinterpret_cast<char*>(&userid_) + sizeof(roomid_));
-  // @@protoc_insertion_point(copy_constructor:protocol.NotifyQuitMsg)
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.NotifyQuitMsg)
 }
 
 void NotifyQuitMsg::SharedCtor() {
@@ -5855,7 +5837,7 @@ void NotifyQuitMsg::SharedCtor() {
 }
 
 NotifyQuitMsg::~NotifyQuitMsg() {
-  // @@protoc_insertion_point(destructor:protocol.NotifyQuitMsg)
+  // @@protoc_insertion_point(destructor:gs_protocol.NotifyQuitMsg)
   SharedDtor();
 }
 
@@ -5886,7 +5868,7 @@ NotifyQuitMsg* NotifyQuitMsg::New(::google::protobuf::Arena* arena) const {
 }
 
 void NotifyQuitMsg::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.NotifyQuitMsg)
+// @@protoc_insertion_point(message_clear_start:gs_protocol.NotifyQuitMsg)
   ::memset(&userid_, 0, reinterpret_cast<char*>(&roomid_) -
     reinterpret_cast<char*>(&userid_) + sizeof(roomid_));
 }
@@ -5895,7 +5877,7 @@ bool NotifyQuitMsg::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.NotifyQuitMsg)
+  // @@protoc_insertion_point(parse_start:gs_protocol.NotifyQuitMsg)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -5940,17 +5922,17 @@ bool NotifyQuitMsg::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.NotifyQuitMsg)
+  // @@protoc_insertion_point(parse_success:gs_protocol.NotifyQuitMsg)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.NotifyQuitMsg)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.NotifyQuitMsg)
   return false;
 #undef DO_
 }
 
 void NotifyQuitMsg::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.NotifyQuitMsg)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.NotifyQuitMsg)
   // int64 userID = 1;
   if (this->userid() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->userid(), output);
@@ -5961,13 +5943,13 @@ void NotifyQuitMsg::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->roomid(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.NotifyQuitMsg)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.NotifyQuitMsg)
 }
 
 ::google::protobuf::uint8* NotifyQuitMsg::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.NotifyQuitMsg)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.NotifyQuitMsg)
   // int64 userID = 1;
   if (this->userid() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->userid(), target);
@@ -5978,12 +5960,12 @@ void NotifyQuitMsg::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->roomid(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.NotifyQuitMsg)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.NotifyQuitMsg)
   return target;
 }
 
 size_t NotifyQuitMsg::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.NotifyQuitMsg)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.NotifyQuitMsg)
   size_t total_size = 0;
 
   // int64 userID = 1;
@@ -6008,22 +5990,22 @@ size_t NotifyQuitMsg::ByteSizeLong() const {
 }
 
 void NotifyQuitMsg::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.NotifyQuitMsg)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.NotifyQuitMsg)
   GOOGLE_DCHECK_NE(&from, this);
   const NotifyQuitMsg* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const NotifyQuitMsg>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.NotifyQuitMsg)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.NotifyQuitMsg)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.NotifyQuitMsg)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.NotifyQuitMsg)
     MergeFrom(*source);
   }
 }
 
 void NotifyQuitMsg::MergeFrom(const NotifyQuitMsg& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.NotifyQuitMsg)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.NotifyQuitMsg)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.userid() != 0) {
@@ -6035,14 +6017,14 @@ void NotifyQuitMsg::MergeFrom(const NotifyQuitMsg& from) {
 }
 
 void NotifyQuitMsg::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.NotifyQuitMsg)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.NotifyQuitMsg)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void NotifyQuitMsg::CopyFrom(const NotifyQuitMsg& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.NotifyQuitMsg)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.NotifyQuitMsg)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -6075,13 +6057,13 @@ void NotifyQuitMsg::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 NotifyQuitMsg::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.NotifyQuitMsg.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.NotifyQuitMsg.userID)
   return userid_;
 }
 void NotifyQuitMsg::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.NotifyQuitMsg.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.NotifyQuitMsg.userID)
 }
 
 // int64 roomID = 2;
@@ -6089,13 +6071,13 @@ void NotifyQuitMsg::clear_roomid() {
   roomid_ = GOOGLE_LONGLONG(0);
 }
 ::google::protobuf::int64 NotifyQuitMsg::roomid() const {
-  // @@protoc_insertion_point(field_get:protocol.NotifyQuitMsg.roomID)
+  // @@protoc_insertion_point(field_get:gs_protocol.NotifyQuitMsg.roomID)
   return roomid_;
 }
 void NotifyQuitMsg::set_roomid(::google::protobuf::int64 value) {
   
   roomid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.NotifyQuitMsg.roomID)
+  // @@protoc_insertion_point(field_set:gs_protocol.NotifyQuitMsg.roomID)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -6113,7 +6095,7 @@ ErrorMsg::ErrorMsg()
     protobuf_protocol_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:protocol.ErrorMsg)
+  // @@protoc_insertion_point(constructor:gs_protocol.ErrorMsg)
 }
 ErrorMsg::ErrorMsg(const ErrorMsg& from)
   : ::google::protobuf::Message(),
@@ -6125,7 +6107,7 @@ ErrorMsg::ErrorMsg(const ErrorMsg& from)
     errmessage_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.errmessage_);
   }
   errcode_ = from.errcode_;
-  // @@protoc_insertion_point(copy_constructor:protocol.ErrorMsg)
+  // @@protoc_insertion_point(copy_constructor:gs_protocol.ErrorMsg)
 }
 
 void ErrorMsg::SharedCtor() {
@@ -6135,7 +6117,7 @@ void ErrorMsg::SharedCtor() {
 }
 
 ErrorMsg::~ErrorMsg() {
-  // @@protoc_insertion_point(destructor:protocol.ErrorMsg)
+  // @@protoc_insertion_point(destructor:gs_protocol.ErrorMsg)
   SharedDtor();
 }
 
@@ -6167,7 +6149,7 @@ ErrorMsg* ErrorMsg::New(::google::protobuf::Arena* arena) const {
 }
 
 void ErrorMsg::Clear() {
-// @@protoc_insertion_point(message_clear_start:protocol.ErrorMsg)
+// @@protoc_insertion_point(message_clear_start:gs_protocol.ErrorMsg)
   errmessage_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   errcode_ = 0;
 }
@@ -6176,7 +6158,7 @@ bool ErrorMsg::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:protocol.ErrorMsg)
+  // @@protoc_insertion_point(parse_start:gs_protocol.ErrorMsg)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -6203,7 +6185,7 @@ bool ErrorMsg::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->errmessage().data(), this->errmessage().length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "protocol.ErrorMsg.errMessage"));
+            "gs_protocol.ErrorMsg.errMessage"));
         } else {
           goto handle_unusual;
         }
@@ -6223,17 +6205,17 @@ bool ErrorMsg::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:protocol.ErrorMsg)
+  // @@protoc_insertion_point(parse_success:gs_protocol.ErrorMsg)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:protocol.ErrorMsg)
+  // @@protoc_insertion_point(parse_failure:gs_protocol.ErrorMsg)
   return false;
 #undef DO_
 }
 
 void ErrorMsg::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:protocol.ErrorMsg)
+  // @@protoc_insertion_point(serialize_start:gs_protocol.ErrorMsg)
   // int32 errCode = 1;
   if (this->errcode() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->errcode(), output);
@@ -6244,18 +6226,18 @@ void ErrorMsg::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->errmessage().data(), this->errmessage().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "protocol.ErrorMsg.errMessage");
+      "gs_protocol.ErrorMsg.errMessage");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->errmessage(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:protocol.ErrorMsg)
+  // @@protoc_insertion_point(serialize_end:gs_protocol.ErrorMsg)
 }
 
 ::google::protobuf::uint8* ErrorMsg::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic;  // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:protocol.ErrorMsg)
+  // @@protoc_insertion_point(serialize_to_array_start:gs_protocol.ErrorMsg)
   // int32 errCode = 1;
   if (this->errcode() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->errcode(), target);
@@ -6266,18 +6248,18 @@ void ErrorMsg::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->errmessage().data(), this->errmessage().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "protocol.ErrorMsg.errMessage");
+      "gs_protocol.ErrorMsg.errMessage");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         2, this->errmessage(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:protocol.ErrorMsg)
+  // @@protoc_insertion_point(serialize_to_array_end:gs_protocol.ErrorMsg)
   return target;
 }
 
 size_t ErrorMsg::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:protocol.ErrorMsg)
+// @@protoc_insertion_point(message_byte_size_start:gs_protocol.ErrorMsg)
   size_t total_size = 0;
 
   // string errMessage = 2;
@@ -6302,22 +6284,22 @@ size_t ErrorMsg::ByteSizeLong() const {
 }
 
 void ErrorMsg::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:protocol.ErrorMsg)
+// @@protoc_insertion_point(generalized_merge_from_start:gs_protocol.ErrorMsg)
   GOOGLE_DCHECK_NE(&from, this);
   const ErrorMsg* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const ErrorMsg>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:protocol.ErrorMsg)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:gs_protocol.ErrorMsg)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:protocol.ErrorMsg)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:gs_protocol.ErrorMsg)
     MergeFrom(*source);
   }
 }
 
 void ErrorMsg::MergeFrom(const ErrorMsg& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:protocol.ErrorMsg)
+// @@protoc_insertion_point(class_specific_merge_from_start:gs_protocol.ErrorMsg)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.errmessage().size() > 0) {
@@ -6330,14 +6312,14 @@ void ErrorMsg::MergeFrom(const ErrorMsg& from) {
 }
 
 void ErrorMsg::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:protocol.ErrorMsg)
+// @@protoc_insertion_point(generalized_copy_from_start:gs_protocol.ErrorMsg)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ErrorMsg::CopyFrom(const ErrorMsg& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:protocol.ErrorMsg)
+// @@protoc_insertion_point(class_specific_copy_from_start:gs_protocol.ErrorMsg)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -6370,13 +6352,13 @@ void ErrorMsg::clear_errcode() {
   errcode_ = 0;
 }
 ::google::protobuf::int32 ErrorMsg::errcode() const {
-  // @@protoc_insertion_point(field_get:protocol.ErrorMsg.errCode)
+  // @@protoc_insertion_point(field_get:gs_protocol.ErrorMsg.errCode)
   return errcode_;
 }
 void ErrorMsg::set_errcode(::google::protobuf::int32 value) {
   
   errcode_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ErrorMsg.errCode)
+  // @@protoc_insertion_point(field_set:gs_protocol.ErrorMsg.errCode)
 }
 
 // string errMessage = 2;
@@ -6384,40 +6366,40 @@ void ErrorMsg::clear_errmessage() {
   errmessage_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 const ::std::string& ErrorMsg::errmessage() const {
-  // @@protoc_insertion_point(field_get:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_get:gs_protocol.ErrorMsg.errMessage)
   return errmessage_.GetNoArena();
 }
 void ErrorMsg::set_errmessage(const ::std::string& value) {
   
   errmessage_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_set:gs_protocol.ErrorMsg.errMessage)
 }
 #if LANG_CXX11
 void ErrorMsg::set_errmessage(::std::string&& value) {
   
   errmessage_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_set_rvalue:gs_protocol.ErrorMsg.errMessage)
 }
 #endif
 void ErrorMsg::set_errmessage(const char* value) {
   
   errmessage_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_set_char:gs_protocol.ErrorMsg.errMessage)
 }
 void ErrorMsg::set_errmessage(const char* value, size_t size) {
   
   errmessage_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_set_pointer:gs_protocol.ErrorMsg.errMessage)
 }
 ::std::string* ErrorMsg::mutable_errmessage() {
   
-  // @@protoc_insertion_point(field_mutable:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.ErrorMsg.errMessage)
   return errmessage_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 ::std::string* ErrorMsg::release_errmessage() {
-  // @@protoc_insertion_point(field_release:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_release:gs_protocol.ErrorMsg.errMessage)
   
   return errmessage_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -6428,13 +6410,13 @@ void ErrorMsg::set_allocated_errmessage(::std::string* errmessage) {
     
   }
   errmessage_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), errmessage);
-  // @@protoc_insertion_point(field_set_allocated:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.ErrorMsg.errMessage)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace protocol
+}  // namespace gs_protocol
 
 // @@protoc_insertion_point(global_scope)

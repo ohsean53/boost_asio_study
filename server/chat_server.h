@@ -3,19 +3,19 @@
 #include "stdafx.h"
 
 #include "session.h"
-#include "define.h"
+#include "../proto/protocol.pb.h"
 
 
 class ChatServer
 {
 public:
   ChatServer(boost::asio::io_service& io_service);
-  ~ChatServer();
+  virtual ~ChatServer();
 
   void Init(const int maxSessionCount);
   void Start();
   void CloseSession(const int sessionID);
-  void ProcessPacket(const int seesionID, const char* data);
+  void ProcessPacket(const int seesionID, const char* data, int msg_size);
 
 private:
   int seq_number_;

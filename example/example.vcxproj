@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{DF94C231-794B-400A-AD90-00AAE127AD33}</ProjectGuid>
+    <ProjectGuid>{8066F828-E47F-4B74-9C4D-9116BDB80E4F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>server</RootNamespace>
+    <RootNamespace>example</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -71,23 +71,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(BOOST_HOME);$(PROTOBUF_HOME);$(IncludePath)</IncludePath>
-    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(PROTOBUF_LIBS)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(PROTOBUF_HOME);$(BOOST_HOME);$(IncludePath)</IncludePath>
+    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(BOOST_HOME);$(PROTOBUF_HOME);$(IncludePath)</IncludePath>
-    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(PROTOBUF_LIBS)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(PROTOBUF_HOME);$(BOOST_HOME);$(IncludePath)</IncludePath>
+    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(BOOST_HOME);$(PROTOBUF_HOME);$(IncludePath)</IncludePath>
-    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(PROTOBUF_LIBS)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(PROTOBUF_HOME);$(BOOST_HOME);$(IncludePath)</IncludePath>
+    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(BOOST_HOME);$(PROTOBUF_HOME);$(IncludePath)</IncludePath>
-    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(PROTOBUF_LIBS)\$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(PROTOBUF_HOME);$(BOOST_HOME);$(IncludePath)</IncludePath>
+    <LibraryPath>$(BOOST_LIBS)\$(Platform)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -166,25 +166,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\proto\protocol.pb.h" />
-    <ClInclude Include="chat_server.h" />
-    <ClInclude Include="define.h" />
-    <ClInclude Include="session.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="util.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\proto\protocol.pb.cc" />
-    <ClCompile Include="chat_server.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="session.cpp" />
+    <ClCompile Include="example.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="util.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

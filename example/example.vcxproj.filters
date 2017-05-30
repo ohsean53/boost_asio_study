@@ -24,12 +24,6 @@
     <ClInclude Include="targetver.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="chat_client.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="define.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="..\proto\protocol.pb.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -38,10 +32,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="chat_client.cpp">
+    <ClCompile Include="example.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="..\proto\protocol.pb.cc">

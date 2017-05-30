@@ -27,10 +27,9 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
-#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
-namespace protocol {
+namespace gs_protocol {
 class ErrorMsg;
 class ErrorMsgDefaultTypeInternal;
 extern ErrorMsgDefaultTypeInternal _ErrorMsg_default_instance_;
@@ -82,9 +81,9 @@ extern ResQuitDefaultTypeInternal _ResQuit_default_instance_;
 class ResRoomList;
 class ResRoomListDefaultTypeInternal;
 extern ResRoomListDefaultTypeInternal _ResRoomList_default_instance_;
-}  // namespace protocol
+}  // namespace gs_protocol
 
-namespace protocol {
+namespace gs_protocol {
 
 namespace protobuf_protocol_2eproto {
 // Internal implementation detail -- do not call these.
@@ -97,59 +96,9 @@ void AddDescriptors();
 void InitDefaults();
 }  // namespace protobuf_protocol_2eproto
 
-enum Type {
-  Undefined = 0,
-  Login = 1,
-  Create = 2,
-  Join = 3,
-  DefinedAction1 = 4,
-  Quit = 5,
-  RoomList = 6,
-  NotifyJoin = 100,
-  NotifyAction1 = 101,
-  NotifyQuit = 102,
-  Error = 1000,
-  Type_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
-  Type_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
-};
-bool Type_IsValid(int value);
-const Type Type_MIN = Undefined;
-const Type Type_MAX = Error;
-const int Type_ARRAYSIZE = Type_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* Type_descriptor();
-inline const ::std::string& Type_Name(Type value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    Type_descriptor(), value);
-}
-inline bool Type_Parse(
-    const ::std::string& name, Type* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<Type>(
-    Type_descriptor(), name, value);
-}
-enum ErrorType {
-  Unknown = 0,
-  ErrorType_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
-  ErrorType_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
-};
-bool ErrorType_IsValid(int value);
-const ErrorType ErrorType_MIN = Unknown;
-const ErrorType ErrorType_MAX = Unknown;
-const int ErrorType_ARRAYSIZE = ErrorType_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* ErrorType_descriptor();
-inline const ::std::string& ErrorType_Name(ErrorType value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    ErrorType_descriptor(), value);
-}
-inline bool ErrorType_Parse(
-    const ::std::string& name, ErrorType* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<ErrorType>(
-    ErrorType_descriptor(), name, value);
-}
 // ===================================================================
 
-class Message : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.Message) */ {
+class Message : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.Message) */ {
  public:
   Message();
   virtual ~Message();
@@ -165,21 +114,21 @@ class Message : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   static const Message& default_instance();
 
   enum PayloadCase {
-    kReqLogin = 2,
-    kReqCreate = 3,
-    kReqJoin = 4,
-    kReqAction1 = 5,
-    kReqQuit = 6,
-    kReqRoomList = 7,
-    kResLogin = 8,
-    kResCreate = 9,
-    kResJoin = 10,
-    kResAction1 = 11,
-    kResQuit = 12,
-    kResRoomList = 13,
-    kNotifyJoin = 14,
-    kNotifyAction1 = 15,
-    kNotifyQuit = 16,
+    kReqLogin = 1,
+    kReqCreate = 2,
+    kReqJoin = 3,
+    kReqAction1 = 4,
+    kReqQuit = 5,
+    kReqRoomList = 6,
+    kResLogin = 7,
+    kResCreate = 8,
+    kResJoin = 9,
+    kResAction1 = 10,
+    kResQuit = 11,
+    kResRoomList = 12,
+    kNotifyJoin = 13,
+    kNotifyAction1 = 14,
+    kNotifyQuit = 15,
     kError = 1000,
     PAYLOAD_NOT_SET = 0,
   };
@@ -236,158 +185,152 @@ class Message : public ::google::protobuf::Message /* @@protoc_insertion_point(c
 
   // accessors -------------------------------------------------------
 
-  // .protocol.Type type = 1;
-  void clear_type();
-  static const int kTypeFieldNumber = 1;
-  ::protocol::Type type() const;
-  void set_type(::protocol::Type value);
-
-  // .protocol.ReqLogin req_login = 2;
+  // .gs_protocol.ReqLogin req_login = 1;
   bool has_req_login() const;
   void clear_req_login();
-  static const int kReqLoginFieldNumber = 2;
-  const ::protocol::ReqLogin& req_login() const;
-  ::protocol::ReqLogin* mutable_req_login();
-  ::protocol::ReqLogin* release_req_login();
-  void set_allocated_req_login(::protocol::ReqLogin* req_login);
+  static const int kReqLoginFieldNumber = 1;
+  const ::gs_protocol::ReqLogin& req_login() const;
+  ::gs_protocol::ReqLogin* mutable_req_login();
+  ::gs_protocol::ReqLogin* release_req_login();
+  void set_allocated_req_login(::gs_protocol::ReqLogin* req_login);
 
-  // .protocol.ReqCreate req_create = 3;
+  // .gs_protocol.ReqCreate req_create = 2;
   bool has_req_create() const;
   void clear_req_create();
-  static const int kReqCreateFieldNumber = 3;
-  const ::protocol::ReqCreate& req_create() const;
-  ::protocol::ReqCreate* mutable_req_create();
-  ::protocol::ReqCreate* release_req_create();
-  void set_allocated_req_create(::protocol::ReqCreate* req_create);
+  static const int kReqCreateFieldNumber = 2;
+  const ::gs_protocol::ReqCreate& req_create() const;
+  ::gs_protocol::ReqCreate* mutable_req_create();
+  ::gs_protocol::ReqCreate* release_req_create();
+  void set_allocated_req_create(::gs_protocol::ReqCreate* req_create);
 
-  // .protocol.ReqJoin req_join = 4;
+  // .gs_protocol.ReqJoin req_join = 3;
   bool has_req_join() const;
   void clear_req_join();
-  static const int kReqJoinFieldNumber = 4;
-  const ::protocol::ReqJoin& req_join() const;
-  ::protocol::ReqJoin* mutable_req_join();
-  ::protocol::ReqJoin* release_req_join();
-  void set_allocated_req_join(::protocol::ReqJoin* req_join);
+  static const int kReqJoinFieldNumber = 3;
+  const ::gs_protocol::ReqJoin& req_join() const;
+  ::gs_protocol::ReqJoin* mutable_req_join();
+  ::gs_protocol::ReqJoin* release_req_join();
+  void set_allocated_req_join(::gs_protocol::ReqJoin* req_join);
 
-  // .protocol.ReqAction1 req_action1 = 5;
+  // .gs_protocol.ReqAction1 req_action1 = 4;
   bool has_req_action1() const;
   void clear_req_action1();
-  static const int kReqAction1FieldNumber = 5;
-  const ::protocol::ReqAction1& req_action1() const;
-  ::protocol::ReqAction1* mutable_req_action1();
-  ::protocol::ReqAction1* release_req_action1();
-  void set_allocated_req_action1(::protocol::ReqAction1* req_action1);
+  static const int kReqAction1FieldNumber = 4;
+  const ::gs_protocol::ReqAction1& req_action1() const;
+  ::gs_protocol::ReqAction1* mutable_req_action1();
+  ::gs_protocol::ReqAction1* release_req_action1();
+  void set_allocated_req_action1(::gs_protocol::ReqAction1* req_action1);
 
-  // .protocol.ReqQuit req_quit = 6;
+  // .gs_protocol.ReqQuit req_quit = 5;
   bool has_req_quit() const;
   void clear_req_quit();
-  static const int kReqQuitFieldNumber = 6;
-  const ::protocol::ReqQuit& req_quit() const;
-  ::protocol::ReqQuit* mutable_req_quit();
-  ::protocol::ReqQuit* release_req_quit();
-  void set_allocated_req_quit(::protocol::ReqQuit* req_quit);
+  static const int kReqQuitFieldNumber = 5;
+  const ::gs_protocol::ReqQuit& req_quit() const;
+  ::gs_protocol::ReqQuit* mutable_req_quit();
+  ::gs_protocol::ReqQuit* release_req_quit();
+  void set_allocated_req_quit(::gs_protocol::ReqQuit* req_quit);
 
-  // .protocol.ReqRoomList req_room_list = 7;
+  // .gs_protocol.ReqRoomList req_room_list = 6;
   bool has_req_room_list() const;
   void clear_req_room_list();
-  static const int kReqRoomListFieldNumber = 7;
-  const ::protocol::ReqRoomList& req_room_list() const;
-  ::protocol::ReqRoomList* mutable_req_room_list();
-  ::protocol::ReqRoomList* release_req_room_list();
-  void set_allocated_req_room_list(::protocol::ReqRoomList* req_room_list);
+  static const int kReqRoomListFieldNumber = 6;
+  const ::gs_protocol::ReqRoomList& req_room_list() const;
+  ::gs_protocol::ReqRoomList* mutable_req_room_list();
+  ::gs_protocol::ReqRoomList* release_req_room_list();
+  void set_allocated_req_room_list(::gs_protocol::ReqRoomList* req_room_list);
 
-  // .protocol.ResLogin res_login = 8;
+  // .gs_protocol.ResLogin res_login = 7;
   bool has_res_login() const;
   void clear_res_login();
-  static const int kResLoginFieldNumber = 8;
-  const ::protocol::ResLogin& res_login() const;
-  ::protocol::ResLogin* mutable_res_login();
-  ::protocol::ResLogin* release_res_login();
-  void set_allocated_res_login(::protocol::ResLogin* res_login);
+  static const int kResLoginFieldNumber = 7;
+  const ::gs_protocol::ResLogin& res_login() const;
+  ::gs_protocol::ResLogin* mutable_res_login();
+  ::gs_protocol::ResLogin* release_res_login();
+  void set_allocated_res_login(::gs_protocol::ResLogin* res_login);
 
-  // .protocol.ResCreate res_create = 9;
+  // .gs_protocol.ResCreate res_create = 8;
   bool has_res_create() const;
   void clear_res_create();
-  static const int kResCreateFieldNumber = 9;
-  const ::protocol::ResCreate& res_create() const;
-  ::protocol::ResCreate* mutable_res_create();
-  ::protocol::ResCreate* release_res_create();
-  void set_allocated_res_create(::protocol::ResCreate* res_create);
+  static const int kResCreateFieldNumber = 8;
+  const ::gs_protocol::ResCreate& res_create() const;
+  ::gs_protocol::ResCreate* mutable_res_create();
+  ::gs_protocol::ResCreate* release_res_create();
+  void set_allocated_res_create(::gs_protocol::ResCreate* res_create);
 
-  // .protocol.ResJoin res_join = 10;
+  // .gs_protocol.ResJoin res_join = 9;
   bool has_res_join() const;
   void clear_res_join();
-  static const int kResJoinFieldNumber = 10;
-  const ::protocol::ResJoin& res_join() const;
-  ::protocol::ResJoin* mutable_res_join();
-  ::protocol::ResJoin* release_res_join();
-  void set_allocated_res_join(::protocol::ResJoin* res_join);
+  static const int kResJoinFieldNumber = 9;
+  const ::gs_protocol::ResJoin& res_join() const;
+  ::gs_protocol::ResJoin* mutable_res_join();
+  ::gs_protocol::ResJoin* release_res_join();
+  void set_allocated_res_join(::gs_protocol::ResJoin* res_join);
 
-  // .protocol.ResAction1 res_action1 = 11;
+  // .gs_protocol.ResAction1 res_action1 = 10;
   bool has_res_action1() const;
   void clear_res_action1();
-  static const int kResAction1FieldNumber = 11;
-  const ::protocol::ResAction1& res_action1() const;
-  ::protocol::ResAction1* mutable_res_action1();
-  ::protocol::ResAction1* release_res_action1();
-  void set_allocated_res_action1(::protocol::ResAction1* res_action1);
+  static const int kResAction1FieldNumber = 10;
+  const ::gs_protocol::ResAction1& res_action1() const;
+  ::gs_protocol::ResAction1* mutable_res_action1();
+  ::gs_protocol::ResAction1* release_res_action1();
+  void set_allocated_res_action1(::gs_protocol::ResAction1* res_action1);
 
-  // .protocol.ResQuit res_quit = 12;
+  // .gs_protocol.ResQuit res_quit = 11;
   bool has_res_quit() const;
   void clear_res_quit();
-  static const int kResQuitFieldNumber = 12;
-  const ::protocol::ResQuit& res_quit() const;
-  ::protocol::ResQuit* mutable_res_quit();
-  ::protocol::ResQuit* release_res_quit();
-  void set_allocated_res_quit(::protocol::ResQuit* res_quit);
+  static const int kResQuitFieldNumber = 11;
+  const ::gs_protocol::ResQuit& res_quit() const;
+  ::gs_protocol::ResQuit* mutable_res_quit();
+  ::gs_protocol::ResQuit* release_res_quit();
+  void set_allocated_res_quit(::gs_protocol::ResQuit* res_quit);
 
-  // .protocol.ResRoomList res_room_list = 13;
+  // .gs_protocol.ResRoomList res_room_list = 12;
   bool has_res_room_list() const;
   void clear_res_room_list();
-  static const int kResRoomListFieldNumber = 13;
-  const ::protocol::ResRoomList& res_room_list() const;
-  ::protocol::ResRoomList* mutable_res_room_list();
-  ::protocol::ResRoomList* release_res_room_list();
-  void set_allocated_res_room_list(::protocol::ResRoomList* res_room_list);
+  static const int kResRoomListFieldNumber = 12;
+  const ::gs_protocol::ResRoomList& res_room_list() const;
+  ::gs_protocol::ResRoomList* mutable_res_room_list();
+  ::gs_protocol::ResRoomList* release_res_room_list();
+  void set_allocated_res_room_list(::gs_protocol::ResRoomList* res_room_list);
 
-  // .protocol.NotifyJoinMsg notify_join = 14;
+  // .gs_protocol.NotifyJoinMsg notify_join = 13;
   bool has_notify_join() const;
   void clear_notify_join();
-  static const int kNotifyJoinFieldNumber = 14;
-  const ::protocol::NotifyJoinMsg& notify_join() const;
-  ::protocol::NotifyJoinMsg* mutable_notify_join();
-  ::protocol::NotifyJoinMsg* release_notify_join();
-  void set_allocated_notify_join(::protocol::NotifyJoinMsg* notify_join);
+  static const int kNotifyJoinFieldNumber = 13;
+  const ::gs_protocol::NotifyJoinMsg& notify_join() const;
+  ::gs_protocol::NotifyJoinMsg* mutable_notify_join();
+  ::gs_protocol::NotifyJoinMsg* release_notify_join();
+  void set_allocated_notify_join(::gs_protocol::NotifyJoinMsg* notify_join);
 
-  // .protocol.NotifyAction1Msg notify_action1 = 15;
+  // .gs_protocol.NotifyAction1Msg notify_action1 = 14;
   bool has_notify_action1() const;
   void clear_notify_action1();
-  static const int kNotifyAction1FieldNumber = 15;
-  const ::protocol::NotifyAction1Msg& notify_action1() const;
-  ::protocol::NotifyAction1Msg* mutable_notify_action1();
-  ::protocol::NotifyAction1Msg* release_notify_action1();
-  void set_allocated_notify_action1(::protocol::NotifyAction1Msg* notify_action1);
+  static const int kNotifyAction1FieldNumber = 14;
+  const ::gs_protocol::NotifyAction1Msg& notify_action1() const;
+  ::gs_protocol::NotifyAction1Msg* mutable_notify_action1();
+  ::gs_protocol::NotifyAction1Msg* release_notify_action1();
+  void set_allocated_notify_action1(::gs_protocol::NotifyAction1Msg* notify_action1);
 
-  // .protocol.NotifyQuitMsg notify_quit = 16;
+  // .gs_protocol.NotifyQuitMsg notify_quit = 15;
   bool has_notify_quit() const;
   void clear_notify_quit();
-  static const int kNotifyQuitFieldNumber = 16;
-  const ::protocol::NotifyQuitMsg& notify_quit() const;
-  ::protocol::NotifyQuitMsg* mutable_notify_quit();
-  ::protocol::NotifyQuitMsg* release_notify_quit();
-  void set_allocated_notify_quit(::protocol::NotifyQuitMsg* notify_quit);
+  static const int kNotifyQuitFieldNumber = 15;
+  const ::gs_protocol::NotifyQuitMsg& notify_quit() const;
+  ::gs_protocol::NotifyQuitMsg* mutable_notify_quit();
+  ::gs_protocol::NotifyQuitMsg* release_notify_quit();
+  void set_allocated_notify_quit(::gs_protocol::NotifyQuitMsg* notify_quit);
 
-  // .protocol.ErrorMsg error = 1000;
+  // .gs_protocol.ErrorMsg error = 1000;
   bool has_error() const;
   void clear_error();
   static const int kErrorFieldNumber = 1000;
-  const ::protocol::ErrorMsg& error() const;
-  ::protocol::ErrorMsg* mutable_error();
-  ::protocol::ErrorMsg* release_error();
-  void set_allocated_error(::protocol::ErrorMsg* error);
+  const ::gs_protocol::ErrorMsg& error() const;
+  ::gs_protocol::ErrorMsg* mutable_error();
+  ::gs_protocol::ErrorMsg* release_error();
+  void set_allocated_error(::gs_protocol::ErrorMsg* error);
 
   PayloadCase payload_case() const;
-  // @@protoc_insertion_point(class_scope:protocol.Message)
+  // @@protoc_insertion_point(class_scope:gs_protocol.Message)
  private:
   void set_has_req_login();
   void set_has_req_create();
@@ -411,25 +354,24 @@ class Message : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   inline void clear_has_payload();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  int type_;
   union PayloadUnion {
     PayloadUnion() {}
-    ::protocol::ReqLogin* req_login_;
-    ::protocol::ReqCreate* req_create_;
-    ::protocol::ReqJoin* req_join_;
-    ::protocol::ReqAction1* req_action1_;
-    ::protocol::ReqQuit* req_quit_;
-    ::protocol::ReqRoomList* req_room_list_;
-    ::protocol::ResLogin* res_login_;
-    ::protocol::ResCreate* res_create_;
-    ::protocol::ResJoin* res_join_;
-    ::protocol::ResAction1* res_action1_;
-    ::protocol::ResQuit* res_quit_;
-    ::protocol::ResRoomList* res_room_list_;
-    ::protocol::NotifyJoinMsg* notify_join_;
-    ::protocol::NotifyAction1Msg* notify_action1_;
-    ::protocol::NotifyQuitMsg* notify_quit_;
-    ::protocol::ErrorMsg* error_;
+    ::gs_protocol::ReqLogin* req_login_;
+    ::gs_protocol::ReqCreate* req_create_;
+    ::gs_protocol::ReqJoin* req_join_;
+    ::gs_protocol::ReqAction1* req_action1_;
+    ::gs_protocol::ReqQuit* req_quit_;
+    ::gs_protocol::ReqRoomList* req_room_list_;
+    ::gs_protocol::ResLogin* res_login_;
+    ::gs_protocol::ResCreate* res_create_;
+    ::gs_protocol::ResJoin* res_join_;
+    ::gs_protocol::ResAction1* res_action1_;
+    ::gs_protocol::ResQuit* res_quit_;
+    ::gs_protocol::ResRoomList* res_room_list_;
+    ::gs_protocol::NotifyJoinMsg* notify_join_;
+    ::gs_protocol::NotifyAction1Msg* notify_action1_;
+    ::gs_protocol::NotifyQuitMsg* notify_quit_;
+    ::gs_protocol::ErrorMsg* error_;
   } payload_;
   mutable int _cached_size_;
   ::google::protobuf::uint32 _oneof_case_[1];
@@ -438,7 +380,7 @@ class Message : public ::google::protobuf::Message /* @@protoc_insertion_point(c
 };
 // -------------------------------------------------------------------
 
-class ReqLogin : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.ReqLogin) */ {
+class ReqLogin : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.ReqLogin) */ {
  public:
   ReqLogin();
   virtual ~ReqLogin();
@@ -511,7 +453,7 @@ class ReqLogin : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::google::protobuf::int64 userid() const;
   void set_userid(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:protocol.ReqLogin)
+  // @@protoc_insertion_point(class_scope:gs_protocol.ReqLogin)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -521,7 +463,7 @@ class ReqLogin : public ::google::protobuf::Message /* @@protoc_insertion_point(
 };
 // -------------------------------------------------------------------
 
-class ReqCreate : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.ReqCreate) */ {
+class ReqCreate : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.ReqCreate) */ {
  public:
   ReqCreate();
   virtual ~ReqCreate();
@@ -594,7 +536,7 @@ class ReqCreate : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::google::protobuf::int64 userid() const;
   void set_userid(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:protocol.ReqCreate)
+  // @@protoc_insertion_point(class_scope:gs_protocol.ReqCreate)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -604,7 +546,7 @@ class ReqCreate : public ::google::protobuf::Message /* @@protoc_insertion_point
 };
 // -------------------------------------------------------------------
 
-class ReqJoin : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.ReqJoin) */ {
+class ReqJoin : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.ReqJoin) */ {
  public:
   ReqJoin();
   virtual ~ReqJoin();
@@ -683,7 +625,7 @@ class ReqJoin : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   ::google::protobuf::int64 roomid() const;
   void set_roomid(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:protocol.ReqJoin)
+  // @@protoc_insertion_point(class_scope:gs_protocol.ReqJoin)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -694,7 +636,7 @@ class ReqJoin : public ::google::protobuf::Message /* @@protoc_insertion_point(c
 };
 // -------------------------------------------------------------------
 
-class ReqAction1 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.ReqAction1) */ {
+class ReqAction1 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.ReqAction1) */ {
  public:
   ReqAction1();
   virtual ~ReqAction1();
@@ -767,7 +709,7 @@ class ReqAction1 : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::google::protobuf::int64 userid() const;
   void set_userid(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:protocol.ReqAction1)
+  // @@protoc_insertion_point(class_scope:gs_protocol.ReqAction1)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -777,7 +719,7 @@ class ReqAction1 : public ::google::protobuf::Message /* @@protoc_insertion_poin
 };
 // -------------------------------------------------------------------
 
-class ReqQuit : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.ReqQuit) */ {
+class ReqQuit : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.ReqQuit) */ {
  public:
   ReqQuit();
   virtual ~ReqQuit();
@@ -850,7 +792,7 @@ class ReqQuit : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   ::google::protobuf::int64 userid() const;
   void set_userid(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:protocol.ReqQuit)
+  // @@protoc_insertion_point(class_scope:gs_protocol.ReqQuit)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -860,7 +802,7 @@ class ReqQuit : public ::google::protobuf::Message /* @@protoc_insertion_point(c
 };
 // -------------------------------------------------------------------
 
-class ReqRoomList : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.ReqRoomList) */ {
+class ReqRoomList : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.ReqRoomList) */ {
  public:
   ReqRoomList();
   virtual ~ReqRoomList();
@@ -933,7 +875,7 @@ class ReqRoomList : public ::google::protobuf::Message /* @@protoc_insertion_poi
   ::google::protobuf::int64 userid() const;
   void set_userid(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:protocol.ReqRoomList)
+  // @@protoc_insertion_point(class_scope:gs_protocol.ReqRoomList)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -943,7 +885,7 @@ class ReqRoomList : public ::google::protobuf::Message /* @@protoc_insertion_poi
 };
 // -------------------------------------------------------------------
 
-class ResLogin : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.ResLogin) */ {
+class ResLogin : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.ResLogin) */ {
  public:
   ResLogin();
   virtual ~ResLogin();
@@ -1022,7 +964,7 @@ class ResLogin : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::google::protobuf::int32 result() const;
   void set_result(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:protocol.ResLogin)
+  // @@protoc_insertion_point(class_scope:gs_protocol.ResLogin)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1033,7 +975,7 @@ class ResLogin : public ::google::protobuf::Message /* @@protoc_insertion_point(
 };
 // -------------------------------------------------------------------
 
-class ResCreate : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.ResCreate) */ {
+class ResCreate : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.ResCreate) */ {
  public:
   ResCreate();
   virtual ~ResCreate();
@@ -1112,7 +1054,7 @@ class ResCreate : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::google::protobuf::int64 roomid() const;
   void set_roomid(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:protocol.ResCreate)
+  // @@protoc_insertion_point(class_scope:gs_protocol.ResCreate)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1123,7 +1065,7 @@ class ResCreate : public ::google::protobuf::Message /* @@protoc_insertion_point
 };
 // -------------------------------------------------------------------
 
-class ResJoin : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.ResJoin) */ {
+class ResJoin : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.ResJoin) */ {
  public:
   ResJoin();
   virtual ~ResJoin();
@@ -1190,6 +1132,18 @@ class ResJoin : public ::google::protobuf::Message /* @@protoc_insertion_point(c
 
   // accessors -------------------------------------------------------
 
+  // repeated int64 members = 3;
+  int members_size() const;
+  void clear_members();
+  static const int kMembersFieldNumber = 3;
+  ::google::protobuf::int64 members(int index) const;
+  void set_members(int index, ::google::protobuf::int64 value);
+  void add_members(::google::protobuf::int64 value);
+  const ::google::protobuf::RepeatedField< ::google::protobuf::int64 >&
+      members() const;
+  ::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
+      mutable_members();
+
   // int64 userID = 1;
   void clear_userid();
   static const int kUserIDFieldNumber = 1;
@@ -1202,25 +1156,20 @@ class ResJoin : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   ::google::protobuf::int64 roomid() const;
   void set_roomid(::google::protobuf::int64 value);
 
-  // int64 members = 3;
-  void clear_members();
-  static const int kMembersFieldNumber = 3;
-  ::google::protobuf::int64 members() const;
-  void set_members(::google::protobuf::int64 value);
-
-  // @@protoc_insertion_point(class_scope:protocol.ResJoin)
+  // @@protoc_insertion_point(class_scope:gs_protocol.ResJoin)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedField< ::google::protobuf::int64 > members_;
+  mutable int _members_cached_byte_size_;
   ::google::protobuf::int64 userid_;
   ::google::protobuf::int64 roomid_;
-  ::google::protobuf::int64 members_;
   mutable int _cached_size_;
   friend struct  protobuf_protocol_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class ResAction1 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.ResAction1) */ {
+class ResAction1 : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.ResAction1) */ {
  public:
   ResAction1();
   virtual ~ResAction1();
@@ -1299,7 +1248,7 @@ class ResAction1 : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::google::protobuf::int32 result() const;
   void set_result(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:protocol.ResAction1)
+  // @@protoc_insertion_point(class_scope:gs_protocol.ResAction1)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1310,7 +1259,7 @@ class ResAction1 : public ::google::protobuf::Message /* @@protoc_insertion_poin
 };
 // -------------------------------------------------------------------
 
-class ResQuit : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.ResQuit) */ {
+class ResQuit : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.ResQuit) */ {
  public:
   ResQuit();
   virtual ~ResQuit();
@@ -1389,7 +1338,7 @@ class ResQuit : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   ::google::protobuf::int32 issuccess() const;
   void set_issuccess(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:protocol.ResQuit)
+  // @@protoc_insertion_point(class_scope:gs_protocol.ResQuit)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1400,7 +1349,7 @@ class ResQuit : public ::google::protobuf::Message /* @@protoc_insertion_point(c
 };
 // -------------------------------------------------------------------
 
-class ResRoomList : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.ResRoomList) */ {
+class ResRoomList : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.ResRoomList) */ {
  public:
   ResRoomList();
   virtual ~ResRoomList();
@@ -1467,30 +1416,37 @@ class ResRoomList : public ::google::protobuf::Message /* @@protoc_insertion_poi
 
   // accessors -------------------------------------------------------
 
+  // repeated int64 roomIDs = 2;
+  int roomids_size() const;
+  void clear_roomids();
+  static const int kRoomIDsFieldNumber = 2;
+  ::google::protobuf::int64 roomids(int index) const;
+  void set_roomids(int index, ::google::protobuf::int64 value);
+  void add_roomids(::google::protobuf::int64 value);
+  const ::google::protobuf::RepeatedField< ::google::protobuf::int64 >&
+      roomids() const;
+  ::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
+      mutable_roomids();
+
   // int64 userID = 1;
   void clear_userid();
   static const int kUserIDFieldNumber = 1;
   ::google::protobuf::int64 userid() const;
   void set_userid(::google::protobuf::int64 value);
 
-  // int64 roomIDs = 2;
-  void clear_roomids();
-  static const int kRoomIDsFieldNumber = 2;
-  ::google::protobuf::int64 roomids() const;
-  void set_roomids(::google::protobuf::int64 value);
-
-  // @@protoc_insertion_point(class_scope:protocol.ResRoomList)
+  // @@protoc_insertion_point(class_scope:gs_protocol.ResRoomList)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedField< ::google::protobuf::int64 > roomids_;
+  mutable int _roomids_cached_byte_size_;
   ::google::protobuf::int64 userid_;
-  ::google::protobuf::int64 roomids_;
   mutable int _cached_size_;
   friend struct  protobuf_protocol_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class NotifyJoinMsg : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.NotifyJoinMsg) */ {
+class NotifyJoinMsg : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.NotifyJoinMsg) */ {
  public:
   NotifyJoinMsg();
   virtual ~NotifyJoinMsg();
@@ -1569,7 +1525,7 @@ class NotifyJoinMsg : public ::google::protobuf::Message /* @@protoc_insertion_p
   ::google::protobuf::int64 roomid() const;
   void set_roomid(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:protocol.NotifyJoinMsg)
+  // @@protoc_insertion_point(class_scope:gs_protocol.NotifyJoinMsg)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1580,7 +1536,7 @@ class NotifyJoinMsg : public ::google::protobuf::Message /* @@protoc_insertion_p
 };
 // -------------------------------------------------------------------
 
-class NotifyAction1Msg : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.NotifyAction1Msg) */ {
+class NotifyAction1Msg : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.NotifyAction1Msg) */ {
  public:
   NotifyAction1Msg();
   virtual ~NotifyAction1Msg();
@@ -1653,7 +1609,7 @@ class NotifyAction1Msg : public ::google::protobuf::Message /* @@protoc_insertio
   ::google::protobuf::int64 userid() const;
   void set_userid(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:protocol.NotifyAction1Msg)
+  // @@protoc_insertion_point(class_scope:gs_protocol.NotifyAction1Msg)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1663,7 +1619,7 @@ class NotifyAction1Msg : public ::google::protobuf::Message /* @@protoc_insertio
 };
 // -------------------------------------------------------------------
 
-class NotifyQuitMsg : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.NotifyQuitMsg) */ {
+class NotifyQuitMsg : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.NotifyQuitMsg) */ {
  public:
   NotifyQuitMsg();
   virtual ~NotifyQuitMsg();
@@ -1742,7 +1698,7 @@ class NotifyQuitMsg : public ::google::protobuf::Message /* @@protoc_insertion_p
   ::google::protobuf::int64 roomid() const;
   void set_roomid(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:protocol.NotifyQuitMsg)
+  // @@protoc_insertion_point(class_scope:gs_protocol.NotifyQuitMsg)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1753,7 +1709,7 @@ class NotifyQuitMsg : public ::google::protobuf::Message /* @@protoc_insertion_p
 };
 // -------------------------------------------------------------------
 
-class ErrorMsg : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:protocol.ErrorMsg) */ {
+class ErrorMsg : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:gs_protocol.ErrorMsg) */ {
  public:
   ErrorMsg();
   virtual ~ErrorMsg();
@@ -1840,7 +1796,7 @@ class ErrorMsg : public ::google::protobuf::Message /* @@protoc_insertion_point(
   ::google::protobuf::int32 errcode() const;
   void set_errcode(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:protocol.ErrorMsg)
+  // @@protoc_insertion_point(class_scope:gs_protocol.ErrorMsg)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -1857,21 +1813,7 @@ class ErrorMsg : public ::google::protobuf::Message /* @@protoc_insertion_point(
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
 // Message
 
-// .protocol.Type type = 1;
-inline void Message::clear_type() {
-  type_ = 0;
-}
-inline ::protocol::Type Message::type() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.type)
-  return static_cast< ::protocol::Type >(type_);
-}
-inline void Message::set_type(::protocol::Type value) {
-  
-  type_ = value;
-  // @@protoc_insertion_point(field_set:protocol.Message.type)
-}
-
-// .protocol.ReqLogin req_login = 2;
+// .gs_protocol.ReqLogin req_login = 1;
 inline bool Message::has_req_login() const {
   return payload_case() == kReqLogin;
 }
@@ -1884,42 +1826,42 @@ inline void Message::clear_req_login() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::ReqLogin& Message::req_login() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.req_login)
+inline  const ::gs_protocol::ReqLogin& Message::req_login() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.req_login)
   return has_req_login()
       ? *payload_.req_login_
-      : ::protocol::ReqLogin::default_instance();
+      : ::gs_protocol::ReqLogin::default_instance();
 }
-inline ::protocol::ReqLogin* Message::mutable_req_login() {
+inline ::gs_protocol::ReqLogin* Message::mutable_req_login() {
   if (!has_req_login()) {
     clear_payload();
     set_has_req_login();
-    payload_.req_login_ = new ::protocol::ReqLogin;
+    payload_.req_login_ = new ::gs_protocol::ReqLogin;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.req_login)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.req_login)
   return payload_.req_login_;
 }
-inline ::protocol::ReqLogin* Message::release_req_login() {
-  // @@protoc_insertion_point(field_release:protocol.Message.req_login)
+inline ::gs_protocol::ReqLogin* Message::release_req_login() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.req_login)
   if (has_req_login()) {
     clear_has_payload();
-    ::protocol::ReqLogin* temp = payload_.req_login_;
+    ::gs_protocol::ReqLogin* temp = payload_.req_login_;
     payload_.req_login_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_req_login(::protocol::ReqLogin* req_login) {
+inline void Message::set_allocated_req_login(::gs_protocol::ReqLogin* req_login) {
   clear_payload();
   if (req_login) {
     set_has_req_login();
     payload_.req_login_ = req_login;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.req_login)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.req_login)
 }
 
-// .protocol.ReqCreate req_create = 3;
+// .gs_protocol.ReqCreate req_create = 2;
 inline bool Message::has_req_create() const {
   return payload_case() == kReqCreate;
 }
@@ -1932,42 +1874,42 @@ inline void Message::clear_req_create() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::ReqCreate& Message::req_create() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.req_create)
+inline  const ::gs_protocol::ReqCreate& Message::req_create() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.req_create)
   return has_req_create()
       ? *payload_.req_create_
-      : ::protocol::ReqCreate::default_instance();
+      : ::gs_protocol::ReqCreate::default_instance();
 }
-inline ::protocol::ReqCreate* Message::mutable_req_create() {
+inline ::gs_protocol::ReqCreate* Message::mutable_req_create() {
   if (!has_req_create()) {
     clear_payload();
     set_has_req_create();
-    payload_.req_create_ = new ::protocol::ReqCreate;
+    payload_.req_create_ = new ::gs_protocol::ReqCreate;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.req_create)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.req_create)
   return payload_.req_create_;
 }
-inline ::protocol::ReqCreate* Message::release_req_create() {
-  // @@protoc_insertion_point(field_release:protocol.Message.req_create)
+inline ::gs_protocol::ReqCreate* Message::release_req_create() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.req_create)
   if (has_req_create()) {
     clear_has_payload();
-    ::protocol::ReqCreate* temp = payload_.req_create_;
+    ::gs_protocol::ReqCreate* temp = payload_.req_create_;
     payload_.req_create_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_req_create(::protocol::ReqCreate* req_create) {
+inline void Message::set_allocated_req_create(::gs_protocol::ReqCreate* req_create) {
   clear_payload();
   if (req_create) {
     set_has_req_create();
     payload_.req_create_ = req_create;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.req_create)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.req_create)
 }
 
-// .protocol.ReqJoin req_join = 4;
+// .gs_protocol.ReqJoin req_join = 3;
 inline bool Message::has_req_join() const {
   return payload_case() == kReqJoin;
 }
@@ -1980,42 +1922,42 @@ inline void Message::clear_req_join() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::ReqJoin& Message::req_join() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.req_join)
+inline  const ::gs_protocol::ReqJoin& Message::req_join() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.req_join)
   return has_req_join()
       ? *payload_.req_join_
-      : ::protocol::ReqJoin::default_instance();
+      : ::gs_protocol::ReqJoin::default_instance();
 }
-inline ::protocol::ReqJoin* Message::mutable_req_join() {
+inline ::gs_protocol::ReqJoin* Message::mutable_req_join() {
   if (!has_req_join()) {
     clear_payload();
     set_has_req_join();
-    payload_.req_join_ = new ::protocol::ReqJoin;
+    payload_.req_join_ = new ::gs_protocol::ReqJoin;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.req_join)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.req_join)
   return payload_.req_join_;
 }
-inline ::protocol::ReqJoin* Message::release_req_join() {
-  // @@protoc_insertion_point(field_release:protocol.Message.req_join)
+inline ::gs_protocol::ReqJoin* Message::release_req_join() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.req_join)
   if (has_req_join()) {
     clear_has_payload();
-    ::protocol::ReqJoin* temp = payload_.req_join_;
+    ::gs_protocol::ReqJoin* temp = payload_.req_join_;
     payload_.req_join_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_req_join(::protocol::ReqJoin* req_join) {
+inline void Message::set_allocated_req_join(::gs_protocol::ReqJoin* req_join) {
   clear_payload();
   if (req_join) {
     set_has_req_join();
     payload_.req_join_ = req_join;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.req_join)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.req_join)
 }
 
-// .protocol.ReqAction1 req_action1 = 5;
+// .gs_protocol.ReqAction1 req_action1 = 4;
 inline bool Message::has_req_action1() const {
   return payload_case() == kReqAction1;
 }
@@ -2028,42 +1970,42 @@ inline void Message::clear_req_action1() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::ReqAction1& Message::req_action1() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.req_action1)
+inline  const ::gs_protocol::ReqAction1& Message::req_action1() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.req_action1)
   return has_req_action1()
       ? *payload_.req_action1_
-      : ::protocol::ReqAction1::default_instance();
+      : ::gs_protocol::ReqAction1::default_instance();
 }
-inline ::protocol::ReqAction1* Message::mutable_req_action1() {
+inline ::gs_protocol::ReqAction1* Message::mutable_req_action1() {
   if (!has_req_action1()) {
     clear_payload();
     set_has_req_action1();
-    payload_.req_action1_ = new ::protocol::ReqAction1;
+    payload_.req_action1_ = new ::gs_protocol::ReqAction1;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.req_action1)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.req_action1)
   return payload_.req_action1_;
 }
-inline ::protocol::ReqAction1* Message::release_req_action1() {
-  // @@protoc_insertion_point(field_release:protocol.Message.req_action1)
+inline ::gs_protocol::ReqAction1* Message::release_req_action1() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.req_action1)
   if (has_req_action1()) {
     clear_has_payload();
-    ::protocol::ReqAction1* temp = payload_.req_action1_;
+    ::gs_protocol::ReqAction1* temp = payload_.req_action1_;
     payload_.req_action1_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_req_action1(::protocol::ReqAction1* req_action1) {
+inline void Message::set_allocated_req_action1(::gs_protocol::ReqAction1* req_action1) {
   clear_payload();
   if (req_action1) {
     set_has_req_action1();
     payload_.req_action1_ = req_action1;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.req_action1)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.req_action1)
 }
 
-// .protocol.ReqQuit req_quit = 6;
+// .gs_protocol.ReqQuit req_quit = 5;
 inline bool Message::has_req_quit() const {
   return payload_case() == kReqQuit;
 }
@@ -2076,42 +2018,42 @@ inline void Message::clear_req_quit() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::ReqQuit& Message::req_quit() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.req_quit)
+inline  const ::gs_protocol::ReqQuit& Message::req_quit() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.req_quit)
   return has_req_quit()
       ? *payload_.req_quit_
-      : ::protocol::ReqQuit::default_instance();
+      : ::gs_protocol::ReqQuit::default_instance();
 }
-inline ::protocol::ReqQuit* Message::mutable_req_quit() {
+inline ::gs_protocol::ReqQuit* Message::mutable_req_quit() {
   if (!has_req_quit()) {
     clear_payload();
     set_has_req_quit();
-    payload_.req_quit_ = new ::protocol::ReqQuit;
+    payload_.req_quit_ = new ::gs_protocol::ReqQuit;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.req_quit)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.req_quit)
   return payload_.req_quit_;
 }
-inline ::protocol::ReqQuit* Message::release_req_quit() {
-  // @@protoc_insertion_point(field_release:protocol.Message.req_quit)
+inline ::gs_protocol::ReqQuit* Message::release_req_quit() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.req_quit)
   if (has_req_quit()) {
     clear_has_payload();
-    ::protocol::ReqQuit* temp = payload_.req_quit_;
+    ::gs_protocol::ReqQuit* temp = payload_.req_quit_;
     payload_.req_quit_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_req_quit(::protocol::ReqQuit* req_quit) {
+inline void Message::set_allocated_req_quit(::gs_protocol::ReqQuit* req_quit) {
   clear_payload();
   if (req_quit) {
     set_has_req_quit();
     payload_.req_quit_ = req_quit;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.req_quit)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.req_quit)
 }
 
-// .protocol.ReqRoomList req_room_list = 7;
+// .gs_protocol.ReqRoomList req_room_list = 6;
 inline bool Message::has_req_room_list() const {
   return payload_case() == kReqRoomList;
 }
@@ -2124,42 +2066,42 @@ inline void Message::clear_req_room_list() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::ReqRoomList& Message::req_room_list() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.req_room_list)
+inline  const ::gs_protocol::ReqRoomList& Message::req_room_list() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.req_room_list)
   return has_req_room_list()
       ? *payload_.req_room_list_
-      : ::protocol::ReqRoomList::default_instance();
+      : ::gs_protocol::ReqRoomList::default_instance();
 }
-inline ::protocol::ReqRoomList* Message::mutable_req_room_list() {
+inline ::gs_protocol::ReqRoomList* Message::mutable_req_room_list() {
   if (!has_req_room_list()) {
     clear_payload();
     set_has_req_room_list();
-    payload_.req_room_list_ = new ::protocol::ReqRoomList;
+    payload_.req_room_list_ = new ::gs_protocol::ReqRoomList;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.req_room_list)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.req_room_list)
   return payload_.req_room_list_;
 }
-inline ::protocol::ReqRoomList* Message::release_req_room_list() {
-  // @@protoc_insertion_point(field_release:protocol.Message.req_room_list)
+inline ::gs_protocol::ReqRoomList* Message::release_req_room_list() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.req_room_list)
   if (has_req_room_list()) {
     clear_has_payload();
-    ::protocol::ReqRoomList* temp = payload_.req_room_list_;
+    ::gs_protocol::ReqRoomList* temp = payload_.req_room_list_;
     payload_.req_room_list_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_req_room_list(::protocol::ReqRoomList* req_room_list) {
+inline void Message::set_allocated_req_room_list(::gs_protocol::ReqRoomList* req_room_list) {
   clear_payload();
   if (req_room_list) {
     set_has_req_room_list();
     payload_.req_room_list_ = req_room_list;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.req_room_list)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.req_room_list)
 }
 
-// .protocol.ResLogin res_login = 8;
+// .gs_protocol.ResLogin res_login = 7;
 inline bool Message::has_res_login() const {
   return payload_case() == kResLogin;
 }
@@ -2172,42 +2114,42 @@ inline void Message::clear_res_login() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::ResLogin& Message::res_login() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.res_login)
+inline  const ::gs_protocol::ResLogin& Message::res_login() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.res_login)
   return has_res_login()
       ? *payload_.res_login_
-      : ::protocol::ResLogin::default_instance();
+      : ::gs_protocol::ResLogin::default_instance();
 }
-inline ::protocol::ResLogin* Message::mutable_res_login() {
+inline ::gs_protocol::ResLogin* Message::mutable_res_login() {
   if (!has_res_login()) {
     clear_payload();
     set_has_res_login();
-    payload_.res_login_ = new ::protocol::ResLogin;
+    payload_.res_login_ = new ::gs_protocol::ResLogin;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.res_login)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.res_login)
   return payload_.res_login_;
 }
-inline ::protocol::ResLogin* Message::release_res_login() {
-  // @@protoc_insertion_point(field_release:protocol.Message.res_login)
+inline ::gs_protocol::ResLogin* Message::release_res_login() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.res_login)
   if (has_res_login()) {
     clear_has_payload();
-    ::protocol::ResLogin* temp = payload_.res_login_;
+    ::gs_protocol::ResLogin* temp = payload_.res_login_;
     payload_.res_login_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_res_login(::protocol::ResLogin* res_login) {
+inline void Message::set_allocated_res_login(::gs_protocol::ResLogin* res_login) {
   clear_payload();
   if (res_login) {
     set_has_res_login();
     payload_.res_login_ = res_login;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.res_login)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.res_login)
 }
 
-// .protocol.ResCreate res_create = 9;
+// .gs_protocol.ResCreate res_create = 8;
 inline bool Message::has_res_create() const {
   return payload_case() == kResCreate;
 }
@@ -2220,42 +2162,42 @@ inline void Message::clear_res_create() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::ResCreate& Message::res_create() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.res_create)
+inline  const ::gs_protocol::ResCreate& Message::res_create() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.res_create)
   return has_res_create()
       ? *payload_.res_create_
-      : ::protocol::ResCreate::default_instance();
+      : ::gs_protocol::ResCreate::default_instance();
 }
-inline ::protocol::ResCreate* Message::mutable_res_create() {
+inline ::gs_protocol::ResCreate* Message::mutable_res_create() {
   if (!has_res_create()) {
     clear_payload();
     set_has_res_create();
-    payload_.res_create_ = new ::protocol::ResCreate;
+    payload_.res_create_ = new ::gs_protocol::ResCreate;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.res_create)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.res_create)
   return payload_.res_create_;
 }
-inline ::protocol::ResCreate* Message::release_res_create() {
-  // @@protoc_insertion_point(field_release:protocol.Message.res_create)
+inline ::gs_protocol::ResCreate* Message::release_res_create() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.res_create)
   if (has_res_create()) {
     clear_has_payload();
-    ::protocol::ResCreate* temp = payload_.res_create_;
+    ::gs_protocol::ResCreate* temp = payload_.res_create_;
     payload_.res_create_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_res_create(::protocol::ResCreate* res_create) {
+inline void Message::set_allocated_res_create(::gs_protocol::ResCreate* res_create) {
   clear_payload();
   if (res_create) {
     set_has_res_create();
     payload_.res_create_ = res_create;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.res_create)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.res_create)
 }
 
-// .protocol.ResJoin res_join = 10;
+// .gs_protocol.ResJoin res_join = 9;
 inline bool Message::has_res_join() const {
   return payload_case() == kResJoin;
 }
@@ -2268,42 +2210,42 @@ inline void Message::clear_res_join() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::ResJoin& Message::res_join() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.res_join)
+inline  const ::gs_protocol::ResJoin& Message::res_join() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.res_join)
   return has_res_join()
       ? *payload_.res_join_
-      : ::protocol::ResJoin::default_instance();
+      : ::gs_protocol::ResJoin::default_instance();
 }
-inline ::protocol::ResJoin* Message::mutable_res_join() {
+inline ::gs_protocol::ResJoin* Message::mutable_res_join() {
   if (!has_res_join()) {
     clear_payload();
     set_has_res_join();
-    payload_.res_join_ = new ::protocol::ResJoin;
+    payload_.res_join_ = new ::gs_protocol::ResJoin;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.res_join)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.res_join)
   return payload_.res_join_;
 }
-inline ::protocol::ResJoin* Message::release_res_join() {
-  // @@protoc_insertion_point(field_release:protocol.Message.res_join)
+inline ::gs_protocol::ResJoin* Message::release_res_join() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.res_join)
   if (has_res_join()) {
     clear_has_payload();
-    ::protocol::ResJoin* temp = payload_.res_join_;
+    ::gs_protocol::ResJoin* temp = payload_.res_join_;
     payload_.res_join_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_res_join(::protocol::ResJoin* res_join) {
+inline void Message::set_allocated_res_join(::gs_protocol::ResJoin* res_join) {
   clear_payload();
   if (res_join) {
     set_has_res_join();
     payload_.res_join_ = res_join;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.res_join)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.res_join)
 }
 
-// .protocol.ResAction1 res_action1 = 11;
+// .gs_protocol.ResAction1 res_action1 = 10;
 inline bool Message::has_res_action1() const {
   return payload_case() == kResAction1;
 }
@@ -2316,42 +2258,42 @@ inline void Message::clear_res_action1() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::ResAction1& Message::res_action1() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.res_action1)
+inline  const ::gs_protocol::ResAction1& Message::res_action1() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.res_action1)
   return has_res_action1()
       ? *payload_.res_action1_
-      : ::protocol::ResAction1::default_instance();
+      : ::gs_protocol::ResAction1::default_instance();
 }
-inline ::protocol::ResAction1* Message::mutable_res_action1() {
+inline ::gs_protocol::ResAction1* Message::mutable_res_action1() {
   if (!has_res_action1()) {
     clear_payload();
     set_has_res_action1();
-    payload_.res_action1_ = new ::protocol::ResAction1;
+    payload_.res_action1_ = new ::gs_protocol::ResAction1;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.res_action1)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.res_action1)
   return payload_.res_action1_;
 }
-inline ::protocol::ResAction1* Message::release_res_action1() {
-  // @@protoc_insertion_point(field_release:protocol.Message.res_action1)
+inline ::gs_protocol::ResAction1* Message::release_res_action1() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.res_action1)
   if (has_res_action1()) {
     clear_has_payload();
-    ::protocol::ResAction1* temp = payload_.res_action1_;
+    ::gs_protocol::ResAction1* temp = payload_.res_action1_;
     payload_.res_action1_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_res_action1(::protocol::ResAction1* res_action1) {
+inline void Message::set_allocated_res_action1(::gs_protocol::ResAction1* res_action1) {
   clear_payload();
   if (res_action1) {
     set_has_res_action1();
     payload_.res_action1_ = res_action1;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.res_action1)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.res_action1)
 }
 
-// .protocol.ResQuit res_quit = 12;
+// .gs_protocol.ResQuit res_quit = 11;
 inline bool Message::has_res_quit() const {
   return payload_case() == kResQuit;
 }
@@ -2364,42 +2306,42 @@ inline void Message::clear_res_quit() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::ResQuit& Message::res_quit() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.res_quit)
+inline  const ::gs_protocol::ResQuit& Message::res_quit() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.res_quit)
   return has_res_quit()
       ? *payload_.res_quit_
-      : ::protocol::ResQuit::default_instance();
+      : ::gs_protocol::ResQuit::default_instance();
 }
-inline ::protocol::ResQuit* Message::mutable_res_quit() {
+inline ::gs_protocol::ResQuit* Message::mutable_res_quit() {
   if (!has_res_quit()) {
     clear_payload();
     set_has_res_quit();
-    payload_.res_quit_ = new ::protocol::ResQuit;
+    payload_.res_quit_ = new ::gs_protocol::ResQuit;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.res_quit)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.res_quit)
   return payload_.res_quit_;
 }
-inline ::protocol::ResQuit* Message::release_res_quit() {
-  // @@protoc_insertion_point(field_release:protocol.Message.res_quit)
+inline ::gs_protocol::ResQuit* Message::release_res_quit() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.res_quit)
   if (has_res_quit()) {
     clear_has_payload();
-    ::protocol::ResQuit* temp = payload_.res_quit_;
+    ::gs_protocol::ResQuit* temp = payload_.res_quit_;
     payload_.res_quit_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_res_quit(::protocol::ResQuit* res_quit) {
+inline void Message::set_allocated_res_quit(::gs_protocol::ResQuit* res_quit) {
   clear_payload();
   if (res_quit) {
     set_has_res_quit();
     payload_.res_quit_ = res_quit;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.res_quit)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.res_quit)
 }
 
-// .protocol.ResRoomList res_room_list = 13;
+// .gs_protocol.ResRoomList res_room_list = 12;
 inline bool Message::has_res_room_list() const {
   return payload_case() == kResRoomList;
 }
@@ -2412,42 +2354,42 @@ inline void Message::clear_res_room_list() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::ResRoomList& Message::res_room_list() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.res_room_list)
+inline  const ::gs_protocol::ResRoomList& Message::res_room_list() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.res_room_list)
   return has_res_room_list()
       ? *payload_.res_room_list_
-      : ::protocol::ResRoomList::default_instance();
+      : ::gs_protocol::ResRoomList::default_instance();
 }
-inline ::protocol::ResRoomList* Message::mutable_res_room_list() {
+inline ::gs_protocol::ResRoomList* Message::mutable_res_room_list() {
   if (!has_res_room_list()) {
     clear_payload();
     set_has_res_room_list();
-    payload_.res_room_list_ = new ::protocol::ResRoomList;
+    payload_.res_room_list_ = new ::gs_protocol::ResRoomList;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.res_room_list)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.res_room_list)
   return payload_.res_room_list_;
 }
-inline ::protocol::ResRoomList* Message::release_res_room_list() {
-  // @@protoc_insertion_point(field_release:protocol.Message.res_room_list)
+inline ::gs_protocol::ResRoomList* Message::release_res_room_list() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.res_room_list)
   if (has_res_room_list()) {
     clear_has_payload();
-    ::protocol::ResRoomList* temp = payload_.res_room_list_;
+    ::gs_protocol::ResRoomList* temp = payload_.res_room_list_;
     payload_.res_room_list_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_res_room_list(::protocol::ResRoomList* res_room_list) {
+inline void Message::set_allocated_res_room_list(::gs_protocol::ResRoomList* res_room_list) {
   clear_payload();
   if (res_room_list) {
     set_has_res_room_list();
     payload_.res_room_list_ = res_room_list;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.res_room_list)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.res_room_list)
 }
 
-// .protocol.NotifyJoinMsg notify_join = 14;
+// .gs_protocol.NotifyJoinMsg notify_join = 13;
 inline bool Message::has_notify_join() const {
   return payload_case() == kNotifyJoin;
 }
@@ -2460,42 +2402,42 @@ inline void Message::clear_notify_join() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::NotifyJoinMsg& Message::notify_join() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.notify_join)
+inline  const ::gs_protocol::NotifyJoinMsg& Message::notify_join() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.notify_join)
   return has_notify_join()
       ? *payload_.notify_join_
-      : ::protocol::NotifyJoinMsg::default_instance();
+      : ::gs_protocol::NotifyJoinMsg::default_instance();
 }
-inline ::protocol::NotifyJoinMsg* Message::mutable_notify_join() {
+inline ::gs_protocol::NotifyJoinMsg* Message::mutable_notify_join() {
   if (!has_notify_join()) {
     clear_payload();
     set_has_notify_join();
-    payload_.notify_join_ = new ::protocol::NotifyJoinMsg;
+    payload_.notify_join_ = new ::gs_protocol::NotifyJoinMsg;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.notify_join)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.notify_join)
   return payload_.notify_join_;
 }
-inline ::protocol::NotifyJoinMsg* Message::release_notify_join() {
-  // @@protoc_insertion_point(field_release:protocol.Message.notify_join)
+inline ::gs_protocol::NotifyJoinMsg* Message::release_notify_join() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.notify_join)
   if (has_notify_join()) {
     clear_has_payload();
-    ::protocol::NotifyJoinMsg* temp = payload_.notify_join_;
+    ::gs_protocol::NotifyJoinMsg* temp = payload_.notify_join_;
     payload_.notify_join_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_notify_join(::protocol::NotifyJoinMsg* notify_join) {
+inline void Message::set_allocated_notify_join(::gs_protocol::NotifyJoinMsg* notify_join) {
   clear_payload();
   if (notify_join) {
     set_has_notify_join();
     payload_.notify_join_ = notify_join;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.notify_join)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.notify_join)
 }
 
-// .protocol.NotifyAction1Msg notify_action1 = 15;
+// .gs_protocol.NotifyAction1Msg notify_action1 = 14;
 inline bool Message::has_notify_action1() const {
   return payload_case() == kNotifyAction1;
 }
@@ -2508,42 +2450,42 @@ inline void Message::clear_notify_action1() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::NotifyAction1Msg& Message::notify_action1() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.notify_action1)
+inline  const ::gs_protocol::NotifyAction1Msg& Message::notify_action1() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.notify_action1)
   return has_notify_action1()
       ? *payload_.notify_action1_
-      : ::protocol::NotifyAction1Msg::default_instance();
+      : ::gs_protocol::NotifyAction1Msg::default_instance();
 }
-inline ::protocol::NotifyAction1Msg* Message::mutable_notify_action1() {
+inline ::gs_protocol::NotifyAction1Msg* Message::mutable_notify_action1() {
   if (!has_notify_action1()) {
     clear_payload();
     set_has_notify_action1();
-    payload_.notify_action1_ = new ::protocol::NotifyAction1Msg;
+    payload_.notify_action1_ = new ::gs_protocol::NotifyAction1Msg;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.notify_action1)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.notify_action1)
   return payload_.notify_action1_;
 }
-inline ::protocol::NotifyAction1Msg* Message::release_notify_action1() {
-  // @@protoc_insertion_point(field_release:protocol.Message.notify_action1)
+inline ::gs_protocol::NotifyAction1Msg* Message::release_notify_action1() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.notify_action1)
   if (has_notify_action1()) {
     clear_has_payload();
-    ::protocol::NotifyAction1Msg* temp = payload_.notify_action1_;
+    ::gs_protocol::NotifyAction1Msg* temp = payload_.notify_action1_;
     payload_.notify_action1_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_notify_action1(::protocol::NotifyAction1Msg* notify_action1) {
+inline void Message::set_allocated_notify_action1(::gs_protocol::NotifyAction1Msg* notify_action1) {
   clear_payload();
   if (notify_action1) {
     set_has_notify_action1();
     payload_.notify_action1_ = notify_action1;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.notify_action1)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.notify_action1)
 }
 
-// .protocol.NotifyQuitMsg notify_quit = 16;
+// .gs_protocol.NotifyQuitMsg notify_quit = 15;
 inline bool Message::has_notify_quit() const {
   return payload_case() == kNotifyQuit;
 }
@@ -2556,42 +2498,42 @@ inline void Message::clear_notify_quit() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::NotifyQuitMsg& Message::notify_quit() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.notify_quit)
+inline  const ::gs_protocol::NotifyQuitMsg& Message::notify_quit() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.notify_quit)
   return has_notify_quit()
       ? *payload_.notify_quit_
-      : ::protocol::NotifyQuitMsg::default_instance();
+      : ::gs_protocol::NotifyQuitMsg::default_instance();
 }
-inline ::protocol::NotifyQuitMsg* Message::mutable_notify_quit() {
+inline ::gs_protocol::NotifyQuitMsg* Message::mutable_notify_quit() {
   if (!has_notify_quit()) {
     clear_payload();
     set_has_notify_quit();
-    payload_.notify_quit_ = new ::protocol::NotifyQuitMsg;
+    payload_.notify_quit_ = new ::gs_protocol::NotifyQuitMsg;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.notify_quit)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.notify_quit)
   return payload_.notify_quit_;
 }
-inline ::protocol::NotifyQuitMsg* Message::release_notify_quit() {
-  // @@protoc_insertion_point(field_release:protocol.Message.notify_quit)
+inline ::gs_protocol::NotifyQuitMsg* Message::release_notify_quit() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.notify_quit)
   if (has_notify_quit()) {
     clear_has_payload();
-    ::protocol::NotifyQuitMsg* temp = payload_.notify_quit_;
+    ::gs_protocol::NotifyQuitMsg* temp = payload_.notify_quit_;
     payload_.notify_quit_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_notify_quit(::protocol::NotifyQuitMsg* notify_quit) {
+inline void Message::set_allocated_notify_quit(::gs_protocol::NotifyQuitMsg* notify_quit) {
   clear_payload();
   if (notify_quit) {
     set_has_notify_quit();
     payload_.notify_quit_ = notify_quit;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.notify_quit)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.notify_quit)
 }
 
-// .protocol.ErrorMsg error = 1000;
+// .gs_protocol.ErrorMsg error = 1000;
 inline bool Message::has_error() const {
   return payload_case() == kError;
 }
@@ -2604,39 +2546,39 @@ inline void Message::clear_error() {
     clear_has_payload();
   }
 }
-inline  const ::protocol::ErrorMsg& Message::error() const {
-  // @@protoc_insertion_point(field_get:protocol.Message.error)
+inline  const ::gs_protocol::ErrorMsg& Message::error() const {
+  // @@protoc_insertion_point(field_get:gs_protocol.Message.error)
   return has_error()
       ? *payload_.error_
-      : ::protocol::ErrorMsg::default_instance();
+      : ::gs_protocol::ErrorMsg::default_instance();
 }
-inline ::protocol::ErrorMsg* Message::mutable_error() {
+inline ::gs_protocol::ErrorMsg* Message::mutable_error() {
   if (!has_error()) {
     clear_payload();
     set_has_error();
-    payload_.error_ = new ::protocol::ErrorMsg;
+    payload_.error_ = new ::gs_protocol::ErrorMsg;
   }
-  // @@protoc_insertion_point(field_mutable:protocol.Message.error)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.Message.error)
   return payload_.error_;
 }
-inline ::protocol::ErrorMsg* Message::release_error() {
-  // @@protoc_insertion_point(field_release:protocol.Message.error)
+inline ::gs_protocol::ErrorMsg* Message::release_error() {
+  // @@protoc_insertion_point(field_release:gs_protocol.Message.error)
   if (has_error()) {
     clear_has_payload();
-    ::protocol::ErrorMsg* temp = payload_.error_;
+    ::gs_protocol::ErrorMsg* temp = payload_.error_;
     payload_.error_ = NULL;
     return temp;
   } else {
     return NULL;
   }
 }
-inline void Message::set_allocated_error(::protocol::ErrorMsg* error) {
+inline void Message::set_allocated_error(::gs_protocol::ErrorMsg* error) {
   clear_payload();
   if (error) {
     set_has_error();
     payload_.error_ = error;
   }
-  // @@protoc_insertion_point(field_set_allocated:protocol.Message.error)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.Message.error)
 }
 
 inline bool Message::has_payload() const {
@@ -2657,13 +2599,13 @@ inline void ReqLogin::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ReqLogin::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ReqLogin.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ReqLogin.userID)
   return userid_;
 }
 inline void ReqLogin::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ReqLogin.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ReqLogin.userID)
 }
 
 // -------------------------------------------------------------------
@@ -2675,13 +2617,13 @@ inline void ReqCreate::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ReqCreate::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ReqCreate.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ReqCreate.userID)
   return userid_;
 }
 inline void ReqCreate::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ReqCreate.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ReqCreate.userID)
 }
 
 // -------------------------------------------------------------------
@@ -2693,13 +2635,13 @@ inline void ReqJoin::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ReqJoin::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ReqJoin.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ReqJoin.userID)
   return userid_;
 }
 inline void ReqJoin::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ReqJoin.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ReqJoin.userID)
 }
 
 // int64 roomID = 2;
@@ -2707,13 +2649,13 @@ inline void ReqJoin::clear_roomid() {
   roomid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ReqJoin::roomid() const {
-  // @@protoc_insertion_point(field_get:protocol.ReqJoin.roomID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ReqJoin.roomID)
   return roomid_;
 }
 inline void ReqJoin::set_roomid(::google::protobuf::int64 value) {
   
   roomid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ReqJoin.roomID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ReqJoin.roomID)
 }
 
 // -------------------------------------------------------------------
@@ -2725,13 +2667,13 @@ inline void ReqAction1::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ReqAction1::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ReqAction1.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ReqAction1.userID)
   return userid_;
 }
 inline void ReqAction1::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ReqAction1.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ReqAction1.userID)
 }
 
 // -------------------------------------------------------------------
@@ -2743,13 +2685,13 @@ inline void ReqQuit::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ReqQuit::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ReqQuit.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ReqQuit.userID)
   return userid_;
 }
 inline void ReqQuit::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ReqQuit.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ReqQuit.userID)
 }
 
 // -------------------------------------------------------------------
@@ -2761,13 +2703,13 @@ inline void ReqRoomList::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ReqRoomList::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ReqRoomList.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ReqRoomList.userID)
   return userid_;
 }
 inline void ReqRoomList::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ReqRoomList.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ReqRoomList.userID)
 }
 
 // -------------------------------------------------------------------
@@ -2779,13 +2721,13 @@ inline void ResLogin::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ResLogin::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResLogin.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResLogin.userID)
   return userid_;
 }
 inline void ResLogin::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResLogin.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResLogin.userID)
 }
 
 // int32 result = 2;
@@ -2793,13 +2735,13 @@ inline void ResLogin::clear_result() {
   result_ = 0;
 }
 inline ::google::protobuf::int32 ResLogin::result() const {
-  // @@protoc_insertion_point(field_get:protocol.ResLogin.result)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResLogin.result)
   return result_;
 }
 inline void ResLogin::set_result(::google::protobuf::int32 value) {
   
   result_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResLogin.result)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResLogin.result)
 }
 
 // -------------------------------------------------------------------
@@ -2811,13 +2753,13 @@ inline void ResCreate::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ResCreate::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResCreate.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResCreate.userID)
   return userid_;
 }
 inline void ResCreate::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResCreate.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResCreate.userID)
 }
 
 // int64 roomID = 2;
@@ -2825,13 +2767,13 @@ inline void ResCreate::clear_roomid() {
   roomid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ResCreate::roomid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResCreate.roomID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResCreate.roomID)
   return roomid_;
 }
 inline void ResCreate::set_roomid(::google::protobuf::int64 value) {
   
   roomid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResCreate.roomID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResCreate.roomID)
 }
 
 // -------------------------------------------------------------------
@@ -2843,13 +2785,13 @@ inline void ResJoin::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ResJoin::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResJoin.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResJoin.userID)
   return userid_;
 }
 inline void ResJoin::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResJoin.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResJoin.userID)
 }
 
 // int64 roomID = 2;
@@ -2857,27 +2799,43 @@ inline void ResJoin::clear_roomid() {
   roomid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ResJoin::roomid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResJoin.roomID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResJoin.roomID)
   return roomid_;
 }
 inline void ResJoin::set_roomid(::google::protobuf::int64 value) {
   
   roomid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResJoin.roomID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResJoin.roomID)
 }
 
-// int64 members = 3;
-inline void ResJoin::clear_members() {
-  members_ = GOOGLE_LONGLONG(0);
+// repeated int64 members = 3;
+inline int ResJoin::members_size() const {
+  return members_.size();
 }
-inline ::google::protobuf::int64 ResJoin::members() const {
-  // @@protoc_insertion_point(field_get:protocol.ResJoin.members)
+inline void ResJoin::clear_members() {
+  members_.Clear();
+}
+inline ::google::protobuf::int64 ResJoin::members(int index) const {
+  // @@protoc_insertion_point(field_get:gs_protocol.ResJoin.members)
+  return members_.Get(index);
+}
+inline void ResJoin::set_members(int index, ::google::protobuf::int64 value) {
+  members_.Set(index, value);
+  // @@protoc_insertion_point(field_set:gs_protocol.ResJoin.members)
+}
+inline void ResJoin::add_members(::google::protobuf::int64 value) {
+  members_.Add(value);
+  // @@protoc_insertion_point(field_add:gs_protocol.ResJoin.members)
+}
+inline const ::google::protobuf::RepeatedField< ::google::protobuf::int64 >&
+ResJoin::members() const {
+  // @@protoc_insertion_point(field_list:gs_protocol.ResJoin.members)
   return members_;
 }
-inline void ResJoin::set_members(::google::protobuf::int64 value) {
-  
-  members_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResJoin.members)
+inline ::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
+ResJoin::mutable_members() {
+  // @@protoc_insertion_point(field_mutable_list:gs_protocol.ResJoin.members)
+  return &members_;
 }
 
 // -------------------------------------------------------------------
@@ -2889,13 +2847,13 @@ inline void ResAction1::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ResAction1::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResAction1.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResAction1.userID)
   return userid_;
 }
 inline void ResAction1::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResAction1.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResAction1.userID)
 }
 
 // int32 result = 2;
@@ -2903,13 +2861,13 @@ inline void ResAction1::clear_result() {
   result_ = 0;
 }
 inline ::google::protobuf::int32 ResAction1::result() const {
-  // @@protoc_insertion_point(field_get:protocol.ResAction1.result)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResAction1.result)
   return result_;
 }
 inline void ResAction1::set_result(::google::protobuf::int32 value) {
   
   result_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResAction1.result)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResAction1.result)
 }
 
 // -------------------------------------------------------------------
@@ -2921,13 +2879,13 @@ inline void ResQuit::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ResQuit::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResQuit.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResQuit.userID)
   return userid_;
 }
 inline void ResQuit::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResQuit.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResQuit.userID)
 }
 
 // int32 isSuccess = 2;
@@ -2935,13 +2893,13 @@ inline void ResQuit::clear_issuccess() {
   issuccess_ = 0;
 }
 inline ::google::protobuf::int32 ResQuit::issuccess() const {
-  // @@protoc_insertion_point(field_get:protocol.ResQuit.isSuccess)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResQuit.isSuccess)
   return issuccess_;
 }
 inline void ResQuit::set_issuccess(::google::protobuf::int32 value) {
   
   issuccess_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResQuit.isSuccess)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResQuit.isSuccess)
 }
 
 // -------------------------------------------------------------------
@@ -2953,27 +2911,43 @@ inline void ResRoomList::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 ResRoomList::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.ResRoomList.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.ResRoomList.userID)
   return userid_;
 }
 inline void ResRoomList::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResRoomList.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.ResRoomList.userID)
 }
 
-// int64 roomIDs = 2;
-inline void ResRoomList::clear_roomids() {
-  roomids_ = GOOGLE_LONGLONG(0);
+// repeated int64 roomIDs = 2;
+inline int ResRoomList::roomids_size() const {
+  return roomids_.size();
 }
-inline ::google::protobuf::int64 ResRoomList::roomids() const {
-  // @@protoc_insertion_point(field_get:protocol.ResRoomList.roomIDs)
+inline void ResRoomList::clear_roomids() {
+  roomids_.Clear();
+}
+inline ::google::protobuf::int64 ResRoomList::roomids(int index) const {
+  // @@protoc_insertion_point(field_get:gs_protocol.ResRoomList.roomIDs)
+  return roomids_.Get(index);
+}
+inline void ResRoomList::set_roomids(int index, ::google::protobuf::int64 value) {
+  roomids_.Set(index, value);
+  // @@protoc_insertion_point(field_set:gs_protocol.ResRoomList.roomIDs)
+}
+inline void ResRoomList::add_roomids(::google::protobuf::int64 value) {
+  roomids_.Add(value);
+  // @@protoc_insertion_point(field_add:gs_protocol.ResRoomList.roomIDs)
+}
+inline const ::google::protobuf::RepeatedField< ::google::protobuf::int64 >&
+ResRoomList::roomids() const {
+  // @@protoc_insertion_point(field_list:gs_protocol.ResRoomList.roomIDs)
   return roomids_;
 }
-inline void ResRoomList::set_roomids(::google::protobuf::int64 value) {
-  
-  roomids_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ResRoomList.roomIDs)
+inline ::google::protobuf::RepeatedField< ::google::protobuf::int64 >*
+ResRoomList::mutable_roomids() {
+  // @@protoc_insertion_point(field_mutable_list:gs_protocol.ResRoomList.roomIDs)
+  return &roomids_;
 }
 
 // -------------------------------------------------------------------
@@ -2985,13 +2959,13 @@ inline void NotifyJoinMsg::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 NotifyJoinMsg::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.NotifyJoinMsg.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.NotifyJoinMsg.userID)
   return userid_;
 }
 inline void NotifyJoinMsg::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.NotifyJoinMsg.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.NotifyJoinMsg.userID)
 }
 
 // int64 roomID = 2;
@@ -2999,13 +2973,13 @@ inline void NotifyJoinMsg::clear_roomid() {
   roomid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 NotifyJoinMsg::roomid() const {
-  // @@protoc_insertion_point(field_get:protocol.NotifyJoinMsg.roomID)
+  // @@protoc_insertion_point(field_get:gs_protocol.NotifyJoinMsg.roomID)
   return roomid_;
 }
 inline void NotifyJoinMsg::set_roomid(::google::protobuf::int64 value) {
   
   roomid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.NotifyJoinMsg.roomID)
+  // @@protoc_insertion_point(field_set:gs_protocol.NotifyJoinMsg.roomID)
 }
 
 // -------------------------------------------------------------------
@@ -3017,13 +2991,13 @@ inline void NotifyAction1Msg::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 NotifyAction1Msg::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.NotifyAction1Msg.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.NotifyAction1Msg.userID)
   return userid_;
 }
 inline void NotifyAction1Msg::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.NotifyAction1Msg.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.NotifyAction1Msg.userID)
 }
 
 // -------------------------------------------------------------------
@@ -3035,13 +3009,13 @@ inline void NotifyQuitMsg::clear_userid() {
   userid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 NotifyQuitMsg::userid() const {
-  // @@protoc_insertion_point(field_get:protocol.NotifyQuitMsg.userID)
+  // @@protoc_insertion_point(field_get:gs_protocol.NotifyQuitMsg.userID)
   return userid_;
 }
 inline void NotifyQuitMsg::set_userid(::google::protobuf::int64 value) {
   
   userid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.NotifyQuitMsg.userID)
+  // @@protoc_insertion_point(field_set:gs_protocol.NotifyQuitMsg.userID)
 }
 
 // int64 roomID = 2;
@@ -3049,13 +3023,13 @@ inline void NotifyQuitMsg::clear_roomid() {
   roomid_ = GOOGLE_LONGLONG(0);
 }
 inline ::google::protobuf::int64 NotifyQuitMsg::roomid() const {
-  // @@protoc_insertion_point(field_get:protocol.NotifyQuitMsg.roomID)
+  // @@protoc_insertion_point(field_get:gs_protocol.NotifyQuitMsg.roomID)
   return roomid_;
 }
 inline void NotifyQuitMsg::set_roomid(::google::protobuf::int64 value) {
   
   roomid_ = value;
-  // @@protoc_insertion_point(field_set:protocol.NotifyQuitMsg.roomID)
+  // @@protoc_insertion_point(field_set:gs_protocol.NotifyQuitMsg.roomID)
 }
 
 // -------------------------------------------------------------------
@@ -3067,13 +3041,13 @@ inline void ErrorMsg::clear_errcode() {
   errcode_ = 0;
 }
 inline ::google::protobuf::int32 ErrorMsg::errcode() const {
-  // @@protoc_insertion_point(field_get:protocol.ErrorMsg.errCode)
+  // @@protoc_insertion_point(field_get:gs_protocol.ErrorMsg.errCode)
   return errcode_;
 }
 inline void ErrorMsg::set_errcode(::google::protobuf::int32 value) {
   
   errcode_ = value;
-  // @@protoc_insertion_point(field_set:protocol.ErrorMsg.errCode)
+  // @@protoc_insertion_point(field_set:gs_protocol.ErrorMsg.errCode)
 }
 
 // string errMessage = 2;
@@ -3081,40 +3055,40 @@ inline void ErrorMsg::clear_errmessage() {
   errmessage_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline const ::std::string& ErrorMsg::errmessage() const {
-  // @@protoc_insertion_point(field_get:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_get:gs_protocol.ErrorMsg.errMessage)
   return errmessage_.GetNoArena();
 }
 inline void ErrorMsg::set_errmessage(const ::std::string& value) {
   
   errmessage_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_set:gs_protocol.ErrorMsg.errMessage)
 }
 #if LANG_CXX11
 inline void ErrorMsg::set_errmessage(::std::string&& value) {
   
   errmessage_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_set_rvalue:gs_protocol.ErrorMsg.errMessage)
 }
 #endif
 inline void ErrorMsg::set_errmessage(const char* value) {
   
   errmessage_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_set_char:gs_protocol.ErrorMsg.errMessage)
 }
 inline void ErrorMsg::set_errmessage(const char* value, size_t size) {
   
   errmessage_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_set_pointer:gs_protocol.ErrorMsg.errMessage)
 }
 inline ::std::string* ErrorMsg::mutable_errmessage() {
   
-  // @@protoc_insertion_point(field_mutable:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_mutable:gs_protocol.ErrorMsg.errMessage)
   return errmessage_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* ErrorMsg::release_errmessage() {
-  // @@protoc_insertion_point(field_release:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_release:gs_protocol.ErrorMsg.errMessage)
   
   return errmessage_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -3125,7 +3099,7 @@ inline void ErrorMsg::set_allocated_errmessage(::std::string* errmessage) {
     
   }
   errmessage_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), errmessage);
-  // @@protoc_insertion_point(field_set_allocated:protocol.ErrorMsg.errMessage)
+  // @@protoc_insertion_point(field_set_allocated:gs_protocol.ErrorMsg.errMessage)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -3165,26 +3139,7 @@ inline void ErrorMsg::set_allocated_errmessage(::std::string* errmessage) {
 // @@protoc_insertion_point(namespace_scope)
 
 
-}  // namespace protocol
-
-#ifndef SWIG
-namespace google {
-namespace protobuf {
-
-template <> struct is_proto_enum< ::protocol::Type> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::protocol::Type>() {
-  return ::protocol::Type_descriptor();
-}
-template <> struct is_proto_enum< ::protocol::ErrorType> : ::google::protobuf::internal::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::protocol::ErrorType>() {
-  return ::protocol::ErrorType_descriptor();
-}
-
-}  // namespace protobuf
-}  // namespace google
-#endif  // SWIG
+}  // namespace gs_protocol
 
 // @@protoc_insertion_point(global_scope)
 
