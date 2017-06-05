@@ -13,7 +13,7 @@ int main()
 
   io_service.run();
 
-  std::cout << "network connect close" << std::endl;
+  std::cout << __FUNCTION__ << "network connect close" << std::endl;
 
   return 0;
 }

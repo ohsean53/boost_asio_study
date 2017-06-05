@@ -21,22 +21,23 @@ ChatServer::~ChatServer()
 
 void ChatServer::Init(const int maxSessionCount)
 {
-  for (auto i = 0; i <= maxSessionCount; ++i) {
+  for (auto i = 0; i < maxSessionCount; ++i) {
     Session* session = new Session(i, acceptor_.get_io_service(), this);
     session_list_.push_back(session);
     session_queue_.push_back(i);
+    std::cout << __FUNCTION__ << " session id initialize : " << i << std::endl;
   }
 }
 
 void ChatServer::Start()
 {
-  std::cout << "server start...." << std::endl;
+  std::cout << __FUNCTION__ << " server start...." << std::endl;
   PostAccept(); // 서버시작시에 제일 먼저 호출
 }
 
 void ChatServer::CloseSession(const int session_id)
 {
-  std::cout << "client connect close, session_id : " << session_id << std::endl;
+  std::cout << __FUNCTION__ << "client connect close, session_id : " << session_id << std::endl;
 
   session_list_[session_id]->GetSocket().close();
   session_queue_.push_back(session_id);
@@ -53,7 +54,7 @@ void ChatServer::ProcessPacket(const int session_id, const char* data, int msg_s
   gs_protocol::Message req;
   auto is_parse_success = req.ParsePartialFromArray(data, msg_size);
   if (is_parse_success == false) {
-    std::cout << "parse fail T.T" << std::endl;
+    std::cout << __FUNCTION__  << " parse fail T.T" << std::endl;
   }
 
   auto msg_type = req.payload_case();
@@ -63,24 +64,17 @@ void ChatServer::ProcessPacket(const int session_id, const char* data, int msg_s
   case gs_protocol::Message::kReqLogin:
   {
     auto req_login = req.req_login();
-    std::cout << "req_login parse success" << std::endl;
-    std::cout << "user_id : " << req_login.userid() << std::endl;
+    std::cout << __FUNCTION__ << " req_login parse success" << std::endl;
+    std::cout << __FUNCTION__ << " user_id : " << req_login.userid() << std::endl;
 
     session_list_[session_id]->SetUserID(req_login.userid());
     auto user_id = session_list_[session_id]->GetUserID();
-    std::cout << "client login success, id : " << user_id << std::endl;
+    std::cout << __FUNCTION__ << " client login success, id : " << user_id << std::endl;
 
     gs_protocol::Message res;
     auto res_login = res.mutable_res_login();
     res_login->set_userid(user_id);
     res_login->set_result(1);
-    //auto res_msg_size = res->ByteSize();
-    //auto buffer = new char[res_msg_size];
-    //auto is_serialize_success = res->SerializeToArray(buffer, res_msg_size);
-
-    //if (is_serialize_success) {
-    //  std::cout << "serialize success!" << std::endl;
-    //}
 
     session_list_[session_id]->PostWrite(false, SerializePBMessage(res));
   }
@@ -93,8 +87,8 @@ void ChatServer::ProcessPacket(const int session_id, const char* data, int msg_s
   case gs_protocol::Message::kReqAction1:
   {
     auto req_action1 = req.req_action1();
-    std::cout << "req_action1 parse success" << std::endl;
-    std::cout << "user_id : " << req_action1.userid() << std::endl;
+    std::cout << __FUNCTION__ << " req_action1 parse success" << std::endl;
+    std::cout << __FUNCTION__ << " user_id : " << req_action1.userid() << std::endl;
 
     gs_protocol::Message notify;
     auto notify_action1 = notify.mutable_notify_action1();
@@ -102,6 +96,9 @@ void ChatServer::ProcessPacket(const int session_id, const char* data, int msg_s
    
     for (auto& session : session_list_)
     {
+      if (session_id == session->GetSessionID()) {
+        continue;
+      }
       if (session->GetSocket().is_open()) {
         session->PostWrite(false, SerializePBMessage(notify));
       }
@@ -129,8 +126,8 @@ void ChatServer::ProcessPacket(const int session_id, const char* data, int msg_s
   case gs_protocol::Message::kNotifyAction1:
   {
     auto notify_action1 = req.notify_action1();
-    std::cout << "notify_action1 parse success" << std::endl;
-    std::cout << "from user_id : " << notify_action1.userid() << std::endl;
+    std::cout << __FUNCTION__ << "notify_action1 parse success" << std::endl;
+    std::cout << __FUNCTION__ << "from user_id : " << notify_action1.userid() << std::endl;
   }
     break;
   case gs_protocol::Message::kNotifyQuit:
@@ -146,11 +143,14 @@ bool ChatServer::PostAccept()
   if (session_queue_.empty())
   {
     is_accepting_ = false;
+    std::cout << __FUNCTION__ << " session_queue is empty" << std::endl;
     return false;
   }
 
   is_accepting_ = true;
   int session_id = session_queue_.front();
+  session_queue_.pop_front();
+  std::cout << __FUNCTION__ << " session_queue pop_front id : " << session_id << std::endl;
 
   acceptor_.async_accept(session_list_[session_id]->GetSocket(),
     boost::bind(
@@ -174,6 +174,6 @@ void ChatServer::HandleAccept(Session* session, const boost::system::error_code 
   }
   else
   {
-    std::cout << "error no : " << error.value() << " error message : " << error.message() << std::endl;
+    std::cout << __FUNCTION__ << " error no : " << error.value() << " error message : " << error.message() << std::endl;
   }
 }
