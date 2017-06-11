@@ -35,7 +35,7 @@ private:
   int session_id_;
   boost::asio::ip::tcp::socket socket_;
   std::array<char, MAX_RECEIVE_BUFFER_LEN> recv_buffer_;
-
+  std::shared_ptr<spdlog::logger> logger_;
   int packet_buffer_mark_;
   char packet_buffer_[MAX_RECEIVE_BUFFER_LEN * 2];
   std::deque<std::shared_ptr<std::vector<char>>> send_msg_queue_;

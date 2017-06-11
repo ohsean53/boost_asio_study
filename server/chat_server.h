@@ -20,7 +20,7 @@ public:
 private:
   int seq_number_;
   bool is_accepting_;
-
+  std::shared_ptr<spdlog::logger> logger_;
   boost::asio::ip::tcp::acceptor acceptor_;
   std::vector< Session*> session_list_;
   std::deque <int> session_queue_;

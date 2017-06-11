@@ -7,6 +7,7 @@ ChatServer::ChatServer(boost::asio::io_service & io_service)
   : acceptor_(io_service, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), PORT_NUMBER))
 {
   is_accepting_ = false;
+  logger_ = spdlog::get(CONSOLE);
 }
 
 ChatServer::~ChatServer()
@@ -25,19 +26,19 @@ void ChatServer::Init(const int maxSessionCount)
     Session* session = new Session(i, acceptor_.get_io_service(), this);
     session_list_.push_back(session);
     session_queue_.push_back(i);
-    std::cout << __FUNCTION__ << " session id initialize : " << i << std::endl;
+    //logger::get(CONSOLE)->info("session id initialize {0}", i);
   }
 }
 
 void ChatServer::Start()
 {
-  std::cout << __FUNCTION__ << " server start...." << std::endl;
+  logger_->info("server start..");
   PostAccept(); // 서버시작시에 제일 먼저 호출
 }
 
 void ChatServer::CloseSession(const int session_id)
 {
-  std::cout << __FUNCTION__ << "client connect close, session_id : " << session_id << std::endl;
+  logger_->debug("client connect close, session_id : {0}", session_id);
 
   session_list_[session_id]->GetSocket().close();
   session_queue_.push_back(session_id);
@@ -49,12 +50,11 @@ void ChatServer::CloseSession(const int session_id)
 
 void ChatServer::ProcessPacket(const int session_id, const char* data, int msg_size)
 {
-  std::cout << std::endl;
   // 사이즈를 제외한 바디메시지만 와야함
   gs_protocol::Message req;
   auto is_parse_success = req.ParsePartialFromArray(data, msg_size);
   if (is_parse_success == false) {
-    std::cout << __FUNCTION__  << " parse fail T.T" << std::endl;
+    logger_->error("fail, protobuf message parse");
   }
 
   auto msg_type = req.payload_case();
@@ -64,12 +64,13 @@ void ChatServer::ProcessPacket(const int session_id, const char* data, int msg_s
   case gs_protocol::Message::kReqLogin:
   {
     auto req_login = req.req_login();
-    std::cout << __FUNCTION__ << " req_login parse success" << std::endl;
-    std::cout << __FUNCTION__ << " user_id : " << req_login.userid() << std::endl;
+
+    logger_->debug("req_login parse user_id : {}", req_login.userid());
 
     session_list_[session_id]->SetUserID(req_login.userid());
     auto user_id = session_list_[session_id]->GetUserID();
-    std::cout << __FUNCTION__ << " client login success, id : " << user_id << std::endl;
+
+    logger_->debug("client login success, user_id : {}", user_id);
 
     gs_protocol::Message res;
     auto res_login = res.mutable_res_login();
@@ -87,8 +88,8 @@ void ChatServer::ProcessPacket(const int session_id, const char* data, int msg_s
   case gs_protocol::Message::kReqAction1:
   {
     auto req_action1 = req.req_action1();
-    std::cout << __FUNCTION__ << " req_action1 parse success" << std::endl;
-    std::cout << __FUNCTION__ << " user_id : " << req_action1.userid() << std::endl;
+
+    SPDLOG_TRACEF(logger_, "req_action1 parse success : {}", req_action1.userid());
 
     gs_protocol::Message notify;
     auto notify_action1 = notify.mutable_notify_action1();
@@ -126,14 +127,13 @@ void ChatServer::ProcessPacket(const int session_id, const char* data, int msg_s
   case gs_protocol::Message::kNotifyAction1:
   {
     auto notify_action1 = req.notify_action1();
-    std::cout << __FUNCTION__ << "notify_action1 parse success" << std::endl;
-    std::cout << __FUNCTION__ << "from user_id : " << notify_action1.userid() << std::endl;
+    logger_->debug("notify_action1 parse success, from user_id : {}", notify_action1.userid());
   }
     break;
   case gs_protocol::Message::kNotifyQuit:
     break;
   default:
-    std::cout << "not defined!" << std::endl;
+    logger_->error("not defined message type");
     break;
   }
 }
@@ -143,14 +143,14 @@ bool ChatServer::PostAccept()
   if (session_queue_.empty())
   {
     is_accepting_ = false;
-    std::cout << __FUNCTION__ << " session_queue is empty" << std::endl;
+    logger_->error("fail post accept, session_queue is empty");
     return false;
   }
 
   is_accepting_ = true;
   int session_id = session_queue_.front();
   session_queue_.pop_front();
-  std::cout << __FUNCTION__ << " session_queue pop_front id : " << session_id << std::endl;
+  logger_->debug("session_queue pop_front id : {}", session_id);
 
   acceptor_.async_accept(session_list_[session_id]->GetSocket(),
     boost::bind(
@@ -166,14 +166,13 @@ void ChatServer::HandleAccept(Session* session, const boost::system::error_code 
   // PostAccept 에서 async_accept 가 끝나고 호출당하는 메서드
   if (!error)
   {
-    std::cout << "client connect success. session id : " << session->GetSessionID() << std::endl;
-
+    logger_->info("client connect success. session id : {}", session->GetSessionID());
     session->Init();
     session->PostRead(); // 여기가 PostReceive 처음 호출하는 부분임
     PostAccept();
   }
   else
   {
-    std::cout << __FUNCTION__ << " error no : " << error.value() << " error message : " << error.message() << std::endl;
+    logger_->critical("error no : {0}, error message : {1}", error.value(), error.message());
   }
 }

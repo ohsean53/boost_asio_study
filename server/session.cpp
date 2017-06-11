@@ -15,6 +15,7 @@ Session::Session(int session_id, boost::asio::io_service& io_service, ChatServer
   , session_id_(session_id)
   , server_(server)
 {
+  logger_ = spdlog::get(CONSOLE);
 }
 
 Session::~Session()
@@ -69,8 +70,7 @@ void Session::PostWrite(const bool immediately, std::shared_ptr<std::vector<char
     boost::asio::buffer((msg.get())[0], (msg.get())->size()),
     [this](const boost::system::error_code& error, size_t bytes_transferred) // 람다식으로 변경
   {
-    std::cout << __FUNCTION__ << " error " << error << std::endl;
-    std::cout << __FUNCTION__ << " write bytes " << bytes_transferred << std::endl;
+    logger_->debug("error : {0} write bytes : {1}", error.value(), bytes_transferred);
     // 보낸 데이터를 제거한다. (보통의 경우에는 이 부분에서 다 끝남)
     {
       auto will_delete = std::move(send_msg_queue_.front());
@@ -93,11 +93,11 @@ void Session::HandleRead(const boost::system::error_code& error, size_t byte_tra
   {
     if (error == boost::asio::error::eof)
     {
-      std::cout << __FUNCTION__ << " client disconnect" << std::endl;
+      logger_->error("client disconnect");
     }
     else
     {
-      std::cout << __FUNCTION__ << " error no : " << error.value() << " error mssage : " << error.message() << std::endl;
+      logger_->error("read error,  error no : {0}, error message {1}", error.value(), error.message());
     }
 
     server_->CloseSession(session_id_); // 에러가 있으면 연결 종료
